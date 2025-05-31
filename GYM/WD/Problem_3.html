@@ -1,0 +1,69 @@
+<!-- HTML Signup Form Creation
+Your task is to create a signup form using HTML. The form should include the following fields: Name, Email, Gender, Car Brands, Age, DOB, Phone Number, Password, and a checkbox for agreeing to the TOS. Each field should have specific attributes as outlined in the table below:
+
+Field	Type	Required	ID	Placeholder
+Name	Text	Yes	name	Name
+Email	Email	Yes	email	Email
+Gender	Radio	Yes	gender_m, gender_f	-
+Car Brands	Select	Yes	cars	--Please choose an option--
+Age	Number	Yes	age	Age
+DOB	Date	Yes	dob	-
+Phone Number	Tel	No	tel	xxx-xxx-xxxx
+Password	Password	Yes	password	Password
+I agree to the TOS	Checkbox	Yes	tos	-
+Instructions:
+
+Use the post method attribute for the form.
+The radio buttons for gender should have the name attribute as gender.
+All input elements must have corresponding labels with the for attribute set to the ID of the element they belong to.
+Use a button of type submit.
+Ensure to follow the instructions exactly to meet the expected output. -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<!-- the entire body must be written by student -->
+	<form method = "post">
+		<label for = "name">Name : </label>
+		<input type = "text" id = "name" placeholder = "Name" required><br>
+		<label for = "email">Email : </label>
+			<input type = "email" id = "email" placeholder = "Email" required><br>
+		<label>Gender : </label><br>
+			<input type = "radio" id = "gender_m" name = "gender" value = "Male" required>
+		<label for = "gender_m">Male</label><br>
+			<input type = "radio" id = "gender_f" name = "gender" value = "Female" required>
+		<label for = "gender_f">Female</label><br>
+		<label for="cars">Car brand:</label>
+			<select name="car_brands" id="cars" required>
+				  <option value="select">select</option>
+				  <option value="volvo">Volvo</option>
+				  <option value="saab">Saab</option>
+				  <option value="mercedes">Mercedes</option>
+				  <option value="audi">Audi</option>
+			</select><br>
+		<label for = "age">Age :</label>
+			<input type = "number" id = "age" placeholder = "Age" name = "Age" required><br>
+		<label for = "dob">DOB :</label>
+			<input type = "date" id = "dob" name = "dob" required><br>
+		<label for = "tel">Phone Number : </label>
+			<input type = "tel" id = "tel" name = "tel" placeholder = "xxx-xxx-xxxx"><br>
+		<label for = "password">Password :</label>
+			<input type = "password" id = "password" placeholder = "Password" required><br>
+		<label for = "tos">I agree to the TOS</label>
+			<input type = "checkbox" id = "tos" required><br>
+		<button type = "submit">submit</button>
+		
+	</form>
+    <script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+
+</html>

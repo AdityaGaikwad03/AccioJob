@@ -1,0 +1,62 @@
+<!-- Trivia
+Ritesh is creating a quiz for his friend who has an exam coming. He wants to impress her with the styling. Help him create a question space that includes the following requirements:
+
+Requirement	Description
+Question & Options	Create a question "What is the captial of India?" with two options (radio buttons) "New Delhi" and "Mumbai."
+Quotation	Include a quotation using the blockquote tag that states "New Delhi is the capital of India and an administrative district of NCT Delhi." Reference it from Wikipedia.
+Styling	Apply the following styles to the quotation:
+- Max-width: Around 600px
+- Margin: Approximately 10px
+- Padding: Around 15px
+- Border-left: 8px solid and in green color
+- Background-color: Close to #f8fffe
+- Font-weight: Bold
+Note: Make sure to follow the exact specifications to create the desired appearance. Refer to the image provided for visual guidance.
+
+output -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+    <style>
+
+/* Your CSS Code here. */
+body {
+      font-family: Arial, sans-serif;
+    }
+
+    .quiz-container {
+      margin: 30px;
+    }
+
+    blockquote {
+      max-width: 600px;
+      margin: 10px;
+      padding: 15px;
+      border-left: 8px solid green;
+      background-color: #f8fffe;
+      font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+	<!-- the entire body must be written by student -->
+	<h3>What is the captial of India?</h3>
+	<input type = "radio" id = "New_Delhi" value = "New Delhi" name = "capital"><label for = "New_Delhi">New Delhi</label><br>
+	<input type = "radio" id = "Mumbai" value = "Mumbai" name = "capital"><label for = "Mumbai">Mumbai</label>
+
+	<blockquote cite="https://en.wikipedia.org/wiki/New_Delhi">
+      New Delhi is the capital of India and an administrative district of NCT Delhi.
+    </blockquote>
+
+    <script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+
+</html>

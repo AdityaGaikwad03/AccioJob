@@ -1,0 +1,49 @@
+<!-- Length In Bytes
+Instructions
+Write a function called byteSize that takes a string as input and returns the size of the string in bytes. The function should work for both ASCII and non-ASCII characters.
+
+Examples
+Input	Output
+byteSize('hello world')	11
+byteSize('안녕하세요')	15
+byteSize('')	0
+Acceptance Criteria
+When the byteSize function is called with a string input, it should return the size of the string in bytes.
+The function should work for both ASCII and non-ASCII characters.
+The function should handle empty string input and return a byte size of 0.
+Extra information in context with this problem:
+About the Blob Concept:
+In the context of this problem, a Blob object is used to determine the size of the input string in bytes. A Blob represents a file-like object of immutable, raw data, and it can be used to handle both ASCII and non-ASCII characters.
+
+Here's how the Blob is used in this problem:
+
+Creating a Blob Object: A new Blob object is created with the given string. This object represents the raw data of the string.
+Getting the Size: The size property of the Blob object returns the size of the string in bytes. This includes the correct handling of non-ASCII characters, which may require more bytes to represent.
+This approach allows for an efficient calculation of the byte size of a string, including handling of different character encodings. -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<!-- the entire body must be written by student -->
+    <script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+<script>
+    const byteSize = (str) => {
+    // write your code here
+	 return new Blob([str]).size;
+    };
+
+    // Do not change the code below
+    const str = prompt("Enter some string.");
+    alert(byteSize(str));
+</script>
+</html>

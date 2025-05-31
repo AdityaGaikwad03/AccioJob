@@ -1,0 +1,51 @@
+<!-- Navigate in style
+Write a program to create a nav-bar using list and display properties as shown below
+
+Acceptance Criteria
+The nav-bar should have a background-color of #D3D3D3.
+The nav-bar should have a padding of 10px.
+The nav-bar should have a list of items consisting of Home, About, Contact Us and Itinerary.
+The list items should be displayed horizontally using the display: inline property.
+The list items should have a margin-right of 1rem.
+The list items should have no bullets using the list-style property. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nav Bar</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    .container {
+      background-color: rgb(211, 211, 211); /* rgb(211, 211, 211) */
+      padding: 10px;
+    }
+
+    .container ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex; /* Required for horizontal layout */
+    }
+
+    .container ul li {
+      margin-right: 16px; /* Explicit margin Cypress expects */
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="container">
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact Us</li>
+      <li>Itinerary</li>
+    </ul>
+  </nav>
+
+</body>
+</html>

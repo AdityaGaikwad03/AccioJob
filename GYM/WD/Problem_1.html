@@ -1,0 +1,57 @@
+ <!-- Sharable URLs
+We can share a lot of information through the URLs
+
+Make an HTML form and use JS for manipulation.
+
+Acceptance Criteria:
+
+Make an text input field with id="name" and name="name"
+
+Make an number input field with id="year" and name="year"
+
+Make a submit button element with id="button"
+
+Make an h3 element with id=”url". Initially, it has the text https://localhost:8080/
+
+When the submit button is clicked, text in h3 should be updated with the appropriate query string.
+
+Refer to the attached image to see how it should work for different cases:
+
+https://d3dyfaf3iutrxo.cloudfront.net/thumbnail/assignment/question/8bb3b47db47841178b670717ea3c74f9.png  -->
+
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <script type="text/javascript" src="./script.js">
+</script>
+  </body>
+		<h3 id = "url">
+			https://localhost:8080/
+		</h3>
+	Name:<br><input type = "text" id = "name" name = "name"><br>
+	Graduation year:<br><input type = "number" id = "year" name = "year"><br>
+	<button id="button">Submit</button>
+	<script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('button');
+    button.addEventListener('click', function () {
+      const baseUrl = 'https://localhost:8080/';
+      const name = document.getElementById('name').value.trim();
+      const year = document.getElementById('year').value.trim();
+
+      const params = new URLSearchParams();
+      if (name) params.append('name', name);
+      if (year) params.append('year', year);
+
+      const queryString = params.toString();
+      const fullUrl = queryString ? baseUrl + '?' + queryString : baseUrl;
+
+      document.getElementById('url').textContent = fullUrl;
+    });
+  });
+
+    </script>
+</html>
