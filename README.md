@@ -48,7 +48,7 @@ Each folder contains:
 Feel free to connect or suggest improvements!
 
 - GitHub: [AdityaGaikwad03](https://github.com/AdityaGaikwad03)
-- LinkedIn: (https://www.linkedin.com/in/adityagaikwad-095940274/)
+- LinkedIn: https://www.linkedin.com/in/adityagaikwad-095940274
 
 ---
 
