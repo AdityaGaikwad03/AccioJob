@@ -71,3 +71,4 @@ class Solution {
     return Math.min(arr[index], minRest);
   }
 }
+
