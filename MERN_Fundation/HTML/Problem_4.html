@@ -1,0 +1,78 @@
+<!-- Creating an HTML layout for AccioJob
+Based on the image provided, you are required to create an HTML layout that matches the design. The requirements are as follows:
+
+Element	Description
+h1	The layout must contain at least one heading (h1) tag with the text content "Welcome to Accio Jobs!"
+body	All content should be placed inside the body tag. You may refer to the given image for styling (if necessary) but make sure to include the required h1 tag.
+Instructions:
+
+The layout should closely match the design shown in the provided image.
+Ensure that the HTML code is properly formatted and adheres to best practices.
+The content must be fully responsive and adapt to different screen sizes.
+Use semantic HTML elements wherever applicable.
+Keep the design clean and consistent with proper spacing and alignment.
+Test the layout in multiple browsers to ensure compatibility. -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /*  your css code here. If applicable */
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f2f5;
+      padding: 20px;
+    }
+
+    main {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+    </style>
+</head>
+
+<body>
+	<!-- the entire body must be written by student -->
+	<main>
+	<h1>Welcome to Accio Jobs!</h1>
+    </main>
+		<script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+
+</html>
