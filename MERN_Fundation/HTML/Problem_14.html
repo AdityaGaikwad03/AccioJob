@@ -1,0 +1,57 @@
+<!-- Semantic Navbar & Audios
+Part 1: Navbar
+Your task is to create a semantic navigation bar that meets the following requirements:
+
+Description	Requirement
+Use appropriate semantic tags for structuring the navigation bar	The navigation bar must include exactly three links. Each link must have a valid href attribute.
+Additional Instructions:
+The navigation bar should be enclosed within a 'nav' element.
+The anchor links should be listed within an unordered list.
+Each anchor link should be placed inside a 'li' element, within the unordered list.
+You can use any valid href value for the links.
+Part 2: Audio Section
+Include the following elements in the audio section:
+
+Description	Requirement
+Heading for the audio section	Text: 3 random audios
+Audio tracks with controls	3 tracks with given URLs and controls:
+URL 1: http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3
+URL 2: http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg
+URL 3: http://codeskulptor-demos.commondatastorage.googleapis.com/pang/paza-moduless.mp3
+Ensure the final HTML document follows the above instructions and structure requirements, displaying the navbar and audio section as described. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar and Audio Section</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="https://example.com/home">Home</a></li>
+      <li><a href="https://example.com/about">About</a></li>
+      <li><a href="https://example.com/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Audio Section -->
+  <section>
+    <h2>3 random audios</h2>
+
+    <audio controls src="http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3"></audio>
+    <br>
+
+    <audio controls src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"></audio>
+    <br>
+
+    <audio controls src="http://codeskulptor-demos.commondatastorage.googleapis.com/pang/paza-moduless.mp3"></audio>
+  </section>
+
+  <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
