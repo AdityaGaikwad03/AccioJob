@@ -1,0 +1,52 @@
+<!-- HTML Feedback Form Creation
+Create a form with the heading "Feedback Form". Follow the requirements below:
+
+Input Elements
+Element	ID	Type	Attributes	Label Required
+Name	name	Text	minlength="3", maxlength="50", required	Yes
+Portfolio	portfolio	URL	required	Yes
+Favorite Color	favColor	Color	N/A	Yes
+Likeness	likeness	Range	min="1", max="100"	Yes
+Form Submission
+The form must be submitted using either the "post" or "POST" method. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+</head>
+<body>
+
+  <h1>Feedback Form</h1>
+
+  <form method="POST">
+    
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
+    <br><br>
+
+    <!-- Portfolio -->
+    <label for="portfolio">Portfolio:</label>
+    <input type="url" id="portfolio" name="portfolio" required>
+    <br><br>
+
+    <!-- Favorite Color -->
+    <label for="favColor">Favorite Color:</label>
+    <input type="color" id="favColor" name="favColor">
+    <br><br>
+
+    <!-- Likeness -->
+    <label for="likeness">Likeness:</label>
+    <input type="range" id="likeness" name="likeness" min="1" max="100">
+    <br><br>
+
+    <!-- Submit -->
+    <button type="submit">Submit</button>
+
+  </form>
+
+</body>
+</html>

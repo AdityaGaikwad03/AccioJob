@@ -1,0 +1,112 @@
+<!-- tyled Table
+You have to create a simple table displaying any statistics of your choice (e.g., game stats, CBSE result sheet, Covid stats). Be creative in using colors, borders, collapsing, or width to show clean stats.
+
+Here are the guidelines for your table:
+
+Requirement	Description
+Table Structure	Your table must contain thead, tbody, and tr elements to separate the content.
+Headers	The headers must be placed inside the thead element, using the th tag.
+Body	The body content must be enclosed within the tbody element, using tr and td tags.
+Style	Apply suitable styles to enhance the appearance of the table, including borders, color schemes, etc. The design is up to your creativity. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+thead tr {
+  background-color: #1f5a8c;
+  color: white;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 18px 20px;
+  text-align: left;
+  font-size: 16px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody tr:last-child {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- add table here -->
+<table>
+	<thead>
+		<th>Name</th>
+		<th>KILLS</th>
+		<th>SAVED</th>
+		<th>DEATHS</th>
+		<th>REVIVES</th>
+		<th>WIN</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Hackerman</td>
+			<td>10</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>Cool Doggo</td>
+			<td>13</td>
+			<td>4</td>
+			<td>8</td>
+			<td>7</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>Andrews</td>
+			<td>19</td>
+			<td>2</td>
+			<td>10</td>
+			<td>11</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>Strawberry</td>
+			<td>2</td>
+			<td>9</td>
+			<td>3</td>
+			<td>5</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!-- Nested HTML Tables
+Your task is to create an HTML table layout with multiple nested tables and lists that closely resemble the structure shown in the image:
+
+Tables in Tables
+Here are the requirements:
+
+Requirement	Description
+Nested Tables	Create 4 nested tables within a main table. Follow the image for layout.
+Headers	Each nested table should have specific headers. For example, one table should have "Nested Table 2," "Column 1," "Column 2" as headers.
+Lists	Include a list in one of the tables with the items "List item 1," "List item 2," "List item 3."
+Background Color	One of the cells in the nested tables should have a black background with white text that contains "HTML."
+NOTE	Keep all headings and texts exactly same as they are mentioned in question
+Ensure that your HTML code closely follows the structure in the image, and submit your completed work for evaluation.
+
+ -->
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Nested Tables</title>
+  <style>
+    table, th, td {
+      border: 2px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    .black-cell {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <!-- Left Top Cell with Nested Table 2 -->
+    <td>
+      <table>
+        <th colspan = "2">Nested Table 2</th>
+        <tr>
+          <th><b>Column 1</b></th>
+          <th><b>Column 2</b></th>
+        </tr>
+        <tr>
+          <td>abc</td>
+          <td>def</td>
+        </tr>
+      </table>
+    </td>
+
+    <!-- Right Top Cell with Nested Table 1 -->
+    <td>
+      <table>
+        <th colspan = "2">Nested Table 1</th>
+        <tr>
+          <td>
+            <ul>
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <!-- Left Bottom Cell with Nested Table 3 -->
+    <td>
+      <table>
+        <th colspan = "2">Nested Table 3</th>
+        <tr>
+          <td><a href="#">Nested Table</a></td>
+          <td>Demo Continued</td>
+        </tr>
+      </table>
+    </td>
+
+    <!-- Right Bottom Cell with Nested Table 4 -->
+    <td>
+      <table>
+        <th>Nested Table 4</th>
+        <tr>
+          <td class="black-cell">HTML</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

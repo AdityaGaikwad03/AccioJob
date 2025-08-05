@@ -1,0 +1,100 @@
+<!-- Recreate Online Shopping Size Chart
+Your task is to recreate a size chart similar to the one used in online shopping websites like Myntra. The size chart should be created using HTML and CSS. The size chart should have a header row with specific column names and data rows with specific measurements. The naming of rows and columns should match the provided image. You can use any CSS styles you like, but the structure of the HTML document should follow the provided criteria. Your solution will be evaluated based on the accuracy of the HTML structure and the visual similarity to the provided image
+
+Size Chart
+Acceptance Criteria:
+Requirement	Description
+Header Row	The header row must be in thead and th elements, with specific column names
+Data Rows	The data rows must be wrapped in tbody
+Naming	Naming of rows and columns should be the same as given in the image
+Tags	Appropriate use of tr and td tags should be done
+CSS	CSS part for the table is optional
+Please ensure that the HTML document follows the above criteria, structuring the size chart according to the requirements. -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 40px auto;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      /* Header Row */
+      .header {
+        background-color: #a94442;
+        color: white;
+        font-weight: bold;
+      }
+
+      /* Waist Row */
+      .waist {
+        background-color: #e89b9b;
+      }
+
+      /* Chest Row */
+      .chest {
+        background-color: #e1cfcf;
+      }
+
+      /* Sleeve Row */
+      .sleeve {
+        background-color: #d3d3d3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- the entire body must be written by student -->
+    <table>
+      <thead>
+        <tr class="header">
+          <th>Part</th>
+          <th>XS</th>
+          <th>S</th>
+          <th>M</th>
+          <th>L</th>
+          <th>XL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="waist">
+          <td>Waist</td>
+          <td>25</td>
+          <td>28</td>
+          <td>30</td>
+          <td>31</td>
+          <td>32</td>
+        </tr>
+        <tr class="chest">
+          <td>Chest</td>
+          <td>34</td>
+          <td>34</td>
+          <td>38</td>
+          <td>40</td>
+          <td>41</td>
+        </tr>
+        <tr class="sleeve">
+          <td>Sleeve</td>
+          <td>23</td>
+          <td>24</td>
+          <td>24</td>
+          <td>25</td>
+          <td>25</td>
+        </tr>
+      </tbody>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
