@@ -1,0 +1,85 @@
+<!-- Job Application Form
+Create a Job Application Form with the following specifications. Pay attention to the details of required fields, IDs, and labels. The form should contain the following HTML elements:
+
+Element	Description	ID	Additional Requirements
+Name	Text Input	name	Required
+Email	Email Input	email	Required
+Gender	Radio Buttons		Required, name attribute as 'gender'
+Laptop Brands	Dropdown (Apple, Asus, HP)	laptop	
+Age	Number Input	age	Required
+Date of Birth	Date Input	dob	Required
+Password	Password Input	password	Required
+Portfolio URL	URL Input	portfolio	
+Submit Button	Button		
+Instructions:
+Use the required attribute for all fields marked with an asterisk (*)
+Form should use either 'post' or 'POST' as the method attribute
+All input elements must have corresponding labels with the 'for' attribute set to the id's of the element they belong to
+Make sure to include all necessary elements and attributes as specified above. The form must be built according to the given instructions. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+    <h2>Job Application Form</h2>
+
+    <form action="#" method="POST">
+        <!-- Name -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Gender -->
+        <label>Gender</label><br>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label>
+        <br><br>
+
+        <!-- Laptop Brands -->
+        <label for="laptop">Laptop Brands</label>
+        <select id="laptop" name="laptop">
+            <option value="">--Select a Brand--</option>
+            <option value="Apple">Apple</option>
+            <option value="Asus">Asus</option>
+            <option value="HP">HP</option>
+        </select>
+        <br><br>
+
+        <!-- Age -->
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required>
+        <br><br>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+
+        <!-- Password -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <!-- Portfolio URL -->
+        <label for="portfolio">Portfolio URL</label>
+        <input type="url" id="portfolio" name="portfolio">
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

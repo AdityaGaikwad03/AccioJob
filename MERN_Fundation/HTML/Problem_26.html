@@ -1,0 +1,125 @@
+<!-- HTML Table Creation
+Create a webpage that describes the use of HTML tables. Follow the specific requirements provided below:
+
+General Requirements
+Webpage Title: "HTML Assignment 3"
+Webpage Heading: Center-aligned "HTML Assignment #3"
+All tables should have the class "middle"
+Table 1
+Structure	3 rows, 3 columns
+Classes	Middle row and rightmost column: "center" and "right"
+IDs	Table: "table-1"; Cells: "t11", "t12", "t13"
+Table 2
+Structure	6 rows, 6 columns, 1st row in a single cell
+IDs	Table: "table-2"; First Cell: "t21"
+Attributes	First cell should have a colspan of 6
+Table 3
+Structure	Include an image; First and last rows: green and blue
+IDs	Table: "table-3"; Image Cell: "t-image"
+Image	Image URL
+Styling
+Table Borders: 1px solid black; Spacing: 1px; Cell Padding: 1px
+Background Colors: "green" and "blue" classes
+Example
+Here's how your webpage should look:
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Assignment 3</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            border-spacing: 1px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 1px;
+        }
+        .center {
+            text-align: center;
+        }
+        .right {
+            text-align: right;
+        }
+        .green {
+            background-color: green;
+        }
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading -->
+    <h2 class="center">HTML Assignment #3</h2>
+
+    <!-- Table 1 -->
+    <table id="table-1" class="middle">
+        <tr>
+            <td id="t11">left</td>
+            <td id="t12" class="center">center</td>
+            <td id="t13" class="right">right</td>
+        </tr>
+        <tr>
+            <td>left</td>
+            <td class="center">center</td>
+            <td class="right">right</td>
+        </tr>
+        <tr>
+            <td>left</td>
+            <td class="center">center</td>
+            <td class="right">right</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Table 2 -->
+    <table id="table-2" class="middle">
+        <tr>
+            <td id="t21" colspan="6"></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Table 3 -->
+    <table id="table-3" class="middle">
+        <tr class="green">
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="t-image">
+                <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2013_FallP3/Luthra%20Portfolio/images-1.jpeg" alt="Basketball player" width="300">
+            </td>
+            <td></td>
+        </tr>
+        <tr class="blue">
+            <td colspan="3"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!-- Car Insurance Registration Form
+Create a form that allows users to register for car insurance. The form must include the following fields:
+
+Field	Type	ID	Required
+Name	Text	name	Yes
+Email	Email	email	Yes
+Gender	Radio Buttons	-	Yes
+Car Brands	Dropdown (Options: BMW, Audi, Mercedez)	cars	No
+Car Age	Number	carage	Yes
+Date of Purchase (dop)	Date	dop	Yes
+Password	Password	password	Yes
+Submit Button	Button (type='submit')	-	-
+Instructions:
+Fields marked with 'Yes' in the 'Required' column are mandatory and must have the 'required' attribute.
+Use the appropriate method attribute value for the form. Choose between 'post' or 'POST'.
+The input elements must have IDs corresponding to the given table. For example, the element for selecting car brand should have an ID of 'cars'.
+The radio buttons for gender must have the 'name' attribute set to 'gender'.
+All input elements must have corresponding labels with the 'for' attribute set to the ID of the element they belong to. For example, the label for the input of name should be structured as: "label for='name' Name /label".
+Use a button with the type attribute set to 'submit' for submitting the form.
+Make sure to follow the above instructions carefully to successfully create the car insurance registration form. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Insurance Registration Form</title>
+</head>
+<body>
+    <h2>Car Insurance Registration Form</h2>
+
+    <form action="#" method="POST">
+        <!-- Name -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Gender -->
+        <label>Gender</label><br>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="Other" required>
+        <label for="other">Other</label>
+        <br><br>
+
+        <!-- Car Brands -->
+        <label for="cars">Car Brands</label>
+        <select id="cars" name="cars">
+            <option value="">--Select a Brand--</option>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Mercedez">Mercedez</option>
+        </select>
+        <br><br>
+
+        <!-- Car Age -->
+        <label for="carage">Car Age</label>
+        <input type="number" id="carage" name="carage" required>
+        <br><br>
+
+        <!-- Date of Purchase -->
+        <label for="dop">Date of Purchase</label>
+        <input type="date" id="dop" name="dop" required>
+        <br><br>
+
+        <!-- Password -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
