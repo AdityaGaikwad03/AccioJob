@@ -1,0 +1,59 @@
+<!-- ARIA Role Implementation
+Create an accessible portfolio using ARIA roles to enhance accessibility for users with disabilities.
+
+Instructions:
+Bind the following ARIA roles to HTML tags:
+
+Role	Tag
+img	img
+heading	h1
+list	ul
+listitem	li
+navigation	nav
+Requirements
+Include a heading, navigation bar, image, brief description, and a list with at least three items.
+All HTML tags must have the respective ARIA roles from the table.
+The document must have a proper title and linked CSS file.
+The img tag must include an alt attribute.
+For more information on ARIA roles, click here. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Heading with ARIA role -->
+    <h1 role="heading">My Accessible Portfolio</h1>
+
+    <!-- Navigation bar with ARIA role -->
+    <nav role="navigation">
+        <ul role="list">
+            <li role="listitem"><a href="#about">About</a></li>
+            <li role="listitem"><a href="#projects">Projects</a></li>
+            <li role="listitem"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Image with ARIA role -->
+    <img src="profile.jpg" alt="Profile photo of John Doe" role="img">
+
+    <!-- Brief description -->
+    <p>
+        Hello! I'm John Doe, a web developer passionate about creating inclusive and accessible web experiences for everyone.
+    </p>
+
+    <!-- List of skills with ARIA roles -->
+    <h2>My Skills</h2>
+    <ul role="list">
+        <li role="listitem">HTML & CSS</li>
+        <li role="listitem">JavaScript</li>
+        <li role="listitem">Accessibility Best Practices</li>
+    </ul>
+
+</body>
+</html>

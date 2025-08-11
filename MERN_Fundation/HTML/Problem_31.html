@@ -1,0 +1,130 @@
+<!-- Develop a Web Page with Specific Requirements
+Preview:
+
+Your task is to create a web page that meets the following requirements:
+
+Headings
+Create the following headings with the specified content and styles:
+
+Tag	Content	Style
+h1	My Playlist	text-align: center
+h2	Now Playing...	text-align: center
+h2	MP3 songs	text-align: center
+Songs Playlist
+Create a playlist of songs using the following tags and attributes:
+
+Tag	Attribute	Style
+ul	-	-
+li (5 times)	-	list-style-type: none
+a	target: _blank	text-decoration-line: none
+Video and Audio Player
+Create video and audio players using the specified tags and attributes. Apply specific styles to container classes:
+
+Tag	Attribute	Container Class	Style
+video/audio	controls	.player_one/.player_two	background-color: rgb(255, 255, 255); padding; border-radius
+source	src, type	-	-
+Additional CSS
+Apply additional styles to specific tags:
+
+Tag	Style
+body	background-color: rgb(204, 204, 204)
+Resources/Links
+Tag	Link
+Audio	https://www.pagalworld.com.se/files/download/id/64630
+Video	https://www.w3schools.com/tags/movie.mp4
+Required Tags
+Ensure that the page includes at least one of each of the following tags: h1, div, ul, li, a, h2, video, source, audio -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Playlist</title>
+    <style>
+        body {
+            background-color: rgb(204, 204, 204);
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        /* Playlist box */
+        .playlist {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 8px;
+            width: 80%;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style-type: none;
+            margin: 5px 0;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        /* Media player containers */
+        .media-box,
+        .player_one,
+        .player_two {
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .media-box {
+            border: 2px solid black;
+            width: 80%;
+            margin: 20px auto;
+        }
+        video, audio {
+            width: 100%;
+            display: block;
+        }
+        .audio-title {
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Title -->
+    <h1>My Playlist</h1>
+
+    <!-- Playlist Box -->
+    <div class="playlist">
+        <ul>
+            <li><a href="#" target="_blank">Song 1</a></li>
+            <li><a href="#" target="_blank">Song 2</a></li>
+            <li><a href="#" target="_blank">Song 3</a></li>
+            <li><a href="#" target="_blank">Song 4</a></li>
+            <li><a href="#" target="_blank">Song 5</a></li>
+        </ul>
+    </div>
+
+    <!-- Now Playing -->
+    <h2>Now Playing...</h2>
+
+    <!-- Video + Audio Box -->
+    <div class="media-box player_one">
+        <video controls>
+            <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h2>MP3 songs</h2>
+        <div class="audio-title player_two">Maan Meri Jaan</div>
+        <audio controls>
+            <source src="https://www.pagalworld.com.se/files/download/id/64630" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+</body>
+</html>
