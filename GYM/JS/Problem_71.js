@@ -56,5 +56,5 @@ function logic(input) {
   const N = parseInt(inputArr[0]);
 
   // let N = parseInt(inputArr[i]);
-  console.log(ClockAngle(N));
+  console.log(ClockAngle(N)); 
 }
