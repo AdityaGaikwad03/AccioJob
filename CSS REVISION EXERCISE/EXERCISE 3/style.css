@@ -1,0 +1,209 @@
+/* === Reset & Base === */
+/* TODO: Universal selector to reset margin, padding, and set box-sizing */
+* {
+  /* your code */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TODO: Style the body
+   - font-family
+   - text color
+   - background-color */
+body {
+  /* your code */
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* TODO: .shell container
+   - max-width
+   - center align with margin
+   - padding */
+.shell {
+  /* your code */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* === Hero Section === */
+/* TODO: #hero
+   - text-align center
+   - margin bottom */
+#hero {
+  /* your code */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* TODO: .page-title
+   - font size
+   - margin bottom */
+.page-title {
+  /* your code */
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* TODO: .page-subtitle
+   - muted text color
+   - margin bottom */
+.page-subtitle {
+  /* your code */
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* TODO: .hero-banner
+   - background-image (use a placeholder image)
+   - background-size, background-position
+   - background-attachment: fixed
+   - height and border-radius */
+.hero-banner {
+  /* your code */
+  background-image: url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRldmVsb3BlcnxlbnwwfDB8MHx8fDA%3D");
+  background-size: cover;
+  background-position: left;
+  /* background-attachment: fixed; */
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* === Panel Set === */
+/* TODO: .panel-set
+   - vertical spacing between panels */
+.panel-set {
+  /* your code */
+  margin-bottom: 1.5rem;
+}
+
+/* TODO: .callout base
+   - background-color: white
+   - border-left
+   - padding
+   - border-radius
+   - margin bottom */
+.callout {
+  /* your code */
+  background-color: white;
+  border-left: 4px solid transparent;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+/* TODO: .callout-title
+   - font size
+   - margin bottom */
+.callout-title {
+  /* your code */
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* TODO: .callout-text
+   - font size
+   - line-height
+   - margin bottom */
+.callout-text {
+  /* your code */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+/* Variants */
+/* TODO: .info: blue tones */
+/* TODO: .success: green tones */
+/* TODO: .warning: amber tones */
+/* TODO: .danger: red tones */
+/* TODO: .note: gray tones */
+.info {
+  /* your code */
+  border-left-color: #007bff;
+  background-color: #d6eaff;
+  color: #007bff;
+}
+.success {
+  /* your code */
+  border-left-color: #28a745;
+  background-color: #d4edda;
+  color: #155724;   
+}
+.warning {
+  /* your code */
+  border-left-color: #ffc107;
+  background-color: #fff3cd;
+  color: #856404;
+}
+.danger {
+  /* your code */
+  border-left-color: #dc3545;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.note {
+  /* your code */
+  border-left-color: #6c757d;
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+/* TODO: .callout-list
+   - remove default list style
+   - add padding
+   - spacing */
+.callout-list {
+  /* your code */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* TODO: .callout-item
+   - spacing between items
+   - optional subtle border-left */
+.callout-item {
+  /* your code */
+  padding-left: 0.5rem;
+  border-left: 3px solid lightgray;
+}
+
+.callout-item + .callout-item {
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+/* TODO: #site-footer
+   - background-color
+   - text-align
+   - padding
+   - margin top */
+#site-footer {
+  /* your code */
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.footer-text {
+  /* your code */
+  color: #666;
+}
+.footer-link {
+  /* your code */
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Grouping example */
+/* TODO: Group .callout-title and .footer-text for shared letter-spacing */
+.callout-title,
+.footer-text {
+  /* your code */
+  letter-spacing: 0.02em;
+}

@@ -1,0 +1,150 @@
+/* TODO: Use universal selector to reset margin and padding for all elements */
+* {
+  /* your code here */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TODO: Style the body element
+   - font-family
+   - text color
+   - background color
+   - line-height */
+body {
+  /* your code here */
+  font-family: 'Courier New', Courier, monospace;
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* TODO: Style the main header (#main-header)
+   - background color
+   - text color
+   - padding
+   - center text */
+#main-header {
+  /* your code here */
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* TODO: Style the page title (.page-title)
+   - larger font size
+   - bold weight
+   - some letter spacing */
+.page-title {
+  /* your code here */
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* TODO: Style the logo image (.logo)
+   - set width
+   - add margin below */
+.logo {
+  /* your code here */
+  width: 100px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+}
+
+/* TODO: Style the profile section (.profile)
+   - background white
+   - padding
+   - width
+   - margin auto
+   - border-radius
+   - subtle box-shadow */
+.profile {
+  /* your code here */
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* TODO: Style the section titles (.section-title)
+   - larger font size
+   - distinct color
+   - bottom margin */
+.section-title {
+  /* your code here */
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* TODO: Style the description paragraphs (.description)
+   - font size
+   - color
+   - margin-bottom */
+.description {
+  /* your code here */
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* TODO: Style the skills section (.skills)
+   - similar to .profile for consistency */
+.skills {
+  /* your code here */
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* TODO: Grouping selector for .description and .skill-item
+   - base font-size
+   - text color */
+.description,
+.skill-item {
+  /* your code here */
+  font-size: 1em;
+  color: #666;
+}
+
+/* TODO: Style the skill list (.skill-list)
+   - remove default list style
+   - add spacing between items */
+.skill-list {
+  /* your code here */
+  list-style: none;
+  padding: 0;
+}
+
+.skill-item {
+  margin-bottom: 5px;
+}
+
+/* TODO: Style the footer (#main-footer)
+   - background color
+   - text color
+   - center text
+   - padding */
+#main-footer {
+  /* your code here */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* TODO: Style the footer link (.footer-link)
+   - text color
+   - remove underline */
+.footer-link {
+  /* your code here */
+  color: #fff;
+  text-decoration: none;
+}
