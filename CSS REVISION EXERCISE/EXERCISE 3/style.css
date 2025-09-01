@@ -105,7 +105,8 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* TODO: .callout-text
+/* TODO: .callout-text.
+
    - font size
    - line-height
    - margin bottom */
@@ -127,30 +128,35 @@ body {
   border-left-color: #007bff;
   background-color: #d6eaff;
   color: #007bff;
+  box-shadow: 0 3px 4px rgba(69, 75, 80, 0.1);
 }
 .success {
   /* your code */
   border-left-color: #28a745;
   background-color: #d4edda;
-  color: #155724;   
+  color: #155724;
+  box-shadow: 0 3px 4px rgba(69, 75, 80, 0.1);
 }
 .warning {
   /* your code */
   border-left-color: #ffc107;
   background-color: #fff3cd;
   color: #856404;
+  box-shadow: 0 3px 4px rgba(69, 75, 80, 0.1);
 }
 .danger {
   /* your code */
   border-left-color: #dc3545;
   background-color: #f8d7da;
   color: #721c24;
+  box-shadow: 0 3px 4px rgba(69, 75, 80, 0.1);
 }
 .note {
   /* your code */
   border-left-color: #6c757d;
   background-color: #e2e3e5;
   color: #383d41;
+  box-shadow: 0 3px 4px rgba(69, 75, 80, 0.1);
 }
 
 /* TODO: .callout-list
