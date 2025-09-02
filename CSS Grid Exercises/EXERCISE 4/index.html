@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 4 — Pricing Table</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <section class="section" id="pricing">
+    <header class="section-header">
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-subtitle">Choose the plan that fits your team today.</p>
+    </header>
+
+    <div class="pricing-grid" id="pricing-grid">
+      <!-- Plan 1 -->
+      <article class="plan">
+        <header class="plan-head">
+          <h3 class="plan-name">Basic</h3>
+          <p class="plan-tagline">For individual projects</p>
+        </header>
+        <div class="plan-price">
+          <span class="currency">₹</span><span class="amount">0</span><span class="cycle">/mo</span>
+        </div>
+        <ul class="plan-features">
+          <li>1 project</li>
+          <li>Community support</li>
+          <li>Basic analytics</li>
+        </ul>
+        <a href="#" class="plan-cta" aria-label="Choose Basic plan">Get Started</a>
+      </article>
+
+      <!-- Plan 2 (recommended) -->
+      <article class="plan plan--featured" aria-label="Recommended plan: Pro">
+        <div class="badge">Recommended</div>
+        <header class="plan-head">
+          <h3 class="plan-name">Pro</h3>
+          <p class="plan-tagline">For growing teams</p>
+        </header>
+        <div class="plan-price">
+          <span class="currency">₹</span><span class="amount">999</span><span class="cycle">/mo</span>
+        </div>
+        <ul class="plan-features">
+          <li>Unlimited projects</li>
+          <li>Email support</li>
+          <li>Advanced analytics</li>
+        </ul>
+        <a href="#" class="plan-cta" aria-label="Choose Pro plan">Start Pro</a>
+      </article>
+
+      <!-- Plan 3 -->
+      <article class="plan">
+        <header class="plan-head">
+          <h3 class="plan-name">Business</h3>
+          <p class="plan-tagline">For org-wide rollouts</p>
+        </header>
+        <div class="plan-price">
+          <span class="currency">₹</span><span class="amount">2999</span><span class="cycle">/mo</span>
+        </div>
+        <ul class="plan-features">
+          <li>SSO & roles</li>
+          <li>Priority support</li>
+          <li>Custom reports</li>
+        </ul>
+        <a href="#" class="plan-cta" aria-label="Choose Business plan">Contact Sales</a>
+      </article>
+    </div>
+  </section>
+</body>
+</html>

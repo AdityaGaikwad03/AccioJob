@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 3 — Blog Cards Grid</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <section class="section" id="blog-section">
+    <header class="section-header">
+      <h2 class="section-title">Latest from the Blog</h2>
+      <p class="section-subtitle">Insights, tutorials, and product updates.</p>
+    </header>
+
+    <div class="blog-grid" id="blog-grid">
+      <!-- Featured card (should span wider on desktop) -->
+      <article class="card blog-card featured" id="post-0">
+        <img class="card-img" src="https://picsum.photos/800/420?blog0" alt="Cover" />
+        <div class="card-body">
+          <h3 class="card-title">Launching Our New Design System</h3>
+          <p class="card-excerpt">A closer look at the principles and patterns that power our UI across web and mobile.</p>
+          <div class="meta-row">
+            <span class="meta">Design</span>
+            <a class="read-more" href="#">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Regular cards -->
+      <article class="card blog-card" id="post-1">
+        <img class="card-img" src="https://picsum.photos/800/420?blog1" alt="Cover" />
+        <div class="card-body">
+          <h3 class="card-title">Optimizing Bundle Size</h3>
+          <p class="card-excerpt">Practical strategies to cut JS bloat without sacrificing features.</p>
+          <div class="meta-row">
+            <span class="meta">Engineering</span>
+            <a class="read-more" href="#">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card blog-card" id="post-2">
+        <img class="card-img" src="https://picsum.photos/800/420?blog2" alt="Cover" />
+        <div class="card-body">
+          <h3 class="card-title">Behind the Scenes: Uptime</h3>
+          <p class="card-excerpt">How we monitor, alert, and respond to keep things running.</p>
+          <div class="meta-row">
+            <span class="meta">Ops</span>
+            <a class="read-more" href="#">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card blog-card" id="post-3">
+        <img class="card-img" src="https://picsum.photos/800/420?blog3" alt="Cover" />
+        <div class="card-body">
+          <h3 class="card-title">Writing Accessible Components</h3>
+          <p class="card-excerpt">ARIA, focus management, and keyboard UX—made approachable.</p>
+          <div class="meta-row">
+            <span class="meta">Accessibility</span>
+            <a class="read-more" href="#">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card blog-card" id="post-4">
+        <img class="card-img" src="https://picsum.photos/800/420?blog4" alt="Cover" />
+        <div class="card-body">
+          <h3 class="card-title">Product Roadmap: Q4</h3>
+          <p class="card-excerpt">What we’re building next and why it matters.</p>
+          <div class="meta-row">
+            <span class="meta">Product</span>
+            <a class="read-more" href="#">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card blog-card" id="post-5">
+        <img class="card-img" src="https://picsum.photos/800/420?blog5" alt="Cover" />
+        <div class="card-body">
+          <h3 class="card-title">Customer Story: Team Nova</h3>
+          <p class="card-excerpt">How a fast-growing startup scaled workflows with our platform.</p>
+          <div class="meta-row">
+            <span class="meta">Case Study</span>
+            <a class="read-more" href="#">Read →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</body>
+</html>
