@@ -1,0 +1,78 @@
+<!-- Your task is to create a layout consisting of three colored blocks inside a container using the box model in CSS. You must use div elements and specific classes as per the guidelines below.
+
+output
+
+Class Requirements
+Class Name	Description
+container	The main container that holds the blocks. It should be centered and have some padding and a border.
+red, green, yellow	Three blocks of colors red, green, and yellow. They should be displayed inline inside the container.
+Instructions and Hints
+Use div elements to create the layout.
+The container should have a specific width and a rounded border.
+Each block should be a circle and have a specific size.
+Pay attention to the colors and positioning of the blocks.
+Make use of properties like text-align, border-radius, background-color, and display to achieve the desired appearance.
+Follow the example image closely to match the layout.
+Ensure your solution aligns with the provided image. Focus on the structure and styling, and be mindful of the required classes and properties. -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<style>/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.container {
+  width: 400px;
+  margin: 50px auto;          /* center the container */
+  padding: 20px;
+  text-align: center;         /* align children inline at center */
+  border: 2px solid #333;
+  border-radius: 15px;        /* rounded container */
+  background-color: gray;
+}
+
+/* Common block styles */
+.container div {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 50%;         /* make circle */
+}
+
+/* Specific colors */
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+</style>
+</head>
+
+<body>
+	<!-- the entire body must be written by student -->
+	<div class = "container">
+		<div class = "green"></div>
+		<div class = "yellow"></div>
+		<div class = "red"></div>
+	</div>
+    <script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+
+</html>
