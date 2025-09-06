@@ -1,0 +1,113 @@
+<!-- Create a Book Library using HTML and CSS
+Create a book library page that displays a collection of books. The final output should look like the image below:
+
+output
+
+Resources:
+Use the following image links for the book covers:
+
+Book Title	Image Link
+Spy in the Amber	Image Link
+Sacred Games	Image Link
+Byomkesh Bakshi	Image Link
+Requirements:
+Element	Description	Attributes & Style
+Body	Background for the entire page	Background color: #f8f8f8
+Library (class: book-library)	Container for the collection of books	Background color: #ffffff; Other CSS styles as required
+Book Block (class: book)	Block for each book including image, title, author, and price	Author color: #777777; Price-block color: #2ecc71
+Note:
+Use class book-library for the collection of books.
+Use class book for each book block.
+Make sure to apply all required CSS styles mentioned above. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Library</title>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .book-library {
+      background-color: #ffffff;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .book {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .book:hover {
+      transform: scale(1.05);
+    }
+
+    .book img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .book h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    .book p.author {
+      color: #777777;
+      margin: 5px 0;
+    }
+
+    .book p.price {
+      color: #2ecc71;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center; margin-bottom:20px;">📚 My Book Library</h1>
+  
+  <div class="book-library">
+    <div class="book">
+      <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Spy-in-the-Amber-by-Manohar-Malgonkar.jpg" alt="Spy in the Amber">
+      <h3>Spy in the Amber</h3>
+      <p class="author">By Manohar Malgonkar</p>
+      <p class="price">₹350</p>
+    </div>
+
+    <div class="book">
+      <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Sacred-Games-by-Vikram-Chandra.jpg" alt="Sacred Games">
+      <h3>Sacred Games</h3>
+      <p class="author">By Vikram Chandra</p>
+      <p class="price">₹499</p>
+    </div>
+
+    <div class="book">
+      <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Byomkesh-Bakshi-by-Sharadindu-Bandyopadhyay.jpg" alt="Byomkesh Bakshi">
+      <h3>Byomkesh Bakshi</h3>
+      <p class="author">By Sharadindu Bandyopadhyay</p>
+      <p class="price">₹299</p>
+    </div>
+  </div>
+</body>
+</html>
