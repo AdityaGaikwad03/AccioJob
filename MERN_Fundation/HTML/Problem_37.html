@@ -1,0 +1,131 @@
+<!-- Create a Basic News Webpage Layout
+In this task, you will create a basic news webpage layout that matches the provided image.
+
+output
+
+Resources:	
+Pictorial News Images:	
+Image_one
+Image_two
+Image_three
+Colors:	
+header-background-color : #011e29
+
+body-background-color : #f5f5f5
+
+Instructions:	
+Create a webpage layout that matches the provided image. Your HTML and CSS must contain the following:
+1.	Use appropriate tags like header, div, h3, ul, li, h2, p, img.
+2.	Style the header with the class .header and ensure it has center alignment, padding, and the provided background color.
+3.	For the "Latest News" section, use a div with the class .latest-news-section. Inside this div, use ul and li tags, and make sure to have three items. Style this section with the provided background color, padding, and width.
+4.	For the pictorial news section, use a div with the class .pictorial-news-section. Ensure the content is centered and style this section with background-color, padding, width, text-align, and border-radius as appropriate.
+5.	Apply the provided colors to the header and body.
+Evaluation: Your webpage will be evaluated based on the correct use of HTML tags, CSS styles, and the overall layout. Refer to the provided image and resources to match the styling accurately. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaw's News</title>
+<style>
+    /*  your css code here. If applicable */
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* Header */
+    .header {
+      background-color: #011e29;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Layout wrapper */
+    .content {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+	  gap : 10px
+    }
+
+    /* Latest News Section */
+    .latest-news-section {
+      background-color: white;
+      padding: 15px;
+      width: 20%;
+      border-radius: 10px;
+    }
+
+    /* Main Article Section */
+    .main-article {
+      background-color: white;
+      padding: 15px;
+      width: 50%;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    /* Pictorial News Section */
+    .pictorial-news-section {
+      background-color: white;
+      padding: 15px;
+      width: 20%;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .pictorial-news-section img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Shaw's News</h1>
+  </header>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Latest News Section -->
+    <div class="latest-news-section">
+      <h3>Latest News Articles</h3>
+      <ul>
+        <li>Article 1</li>
+        <li>Article 2</li>
+        <li>Article 3</li>
+      </ul>
+    </div>
+
+    <!-- Main Article Section -->
+    <div class="main-article">
+      <h2>Main Article</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed auctor, magna eu fringilla malesuada, ipsum risus eleifend est, 
+        non feugiat quam augue euismod eros. Sed malesuada, magna eu fringilla 
+        malesuada, ipsum risus eleifend est, non feugiat quam augue euismod eros.
+      </p>
+    </div>
+
+    <!-- Pictorial News Section -->
+    <div class="pictorial-news-section">
+      <h3>Pictorial News</h3>
+      <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/delhi_rains_1674974112847_1674981888135_1674981888135.jpeg" alt="Pictorial News 1">
+      <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/ADANI-INDIA-GAUTAM-ADANI-0_1675011651023_1675011651023_1675011672003_1675011672003.JPG" alt="Pictorial News 2">
+      <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/FRANCE-REFORM-PENSIONS-31_1675022359706_1675022359706_1675022383851_1675022383851.JPG" alt="Pictorial News 3">
+    </div>
+
+  </div>
+
+</body>
+</html>
