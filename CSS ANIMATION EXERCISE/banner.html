@@ -1,0 +1,71 @@
+<!-- sliding banner (text auto slide) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html{
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;   
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+           
+        .banner{ 
+            width: 50vh;
+            height: 100px;
+            border: 2px solid black;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(241, 57, 25, 0.792);
+        }
+        .text{
+            font-size: 95px;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            white-space: nowrap;
+            position: absolute;
+            animation: slide 5s linear infinite;
+        }
+        
+        .text2{
+            font-size: 90px;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            white-space: nowrap;
+            position: absolute;
+            animation: slide2 4s linear infinite;
+        }
+
+        @keyframes slide{
+            0%{
+                left: 100%;    
+            }
+            100%{
+                left: -100%;
+            }
+        }
+        
+        @keyframes slide2{
+            0%{
+                left: -100%;    
+            }
+            100%{
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="text2">🌳🌳🌳</div>
+        <div class="text">🚓🚓🚓 </div>
+    </div>
+</body>
+</html>
