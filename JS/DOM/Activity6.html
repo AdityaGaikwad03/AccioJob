@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "mybox" class = "box blue shadow">I'm a box</div>
+    <button id = "add">Add "highlight"</button>
+    <button id = "remove">Remove "blue"</button>
+    <button id = "toggle">Toggle "rounded"</button>
+    <button id = "check">Check "shadow"</button>
+
+    <script>
+        let mybox = document.getElementById("mybox");
+        let add = document.getElementById("add");
+        let remove = document.getElementById("remove");
+        let toggle = document.getElementById("toggle");
+        let check = document.getElementById("check");
+       
+        let p = document.createElement("p");
+            document.body.appendChild(p);
+
+        add.addEventListener('click',()=>{
+            mybox.classList.add("highlight");
+            p.textContent = "Class 'highlight' added";
+        });
+
+        remove.addEventListener('click',()=>{
+            mybox.classList.remove("blue");
+            p.textContent = "Class 'blue' removed";
+        });
+
+        toggle.addEventListener('click',()=>{
+            mybox.classList.toggle("rounded");
+            p.textContent = "Class 'rounded' toggled";
+        });
+
+        check.addEventListener('click',()=>{
+            let hasShadow = mybox.classList.contains("shadow");
+            p.textContent = `Box has class 'shadow': ${hasShadow}`;
+        });
+    </script>
+</body>
+</html>

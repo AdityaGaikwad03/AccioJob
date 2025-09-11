@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "actionBtn" type = "button">click Me</button>
+    <div id="output"></div>
+    <script>
+        let btn = document.getElementById("actionBtn");
+        let op = document.getElementById("output");
+
+        btn.addEventListener('click',()=>{
+            op.setAttribute("class","active");
+            op.textContent = "Class attribute added";
+        })
+
+        btn.addEventListener('dblclick',()=>{
+            let type = btn.getAttribute("type");
+            op.textContent = `Type attribute value is: ${type}`;
+        })
+
+        btn.addEventListener('contextmenu',(e)=>{
+                op.removeAttribute("class");
+                op.textContent = "Class attribute removed";
+        })
+    </script>
+</body>
+</html>
+
+

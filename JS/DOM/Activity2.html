@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "add-text">Add plain text</button>
+    <button id = "add-html">Add HTML content</button>
+    <div id = "output"></div>
+    <script>
+        let text = document.getElementById("add-text");
+        let html = document.getElementById("add-html");
+        let output = document.getElementById("output");
+        text.addEventListener('click', ()=> {
+            output.textContent = "<h3>This is a new heading</h3>\n";
+        });
+        html.addEventListener('click', ()=>{
+            output.innerHTML = "<h3>This is a new heading</h3>";
+        })
+    </script>
+</body>
+</html>
