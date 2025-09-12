@@ -1,0 +1,82 @@
+<!-- DOM Exercises
+Assignment 1: Interactive FAQ Section
+Scenario: You are building a FAQ section for a website. When a question is clicked, its answer should toggle (show or hide).
+Instructions:
+Create a list of questions with their corresponding answers.
+Initially, the answers should be hidden.
+Clicking a question should toggle its answer's visibility.
+Solution: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ Section</title>
+  <style>
+    .answer {
+      display: none; /* Hide answers by default */
+      color: gray;
+      margin-left: 20px;
+    }
+    .question {
+      cursor: pointer; /* Indicate clickable element */
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .question:hover {
+      color: rgb(153, 153, 175); /* Change color on hover for better UX */
+      text-decoration: underline;
+    }
+    #faq {
+      max-width: 600px;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+        line-height: 1.6;
+        font-size: 16px;
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    #faq div {
+      margin-bottom: 15px;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <div id="faq">
+    <div>
+      <div class="question">What is JavaScript?</div>
+      <div class="answer">JavaScript is a programming language for the web.</div>
+    </div>
+    <div>
+      <div class="question">What is the DOM?</div>
+      <div class="answer">The DOM is the Document Object Model of a webpage.</div>
+    </div>
+    <div>
+      <div class="question">What is an event listener?</div>
+      <div class="answer">An event listener listens for and reacts to user interactions.</div>
+    </div>
+  </div>
+
+  <script>
+    // Select all question elements
+    const questions = document.querySelectorAll('.question');
+    questions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>

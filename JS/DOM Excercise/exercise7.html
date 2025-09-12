@@ -1,0 +1,45 @@
+<!-- ### **Assignment 2: Real-Time Character Counter**
+
+**Scenario:** Create a text input field where users can type a message. Show the real-time character count below the input. Limit the input to 100 characters, and display a warning when the limit is reached and stop the user from typing further. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Character Counter</title>
+  <style>
+    .warning {
+      color: red; /* Style for warning message */
+    }
+  </style>
+</head>
+<body>
+  <h1>Type your message</h1>
+  <textarea id="message" rows="4" cols="50" placeholder="Type here..."></textarea>
+  <div>
+    <span id="charCount">0</span>/100 characters
+    <span id="warning" class="warning" style="display: none;">Character limit reached!</span>
+  </div>
+
+  <script>
+    const messageInput = document.getElementById('message');
+    const charCount = document.getElementById('charCount');
+    const warning = document.getElementById('warning');
+
+    messageInput.addEventListener('input', () => {
+      const currentLength = messageInput.value.length;
+      charCount.textContent = currentLength;
+
+      if (currentLength === 100) {
+        warning.style.display = 'inline';
+        messageInput.value = messageInput.value.substring(0, 100); 
+        messageInput.setAttribute('maxlength', '100');
+      } else {
+        warning.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
