@@ -1,0 +1,51 @@
+<!-- ## 🧪 **Exercise 3: Update Hero Section Title and Style on Button Click**
+
+---
+
+### 🎯 **Task:**
+
+You're working on the **hero section** of a portfolio homepage. When a user clicks a button, the main title should update and get visually highlighted.
+
+---
+
+### 🧾 **Instructions:**
+
+- Use `getElementById()` or `querySelector()` to select the `<h1 id="hero-title">`.
+- When the user clicks the button:
+    - Change the text to `"Welcome to My Portfolio"` using `textContent`.
+    - Add a class `"highlight"` to the `<h1>` using `classList.add()`. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .highlight {
+        color: #007bff;
+        font-size: 2.5rem;
+        transition: 0.3s ease;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="hero">
+      <h1 id="hero-title">Hello World!</h1>
+      <button id="update-btn">Update Title</button>
+    </section>
+    <script>
+      let heroTitle = document.getElementById("hero-title");
+      let updateBtn = document.getElementById("update-btn");
+
+      updateBtn.addEventListener("click", () => {
+        heroTitle.textContent = "Welcome to My Portfolio";
+        heroTitle.classList.add("highlight");
+      });
+      updateBtn.addEventListener("dblclick", () => {
+        heroTitle.textContent = "Hello World!";
+        heroTitle.classList.remove("highlight");
+      });
+    </script>
+  </body>
+</html>

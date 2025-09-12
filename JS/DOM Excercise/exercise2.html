@@ -1,0 +1,38 @@
+<!-- ## 🧪 **Exercise 2: Add Testimonial Section Dynamically**
+
+---
+
+### 🎯 **Task:**
+
+You're building a **landing page** for a product. The testimonial section should be created and added dynamically using JavaScript when the page loads.
+
+---
+
+### 🧾 **Instructions:**
+
+- Use `createElement()` to create a new `<p>` element.
+- Use `textContent` to add this text:
+    
+    `"This product changed my life!"`
+    
+- Use `appendChild()` to add this `<p>` inside the existing `<div id="testimonials">`. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="testimonials">
+      <h2>What Our Users Say</h2>
+    </div>
+    <script>
+        let testimonials = document.getElementById("testimonials");
+        let p = document.createElement("p");
+        p.textContent = "This product changed my life!";
+        testimonials.appendChild(p);
+    </script>
+  </body>
+</html>

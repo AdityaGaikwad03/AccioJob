@@ -1,0 +1,48 @@
+<!-- ## 🧪 **Exercise 4: Add and Remove Newsletter Pop-up**
+
+---
+
+### 🎯 **Task:**
+
+On your blog website, a **newsletter pop-up** should appear when the user clicks the “Show Newsletter” button, and disappear when they click “Close”.
+
+---
+
+### 🧾 **Instructions:**
+
+- When the **"Show Newsletter"** button is clicked:
+    - Use `createElement()` to create a `<div>` with text: `"Subscribe to our Newsletter"`.
+    - Give it an `id="newsletter"` and add it to `<body>` using `appendChild()`.
+- When the **"Close"** button is clicked:
+    - Use `getElementById()` and `removeChild()` to remove the newsletter popup from the DOM. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="show-btn">Show Newsletter</button>
+<button id="close-btn">Close</button>
+<script>
+    let showBtn = document.getElementById("show-btn");
+    let closeBtn = document.getElementById("close-btn");
+
+    showBtn.addEventListener("click", () => {
+        let newsletter = document.createElement("div");
+        newsletter.id = "newsletter";
+        newsletter.textContent = "Subscribe to our Newsletter";
+        document.body.appendChild(newsletter);
+    });
+
+    closeBtn.addEventListener("click", () => {
+        let newsletter = document.getElementById("newsletter");
+        if (newsletter) {
+            document.body.removeChild(newsletter);
+        }
+    });
+</script>
+</body>
+</html>

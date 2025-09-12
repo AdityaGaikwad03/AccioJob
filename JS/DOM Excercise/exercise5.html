@@ -1,0 +1,42 @@
+<!-- ## 🧪 **Exercise 5: Toggle Dark Theme on Button Click**
+
+---
+
+### 🎯 **Task:**
+
+You’re building a **dashboard or portfolio site** that supports light and dark themes. When the user clicks the “Toggle Theme” button, the `dark-theme` class should be toggled on the `<body>` element.
+
+---
+
+### 🧾 **Instructions:**
+
+- Select the `<body>` element.
+- When the button is clicked:
+    - Use `classList.toggle()` to add or remove the `"dark-theme"` class on `<body>`. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <button id="theme-toggle-btn">Toggle Theme</button>
+<script>
+    let themeToggleBtn = document.getElementById("theme-toggle-btn");
+    themeToggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+    });
+</script>
+</body>
+</html>
+</body>
+</html>

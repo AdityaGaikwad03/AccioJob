@@ -1,0 +1,41 @@
+<!--  Exercise 1: Highlight Active Navigation Tab
+  ### 🎯 **Task:**
+
+You are building a **navbar** for a personal portfolio website. When the page loads, the "Home" tab should appear highlighted to indicate that it is the active page.
+
+---
+
+### 🧾 **Instructions:**
+
+- Select the `<li>` element with `id="home-tab"` using a DOM selector.
+- Add a CSS class called `"active-tab"` to that element using `classList.add()`.
+
+This class will be used to visually highlight the active tab. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .active-tab {
+        font-weight: bold;
+        color: royalblue;
+        text-decoration: underline;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="navbar">
+      <li id="home-tab">Home</li>
+      <li>About</li>
+      <li>Projects</li>
+      <li>Contact</li>
+    </ul>
+    <script>
+      let homeTab = document.getElementById("home-tab");
+      homeTab.classList.add("active-tab");
+    </script>
+  </body>
+</html>
