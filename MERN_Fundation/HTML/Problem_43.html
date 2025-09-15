@@ -1,0 +1,42 @@
+<!-- Flexbox CSS Styling
+You have HTML markup defined, implement the css.
+
+Details:	
+Use flexbox properties on the element holder.
+Make the items appear in a row, such that all elements are evenly placed in the row.
+Also put the property on holder such that if more items are added in holder, they don't squash, and instead just go on the next row.
+Note:	Do not change the HTML markup, only change the CSS code of holder. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+    <style>
+
+/* Your CSS Code here. */
+.holder {
+  display: flex;           /* Enable flexbox */
+  flex-wrap: wrap;         /* Allow items to move to next row */
+  justify-content: space-evenly; /* Evenly place items horizontally */
+  align-items: center;     /* Center items vertically (optional) */
+  gap: 10px;               /* Optional: space between items */
+}
+
+    </style>
+</head>
+
+<body>
+<div class="holder">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+</div>
+	<!-- the entire body must be written by student -->
+    <script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+
+</html>

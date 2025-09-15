@@ -1,0 +1,64 @@
+<!-- Flexbox Layout Creation
+You need to implement the CSS using flexbox as shown below in the images:
+
+Layout Example
+For flex-wrap illustration:
+Overflow Example
+Note:	Make the items appear in a row, such that there is a space between the elements and the first and last ones are touching the ends of the screens. Also, set the properties on the holder class such that if more items are added in the holder they don't squash, and rather just go on the next row.
+Your Task:	Your task is to add appropriate CSS to the holder and item classes to achieve the required layout. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+    <style>
+        /* Holder container */
+.holder {
+  display: flex;                 /* Enable flexbox */
+  flex-wrap: wrap;               /* Allow items to wrap to next row */
+  justify-content: space-between; /* Space between items, first/last touch edges */
+  width: 100vw;                  /* Full viewport width */
+  padding: 0;                    /* Remove default padding */
+  box-sizing: border-box;        /* Include padding/border in width */
+}
+
+/* Each item */
+.item {
+  width: 100px;                  /* Fixed width */
+  height: 100px;                 /* Fixed height */
+  background-color: green;       /* Default color */
+  flex-shrink: 0;                /* Prevent items from shrinking */
+  display: flex;                 /* Center content inside item */
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: black;
+}
+
+/* Example specific colors */
+.item-1 { background-color: red; }
+.item-2 { background-color: blue; }
+
+    </style>
+</head>
+
+<body>
+	<!-- the entire body must be written by student -->
+	<div class="holder">
+  <div class="item item-3">3</div>
+  <div class="item item-1">1</div>
+  <div class="item item-2">2</div>
+  <div class="item">4</div>
+  <div class="item">5</div>
+  <div class="item">6</div>
+  <div class="item">7</div>
+</div>
+
+    <script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+
+</html>

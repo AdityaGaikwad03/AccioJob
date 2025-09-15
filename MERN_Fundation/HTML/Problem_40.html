@@ -1,0 +1,46 @@
+<!-- Flexbox Item Placement
+You have the following HTML markup for a container element named holder. Your task is to modify only the CSS code for the holder element:
+
+Use CSS flexbox properties to arrange the items in a row.
+Center all elements horizontally and vertically in the row, making them appear squashed together as shown in the first image
+alt text
+Ensure that if more items are added to the holder, they do not squash. Instead, the additional items should move to the next row, as shown in the second image
+alt text
+Note: Do not change the html markup, only change the CSS code of holder element -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+    <style>
+
+/* Your CSS Code here. */
+.holder {
+  display: flex;            /* enable flexbox */
+  flex-wrap: wrap;          /* allow items to move to next row */
+  justify-content: center;  /* center items horizontally */
+  align-items: center;      /* center items vertically */
+  gap: 0;                   /* optional: remove spacing if squashed together */
+  height: 200px;            /* optional: set a fixed height for vertical centering */
+}
+
+    </style>
+</head>
+
+<body>
+<div class="holder">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+
+	<!-- the entire body must be written by student -->
+    <script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+
+</html>

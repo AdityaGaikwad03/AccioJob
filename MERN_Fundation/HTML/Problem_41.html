@@ -1,0 +1,48 @@
+<!-- entering Items with Flexbox
+Your task is to implement the CSS to make item-1 position itself in the center of the screen using flexbox properties on the element holder(already defined in HTML).
+
+Requirements
+Component	Description
+Holder	The holder must take the full viewport width and height.
+Item-1	The item-1 must be placed at the center of the screen using flexbox properties. It must have a width of 100px, a height of 100px, and a red background color.
+Instructions
+Identify the required flexbox properties to center the item-1 within the holder.
+Write the CSS code for the holder to fulfill the requirements. Make sure to use appropriate flexbox properties.
+Ensure that the CSS code correctly positions the item-1 in the center of the screen without modifying the HTML markup. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css"/>
+    <style>
+
+/* Your CSS Code here. */
+/* Holder takes full viewport and centers its content */
+.holder {
+  display: flex;               /* Enable flexbox */
+  justify-content: center;     /* Center horizontally */
+  align-items: center;         /* Center vertically */
+  width: 100vw;                /* Full viewport width */
+  height: 100vh;               /* Full viewport height */
+}
+
+/* Item-1 styling */
+.item-1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+    </style>
+    <title>Place Item in Center</title>
+</head>
+<body>
+    <div class="holder">
+        <div class="item item-1">
+            Place me in center using flex
+        </div>
+    </div>
+</body>
+</html>

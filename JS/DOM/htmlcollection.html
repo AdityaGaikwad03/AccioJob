@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>first paragraph</div>
+        <div>second paragraph</div>
+        <div>third paragraph</div>
+    </div>
+    <script>
+        //first lement child
+        let container = document.querySelector(".container");
+        console.log(container.firstElementChild);
+        //last element child
+        console.log(container.lastElementChild);
+        //children
+        console.log(container.children);
+        //child element count
+        console.log(container.childElementCount);
+        //parent element
+        let firstDiv = document.querySelector("div");
+        console.log(firstDiv.parentElement);
+        //next element sibling
+        console.log(firstDiv.nextElementSibling);
+        //previous element sibling
+        console.log(firstDiv.nextElementSibling.previousElementSibling);
+        // nth child
+        console.log(container.children[1]);
+    </script>
+</body>
+</html>

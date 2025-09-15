@@ -1,0 +1,49 @@
+<!-- CSS Grid Design
+Your task is to design a 2x2 grid using CSS grid that has a total size of 200px, with two rows and two columns, without altering the properties of the individual items.
+
+Requirements
+Objective	Description
+Grid Container	Apply appropriate grid properties to the element with the class "holder" to create a 200px 2x2 grid.
+Rows and Columns	Utilize the repeat function in CSS grid to define two equal rows and two equal columns within the grid.
+Items	Ensure that the items are positioned automatically within the grid, without altering their properties.
+Instructions
+Analyze the given HTML structure and recognize the element that will serve as the grid container.
+Apply the necessary CSS grid properties to create a 2x2 grid of equal segments.
+Make use of the CSS repeat function to establish the rows and columns.
+Verify that the grid is properly displayed and that it meets the given requirements. -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+    <style>
+
+/* Your CSS Code here. */
+.holder {
+  display: grid; /* Make it a grid container */
+  width: 200px;
+  height: 200px;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  grid-template-rows: repeat(2, 1fr);    /* 2 equal rows */
+  gap: 0; /* Optional: remove spacing between grid cells */
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="holder">
+    	<div class="item item-1">1</div>
+    	<div class="item item-2">2</div>
+    	<div class="item item-3">3</div>
+    	<div class="item item-4">4</div>
+   </div>
+   <script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+
+</html>
