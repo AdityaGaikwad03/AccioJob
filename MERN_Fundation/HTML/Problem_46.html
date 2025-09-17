@@ -1,0 +1,73 @@
+<!-- Styling HTML Table with CSS
+Create the table as shown below using table and css properities. demo image
+
+Styling information
+td and th will have a border of 1px solid #ccc and border-radius of 5px. They should also have a padding of 0.5rem.
+Background color of odd rows should be #f2f2f2 and of even rows should be #ffffff -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Table</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /*  your css code here. If applicable */
+table {
+  border-collapse: separate; /* allow border-radius */
+  border-spacing: 8px;        /* space between cells */
+}
+
+th, td {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+  </style>
+</head>
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Table-Header 1</th>
+        <th>Table-Header 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+      </tr>
+      <tr>
+        <td>Cell 4</td>
+        <td>Cell 5</td>
+      </tr>
+      <tr>
+        <td>Cell 7</td>
+        <td>Cell 8</td>
+      </tr>
+      <tr>
+        <td>Cell 9</td>
+        <td>Cell 10</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

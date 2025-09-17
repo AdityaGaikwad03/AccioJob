@@ -1,0 +1,127 @@
+<!-- Facebook Login
+Create a Login page similar to the latest on facebook. An example is given below demo image
+
+Instructions
+The page should have 2 sections - left and right. Create two divs with the same class names.
+In the left section, there should be the facebook logo(it should have an alt text of Facebook logo) and a description with the text Facebook helps you connect and share with the people in your life.
+The right section should have a form which should have-
+an input with the type text, id of email and placeholder as Email address or phone number
+another input with the type of password, id of password and placeholder as Password.
+also add a button with the type of submit and it should have a text of Log in
+Finally there should be an <a> tag with the href of your choice and the text of Forgotten account?
+Outside the form, there should be a button with the class of signup and a text of Create new account
+Styling instructions
+body should have a background-color of #f6f6f6. It should have a display of flex, justify-content of center, align-items of center and a height of 100vh
+left should have a width of 450px, margin-top of 70px and a display of inline-block
+form should have the display as flex width as 300px, background-color as white, with a padding of 20px and a border-radius of 5px. It should also have a box-shadow of 0 0 10px #ccc, flex-direction of column and a gap of 10px
+Each input should have a border of 1px solid #ccc and a border-radius of 5px and a padding of 10px
+The button should have a background-color of #1877f2, border-radius of 5px, padding of 10px 20px and should take up all the width of the right container
+The link should not have any underline and should have a color of #1877f2
+The signup button should have a background-color of 42b72a
+Resouces
+Facebook logo image: https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Login</title>
+  <style>
+    /* Body styling */
+    body {
+      background-color: #f6f6f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      gap: 100px;
+    }
+
+    /* Left section */
+    .left {
+      width: 450px;
+      margin-top: 70px;
+      display: inline-block;
+    }
+
+    .left img {
+      width: 250px;
+    }
+
+    .left p {
+      font-size: 1.5rem;
+    }
+
+    /* Right section */
+    .right form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 300px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    .right input {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .right button[type="submit"] {
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      width: 100%;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .right a {
+      text-decoration: none;
+      color: #1877f2;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .signup {
+      background-color: #42b72a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      width: 300px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Left Section -->
+  <div class="left">
+    <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook logo">
+    <p>Facebook helps you connect and share with the people in your life.</p>
+  </div>
+
+  <!-- Right Section -->
+  <div class="right">
+    <form>
+      <input type="text" id="email" placeholder="Email address or phone number">
+      <input type="password" id="password" placeholder="Password">
+      <button type="submit">Log in</button>
+      <a href="#">Forgotten account?</a>
+    </form>
+    <button class="signup">Create new account</button>
+  </div>
+</body>
+</html>
