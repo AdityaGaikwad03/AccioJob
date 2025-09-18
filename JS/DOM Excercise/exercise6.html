@@ -13,43 +13,43 @@ Solution: -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ Section</title>
   <style>
-    .answer {
-      display: none; /* Hide answers by default */
-      color: gray;
-      margin-left: 20px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
-    .question {
-      cursor: pointer; /* Indicate clickable element */
-      font-weight: bold;
-      margin: 10px 0;
-    }
-    .question:hover {
-      color: rgb(153, 153, 175); /* Change color on hover for better UX */
-      text-decoration: underline;
+    body {
+      background-color: #f4f4f4;
+      padding: 20px;
     }
     #faq {
+      width: 80%;
       max-width: 600px;
-      margin: 20px auto;
-      font-family: Arial, sans-serif;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        background-color: #f9f9f9;
-        line-height: 1.6;
-        font-size: 16px;
-        color: #333;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s, box-shadow 0.3s;
+      margin: 50px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    #faq div {
-      margin-bottom: 15px;
-        padding: 10px;
-        border-bottom: 1px solid #eee;
+    .question {
+      background-color: #f7f7f7;
+      padding: 15px;
+      cursor: pointer;
+      border-bottom: 1px solid #ccc;
     }
+    .answer {
+      display: none;
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+      background-color: #898787;
+    }
+    .question:hover {
+      background-color: #eaeaea;
+    }
+    .answer:last-child {
+      border-bottom: none;
+    }
+
   </style>
 </head>
 <body>

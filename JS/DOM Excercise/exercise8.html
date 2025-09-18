@@ -1,0 +1,188 @@
+<!-- 
+Assignment 3: Shopping List Manager
+Scenario: Create a shopping list app where users can:
+
+Add an item to the list.
+Delete an item from the list.
+Clear the entire list. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #d2e746, #35d5db);
+        padding: 10px;
+      }
+
+      .list-app {
+        width: 100%;
+        max-width: 540px;
+        background: #fff;
+        margin: 100px auto 20px;
+        padding: 40px 30px 70px;
+        border-radius: 10px;
+      }
+
+      .list-app h2 {
+        color: #002765;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .list-app h2 img {
+        width: 30px;
+        margin-left: 10px;
+      }
+
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #edeef0;
+        border-radius: 30px;
+        padding-left: 20px;
+        margin-bottom: 25px;
+      }
+
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 10px;
+        font-weight: 14px;
+      }
+
+      #itemInput {
+        width: 80%;
+        font-size: 16px;
+        background-color: #edeef0;
+        border-radius: 30px;
+        padding: 12px 20px;
+        border: 2px solid #ccc;
+        transition: border-color 0.3s;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        padding: 16px 50px;
+        margin-top: 20px;
+        background: #ff5945;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 40px;
+      }
+
+      ul li {
+        list-style: none;
+        font-size: 17px;
+        padding: 12px 8px 12px 50px;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+      }
+
+      ul li::before {
+        content: "";
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background-image: url(images/unchecked.png);
+        background-size: cover;
+        background-position: center;
+        top: 12px;
+        left: 8px;
+      }
+
+      ul li.checked {
+        color: #555;
+        text-decoration: line-through;
+      }
+
+      ul li.checked::before {
+        background-image: url(images/checked.png);
+      }
+
+      ul li span {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        color: #555;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+      }
+
+      ul li span:hover {
+        background: #edeef0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="list-app">
+        <h2>Shopping List</h2>
+        <input type="text" id="itemInput" placeholder="Enter item" />
+        <button id="addItem" onclick="addTask()">Add Item</button>
+        <button id="clearList" onclick="clearList()">Clear List</button>
+        <ul id="shoppingList"></ul>
+      </div>
+    </div>
+    <script>
+      let itemInput = document.getElementById("itemInput");
+      let addItem = document.getElementById("addItem");
+      let clearList = document.getElementById("clearList");
+      let shoppingList = document.getElementById("shoppingList");
+
+      addItem.addEventListener("click", () => {
+        // add item to the list
+        let itemText = itemInput.value.trim();
+        if (itemText == "") return;
+
+        // create a new list item
+        let li = document.createElement("li");
+        li.textContent = itemText;
+
+        // add delete button to the list item
+        let deleteBtn = document.createElement("span");
+        deleteBtn.textContent = "❌";
+        deleteBtn.classList.add("delete-btn");
+        deleteBtn.addEventListener("click", () => {
+          li.remove();
+        });
+
+        li.appendChild(deleteBtn);
+        shoppingList.appendChild(li);
+
+        // clear the input field
+        itemInput.value = "";
+      });
+
+      clearList.addEventListener("click", () => {
+        shoppingList.innerHTML = "";
+      });
+    </script>
+  </body>
+</html>
