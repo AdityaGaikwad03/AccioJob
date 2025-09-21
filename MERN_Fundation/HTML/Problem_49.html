@@ -1,0 +1,51 @@
+<!-- DOM Level Finder
+Instructions
+Develop a JavaScript program that determines the DOM level of an element with the id level in the provided HTML code. The DOM level is the number of parent elements the target element has, including the root html element.
+
+📌 Important:
+
+Do not make any changes to the HTML file. Write your JavaScript code in a separate JS file.
+Use the alert() function to display the final answer in the format: The level of the element is: n, where n is the DOM level of the element.
+Examples
+HTML Structure	Output
+	The level of the element is: 4
+Acceptance Criteria
+Your program should correctly determine the DOM level of the element with the id level.
+The program should handle cases where the element is nested within multiple parent elements.
+Constraints
+The HTML structure will only contain valid HTML tags.
+The maximum depth of the DOM tree will not exceed 1000 levels. -->
+
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li id="level">Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+    </ul>
+    <script type="text/javascript" src="./script.js">
+              //your JS code here. If required.
+      const element = document.getElementById("level");
+
+      let level = 0;
+      let current = element;
+
+      while (current) {
+        level++;
+        current = current.parentElement;
+      }
+
+      // Show the result
+      alert("The level of the element is: " + level);
+    </script>
+  </body>
+</html>

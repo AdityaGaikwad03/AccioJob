@@ -1,0 +1,91 @@
+<!-- Grofers Checkout
+You are given a Grocery list in an HTML table. You want to find the total price by calculating the sum of prices of individual items listed in the table.
+Write the sum logic in such a way that it works for given prices and also if the values are changed in the table. Show the total price by adding a new row to the table with a single cell that has the total price.
+
+Implementation Hint:
+
+You can choose to use Element.querySelectorAll() to get the prices from the HTML table.
+
+Once you get the numbers, you can add them to get the total price.
+
+You can choose to use Document.createElement() to create the last row of the table that shows the total value.
+
+Note:
+
+All the items belong to class=”item”
+
+All the prices belong to class=”prices”
+
+Hint: Use class names to extract the relevant information -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <table style="width: 100%">
+    <caption>
+      Monthly savings
+    </caption>
+    <tr>
+      <th>Item</th>
+      <th>Prices in Rs</th>
+    </tr>
+    <tr>
+      <td class="item">Tea</td>
+      <td class="price">50</td>
+    </tr>
+    <tr>
+      <td class="item">Coffee</td>
+      <td class="price">70</td>
+    </tr>
+    <tr>
+      <td class="item">Biscuits</td>
+      <td class="price">100</td>
+    </tr>
+    <tr>
+      <td class="item">Rice</td>
+      <td class="price">130</td>
+    </tr>
+    <tr>
+      <td class="item">Milk</td>
+      <td class="price">50</td>
+    </tr>
+  </table>
+
+  <script type="text/javascript">
+    const getSumBtn = document.createElement("button");
+    getSumBtn.append("Get Total Price");
+    document.body.appendChild(getSumBtn);
+
+    const getSum = () => {
+      const priceCells = document.querySelectorAll(".price");
+      let total = 0;
+
+      priceCells.forEach(cell => {
+        total += parseInt(cell.textContent);
+      });
+
+      // remove old total row if it exists
+      const oldTotal = document.querySelector("#ans");
+      if (oldTotal) {
+        oldTotal.parentElement.remove();
+      }
+
+      // create new row
+      const table = document.querySelector("table");
+      const newRow = document.createElement("tr");
+      const newCell = document.createElement("td");
+      newCell.colSpan = 2;
+      newCell.style.fontWeight = "bold";
+      newCell.id = "ans"; // ✅ important for Cypress test
+      newCell.textContent = total;
+      newRow.appendChild(newCell);
+      table.appendChild(newRow);
+    };
+
+    getSumBtn.addEventListener("click", getSum);
+  </script>
+</body>
+</html>

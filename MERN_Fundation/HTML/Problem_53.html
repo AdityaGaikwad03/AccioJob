@@ -1,0 +1,87 @@
+<!-- IMDb Page Styling
+People are bored with the original movie detail page of IMDb. Your task is to update a section for them and make it more beautiful. Below are the mandatory requirements for the movie detail page. Feel free to add more styles to make it more appealing.
+
+The poster for the movie:
+Must be inside an "img" tag with a class of "moviePic".
+Should have CSS properties: height, width, and opacity.
+The description of the movie:
+Must be inside a "p" tag with a class of "movieDetail".
+Should be in the center of the page using CSS properties: position, top, width, text-align, and font-size.
+Note: Don't use inline CSS, instead use class selectors for CSS,
+Element	Description	Class	CSS Properties
+img	Movie Poster	moviePic	height, width, opacity
+p	Movie Description	movieDetail	position, top, width, text-align, font-size
+Please adhere to the instructions above to create a beautiful IMDb movie detail page that fulfills the requirements.
+
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMDb Styled Movie Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      color: #FFD700;
+      font-size: 2.5rem;
+    }
+
+    /* Poster */
+    .moviePic {
+      height: 400px;
+      width: 270px;
+      opacity: 0.9;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.6);
+    }
+
+    /* Description */
+    .movieDetail {
+      position: relative;
+      top: 20px;
+      width: 60%;
+      margin: 20px auto;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    /* Extra polish */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .movieDetail strong {
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>The Dark Knight</h1>
+    <img src="https://m.media-amazon.com/images/I/51EbJjlB6BL._AC_.jpg" alt="The Dark Knight Poster" class="moviePic">
+    <p class="movieDetail">
+      <strong>The Dark Knight</strong> (2008) is a superhero masterpiece directed by Christopher Nolan. 
+      It follows Batman as he faces his most dangerous adversary yet — the Joker, 
+      a criminal mastermind who pushes Gotham City to the brink of chaos. 
+      With breathtaking visuals, stellar performances, and a haunting score, 
+      this film redefined the superhero genre.
+    </p>
+  </div>
+</body>
+</html>

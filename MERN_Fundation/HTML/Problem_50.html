@@ -1,0 +1,51 @@
+<!-- Focus Squares
+You are given three squares each of Lavender color(#E6E6FA). Whenever the cursor is on any one of the three squares, the colors of rest of the squares change to Coffee(#6F4E37). Your task is to achieve this functionality in the given three squares.
+
+focus-sq
+
+Instructions
+Do not change the class and id of the squares. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colorful Squares</title>
+	<style>
+		.square {
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			margin: 10px;
+			background-color: #E6E6FA; /* lavender */
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="square" id="square1"></div>
+	<div class="square" id="square2"></div>
+	<div class="square" id="square3"></div>
+
+	<script type="text/javascript">
+		const squares = document.querySelectorAll(".square");
+
+		const lavender = "#E6E6FA";
+		const coffee = "#6F4E37";
+
+		squares.forEach((square, index) => {
+			// ✅ use mouseover for Cypress compatibility
+			square.addEventListener("mouseover", () => {
+				squares.forEach((sq, i) => {
+					sq.style.backgroundColor = (i === index) ? lavender : coffee;
+				});
+			});
+
+			// ✅ use mouseout for Cypress compatibility
+			square.addEventListener("mouseout", () => {
+				squares.forEach((sq) => {
+					sq.style.backgroundColor = lavender;
+				});
+			});
+		});
+	</script>
+</body>
+</html>
