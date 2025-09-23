@@ -1,0 +1,90 @@
+<!-- Semantic Navigation Bar and Image Display
+Create a semantic navbar with specific links and display a set of images on the page. Details are provided below:
+
+Navbar Requirements:
+Requirement	Description
+Semantic Tags	Use semantic elements for the navbar, including nav, ul, and a.
+Links	Total of 3 links: "Home", "About us", and "Contact us". You can use any href of your choice.
+Image Requirements:
+Requirement	Description
+Heading	Add the heading "3 random images" above the images.
+Images	Include 3 images using the following URLs with alt tag:
+https://picsum.photos/id/123/200/300
+https://picsum.photos/id/124/200/300
+https://picsum.photos/id/125/200/300
+The alt tag should contain the text "Random image" in all the three image tags.
+Acceptance Criteria:
+The navbar must be constructed semantically with appropriate tags and must contain the specified links.
+The images must be displayed with the correct sources and include the alt tag as specified.
+The heading above the images must be present and correctly placed. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic Navbar and Images</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+    nav li {
+      display: inline;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    img {
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Semantic Navbar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h2>3 random images</h2>
+    <img src="https://picsum.photos/id/123/200/300" alt="Random image">
+    <img src="https://picsum.photos/id/124/200/300" alt="Random image">
+    <img src="https://picsum.photos/id/125/200/300" alt="Random image">
+  </main>
+
+</body>
+</html>
