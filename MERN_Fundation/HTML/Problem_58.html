@@ -1,0 +1,139 @@
+<!-- Movie Webpage Creation
+Create an HTML document for your favorite movie. Follow the requirements below:
+
+Section	Description
+Header	Include the name of the movie.
+Nav	Add links to the Actors and Quotes sections with ids: nav-actor and nav-quote. Link them to the respective sections.
+Summary	Write a brief summary of the plot.
+Sections	Include two sections with ids actor and quote. Fill them with details about the actors and your favorite quote from the movie.
+Aside	Provide information about the IMDb rating and release date.
+Footer	Display the Producer's name as Produced by: < name >.
+Additional Requirements:
+Every section (including nav, summary, aside, header, and footer) must contain text.
+The navigation links in the nav section should properly link to the corresponding actor and quote sections.
+Style the page as you like, and feel free to include additional elements to enhance the design. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inception - Movie Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+    }
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      display: flex;
+      padding: 20px;
+    }
+    section {
+      flex: 3;
+      padding: 20px;
+      background: white;
+      margin-right: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    aside {
+      flex: 1;
+      padding: 20px;
+      background: #fff7e6;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    Inception
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <a id="nav-actor" href="#actor">Actors</a>
+    <a id="nav-quote" href="#quote">Quotes</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div style="flex:3;">
+  <!-- Summary -->
+  <details open>
+    <summary>Summary</summary>
+    <p>
+      *Inception* is a science fiction thriller directed by Christopher Nolan.
+      It follows Dom Cobb, a skilled thief who enters the dreams of others to steal secrets.
+      Cobb and his team are tasked with the seemingly impossible mission of planting an idea
+      into someone’s subconscious, a process known as "inception."
+    </p>
+  </details>
+
+  <!-- Actors -->
+  <section id="actor">
+    <h2>Actors</h2>
+    <ul>
+      <li>Leonardo DiCaprio as Dom Cobb</li>
+      <li>Joseph Gordon-Levitt as Arthur</li>
+      <li>Elliot Page as Ariadne</li>
+      <li>Tom Hardy as Eames</li>
+    </ul>
+  </section>
+
+  <!-- Quote -->
+  <section id="quote">
+    <h2>Favorite Quote</h2>
+    <blockquote>
+      "You mustn’t be afraid to dream a little bigger, darling." – Eames
+    </blockquote>
+  </section>
+</div>
+<aside>
+    <h2>Movie Info</h2>
+    <p><strong>IMDb Rating:</strong> 8.8/10</p>
+    <p><strong>Release Date:</strong> July 16, 2010</p>
+  </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Produced by: Emma Thomas & Christopher Nolan
+  </footer>
+</body>
+</html>
