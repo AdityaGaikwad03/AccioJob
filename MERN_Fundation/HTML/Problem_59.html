@@ -1,0 +1,105 @@
+<!-- Semantic Navbar and Videos
+Create a semantic navbar with specific links and display a set of videos on the page.
+
+Navbar Requirements:
+Requirement	Description
+Semantic Tags	Use semantic elements for the navbar, including nav, ul, and a.
+Links	Total of 3 links: "Home", "About us", and "Contact us". You can use any href of your choice.
+Video Requirements:
+Requirement	Description
+Heading	Add the heading "3 random videos" above the videos.
+Videos	Include 3 videos using the following URLs:
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4
+Display the controls attribute for each video. Use dedicated source tag to add the source urls for each video.
+Acceptance Criteria:
+The navbar must be constructed semantically with appropriate tags and must contain the specified links.
+The videos must be displayed with the correct sources and include the controls attribute as specified.
+The heading above the videos must be present and correctly placed. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic Navbar and Videos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    nav {
+      background: #333;
+      padding: 15px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      margin: 0 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .videos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    video {
+      width: 300px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Semantic Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Heading -->
+  <h2>3 random videos</h2>
+
+  <!-- Video Section -->
+  <div class="videos">
+    <video controls>
+      <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls>
+      <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls>
+      <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</body>
+</html>
