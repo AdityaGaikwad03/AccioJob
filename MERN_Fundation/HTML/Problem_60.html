@@ -1,0 +1,62 @@
+<!-- Remove Color from Dropdown List
+You have been provided with a dropdown list identified by colorSelect and an associated button.
+
+Your task is to implement the functionality that allows the removal of a color from the list when the designated button is pressed.
+
+Preview
+remove-item
+
+Instructions
+Utilize the existing code present in the main.html file.
+The id of the <select> tag should remain as colorSelect.
+Maintain the attributes type="button" and value="Select and Remove" of the <input> tag without any alterations.
+Example
+Suppose the dropdown list initially contains the following colors:
+
+Red
+Green
+White
+Black
+Upon clicking the "Select and Remove" button after choosing "Green," the updated list should appear as follows:
+
+Red
+White
+Black -->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css"> 
+			body {margin: 30px;} 
+		</style>  
+		<meta charset=utf-8 /> 
+		<title>Remove items from a dropdown list</title>
+	</head>
+
+	<body>
+		<form> 
+			<select id="colorSelect"> 
+				<option>Red</option> 
+				<option>Green</option> 
+				<option>White</option> 
+				<option>Black</option> 
+			</select> 
+			<input type="button" value="Select and Remove"> 
+		</form>
+
+		<script type="text/javascript" src="./script.js">
+            //your JS code here. If required.
+document.querySelector('input[type="button"]').addEventListener('click', function() {
+  const select = document.getElementById('colorSelect');
+  const selectedIndex = select.selectedIndex;
+  if (selectedIndex !== -1) {
+    select.remove(selectedIndex);
+  }
+});
+
+		</script>
+
+	</body>
+
+</html>
