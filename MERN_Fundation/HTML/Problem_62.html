@@ -1,0 +1,68 @@
+<!-- Volume of a Sphere
+You are given a form like this: image
+
+Develop a JavaScript program that calculates the volume of a sphere based on user input. The provided HTML and JavaScript code represent a form where users can input the radius of a sphere, and upon clicking the "Calculate" button, the volume_sphere() function is called to display the calculated volume in the designated field.
+
+Instructions:
+Your task is to complete the volume_sphere() function found in the script.js file. Ensure the function performs the following steps:
+
+Retrieve the radius value entered by the user from the input field.
+Validate the input, ensuring the radius is a non-negative number.
+Calculate the volume of the sphere using the formula: [ V = \frac{4}{3} \pi r^3 ]
+Display the calculated volume in the designated output field.
+Ensure the calculated volume is rounded to four decimal places.
+Examples:
+Radius Input	Expected Output
+5	523.5988
+10	4188.7902
+'abc'	NaN
+-3	NaN
+Note: For input values that are not valid (negative or non-numeric), the expected output is 'NaN' (Not a Number).
+
+Testing:
+Test Case 1 - Calculate Correct Result:
+Input: Radius = 5
+Action: Submit the form
+Expected Output: Calculated volume should be approximately 523.5988.
+Test Case 2 - Handle Incorrect Input:
+Input: Radius = 'abc'
+Action: Submit the form
+Expected Output: Calculated volume should be 'NaN' due to invalid input. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<title>Volume of a Sphere</title>
+<style> 
+body{padding-top:30px;}
+label,input{display:block;} 
+</style>
+</head>
+<body>
+	<p>Input radius value and get the volume of a sphere.</p>
+	<form action="" method="post" id="MyForm">
+	<label for="radius">Radius</label><input type="text" name="radius" id="radius" required>
+	<label for="volume">Volume</label><input type="text" name="volume" id="volume">
+	<input type="submit" value="Calculate" id="submit">    </form>
+	<script type="text/javascript" src="./script.js">
+    function volume_sphere(event) {
+  event.preventDefault();
+  const radiusInput = document.getElementById('radius').value;
+  const radius = parseFloat(radiusInput);
+   let volume;
+  if (isNaN(radius) || radius < 0) {
+    volume = NaN;
+  } else {
+    volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
+  }
+  document.getElementById('volume').value = isNaN(volume)
+    ? 'NaN'
+    : volume.toFixed(4);
+}
+window.onload = () => {
+  document.getElementById('MyForm').onsubmit = volume_sphere;
+};
+</script>
+</body>
+</html>

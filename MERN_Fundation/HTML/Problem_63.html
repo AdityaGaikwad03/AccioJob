@@ -1,0 +1,82 @@
+<!-- Color Board
+The Task is to create an application which renders a board having 800 boxes which basically changes the background color on hover.
+
+color-board.
+
+Instructions
+
+The square container should have an class container.
+The boxes should have class as square.
+The change in color after hovering should disapper after 1 second smoothly. -->
+<!-- Color Board -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Board</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #111;
+      margin: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(40, 20px); /* 40x20 = 800 boxes */
+      grid-gap: 2px;
+    }
+
+    .square {
+      width: 20px;
+      height: 20px;
+      background-color: rgb(29, 29, 29); /* ✅ expected default color */
+      transition: background-color 1s ease; /* smooth fade-out */
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container"></div>
+
+  <script>
+  const container = document.getElementById('container');
+const BOX_COUNT = 800;
+
+// Create 800 boxes dynamically
+for (let i = 0; i < BOX_COUNT; i++) {
+  const square = document.createElement('div');
+  square.classList.add('square');
+
+  // On hover
+  square.addEventListener('mouseover', () => setColor(square));
+  square.addEventListener('mouseout', () => removeColor(square));
+
+  container.appendChild(square);
+}
+
+// Generate a truly random color
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function setColor(element) {
+  const color = getRandomColor();
+  element.style.background = color;
+  element.style.transition = 'background-color 0s'; // instant change
+}
+
+function removeColor(element) {
+  element.style.transition = 'background-color 1s ease'; // smooth fade
+  element.style.background = '#1d1d1d';
+}
+
+  </script>
+</body>
+</html>

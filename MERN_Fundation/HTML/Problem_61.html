@@ -1,0 +1,104 @@
+<!-- Replit Asian Paints
+The task is to create an application having a 3 X 3 grid numbered as 1,2,3...9 with id as the number assigned to it. for eg : the third element of grid have the id 3 after this the application should also have an input for input-id and one for the color where we can input coloras color-id. after we submit this we should observer the background color of that grid to be changed and after we change it to other first every grid element background-color should be set transparent .after this the particular ids color is changed.
+
+Instructions
+The input for block id should have id block_id and color should have id as colour_id.
+The Change color button should have an id change_button and a reset button with id Reset.
+The grid container should have an id of grid-container and the item should have an id as grid-item. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asian Paints Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .grid-item {
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      cursor: pointer;
+      background-color: transparent;
+      transition: background-color 0.3s;
+    }
+
+    input {
+      margin: 5px;
+      padding: 8px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="grid-item" id="1">1</div>
+    <div class="grid-item" id="2">2</div>
+    <div class="grid-item" id="3">3</div>
+    <div class="grid-item" id="4">4</div>
+    <div class="grid-item" id="5">5</div>
+    <div class="grid-item" id="6">6</div>
+    <div class="grid-item" id="7">7</div>
+    <div class="grid-item" id="8">8</div>
+    <div class="grid-item" id="9">9</div>
+  </div>
+
+  <div>
+    <input type="number" id="block_id" placeholder="Enter Block ID (1–9)">
+    <input type="text" id="colour_id" placeholder="Enter Color (e.g., red)">
+    <button id="change_button">Change</button>
+    <button id="reset_button">Reset</button>
+  </div>
+
+  <script>
+    const changeBtn = document.getElementById('change_button');
+    const resetBtn = document.getElementById('reset_button');
+
+    changeBtn.addEventListener('click', () => {
+      const blockId = document.getElementById('block_id').value;
+      const color = document.getElementById('colour_id').value;
+
+      // Reset all grid items to transparent
+      const items = document.querySelectorAll('.grid-item');
+      items.forEach(item => item.style.backgroundColor = 'rgba(0, 0, 0, 0)');
+
+      // Change color of selected block
+      const target = document.getElementById(blockId);
+      if (target) {
+        target.style.backgroundColor = color;
+      } else {
+        alert('Please enter a valid block ID between 1 and 9.');
+      }
+    });
+
+    resetBtn.addEventListener('click', () => {
+      const items = document.querySelectorAll('.grid-item');
+      items.forEach(item => item.style.backgroundColor = 'rgba(0, 0, 0, 0)');
+      document.getElementById('block_id').value = '';
+      document.getElementById('colour_id').value = '';
+    });
+  </script>
+
+</body>
+</html>
