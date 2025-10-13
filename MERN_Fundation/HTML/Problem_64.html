@@ -1,0 +1,76 @@
+<!-- Clock Timer
+You are tasked with developing a JavaScript program that creates a date timer and displays it on the browser, similar to the sample provided.
+
+Clock Timer Sample
+
+Instructions
+Develop a JavaScript program that accomplishes the following:
+
+Utilize a p tag with the id timer to display the time and date.
+Ensure that the time dynamically updates every second, displaying the current date and time.
+Constraints
+The timer should be accurate to the current system time.
+Testing:
+Test Case - Display Timer:
+Action: Visit the page.
+Expected Result: The timer element with id timer should exist on the page.
+Test Case - Update Timer:
+Action: Visit the page and observe the timer.
+Expected Result: The timer should dynamically update every second, displaying the current date and time.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock Timer</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #121212;
+      color: #00ffcc;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 2rem;
+    }
+
+    #timer {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #00ffcc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <p id="timer">Loading time...</p>
+
+  <script>
+    function updateTimer() {
+      const timerElement = document.getElementById("timer");
+      const now = new Date();
+
+      const date = now.toLocaleDateString(undefined, {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+
+      const time = now.toLocaleTimeString();
+
+      timerElement.textContent = `${date} | ${time}`;
+    }
+
+    // Update every second
+    setInterval(updateTimer, 1000);
+
+    // Initial call to display immediately
+    updateTimer();
+  </script>
+</body>
+</html>

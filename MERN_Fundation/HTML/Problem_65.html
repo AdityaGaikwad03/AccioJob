@@ -1,0 +1,113 @@
+<!-- 📝 Form Login
+🎯 Objective
+Your task is to write a JavaScript function to retrieve user input from an HTML form containing First Name and Last Name fields. When the user submits the form, display their full name using an alert().
+
+📌 Acceptance Criteria
+✅ Form Structure
+The HTML form contains:
+An input field for First Name with name="fname"
+An input field for Last Name with name="lname"
+A Submit button of type submit
+✅ JavaScript Function
+Implement the function getFormvalue():
+Retrieve values from First Name (fname) and Last Name (lname) fields.
+Display the full name using alert("<First Name> <Last Name>").
+Ensure the function is triggered when the form is submitted.
+🖥 Example Walkthrough
+Test Case 1: Basic Name Input
+First Name	Last Name	Output
+John	Doe	John Doe
+Steps:
+User enters John in First Name field.
+User enters Doe in Last Name field.
+Clicks the Submit button.
+An alert pops up with: "John Doe".
+Test Case 2: Middle Name Handling
+First Name	Last Name	Output
+John	Mark Doe	John Mark Doe
+Steps:
+User enters John in First Name field.
+User enters Mark Doe in Last Name field.
+Clicks the Submit button.
+An alert pops up with: "John Mark Doe".
+🔥 Edge Cases
+Empty Fields: What happens if a user submits without entering any text?
+Extra Spaces: Handle cases where users enter spaces before or after their name.
+Special Characters: Ensure names with hyphens (Anne-Marie) or apostrophes (O'Connor) work correctly.
+🛠 Implementation Steps
+Access the input fields using document.querySelector() or document.forms.
+Retrieve the values of fname and lname.
+Concatenate the values into "FirstName LastName".
+Display an alert with the full name.
+Ensure the function is called when the form is submitted.
+🧪 Test Cases
+✅ Test Case 1: Form Submission (Basic)
+Given:
+First Name: "John"
+Last Name: "Doe"
+When: Submit button is clicked.
+Then: Alert should show "John Doe".
+✅ Test Case 2: Form Submission (Middle Name)
+Given:
+First Name: "John"
+Last Name: "Mark Doe"
+When: Submit button is clicked.
+Then: Alert should show "John Mark Doe". -->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset=utf-8 />
+		<title>Return first and last name from a form</title>
+		<style type="text/css">
+			body {margin: 30px;}
+		</style> 
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<form id="form1" onsubmit="getFormvalue()">
+		First name: <input type="text" name="fname"><br>
+		Last name: <input type="text" name="lname"><br>
+		<input type="submit" value="Submit">
+	</form>
+	
+    <script type="text/javascript">
+        function getFormvalue() {
+    //Write your code here
+	function getFormvalue(event) {
+  // Prevent form from refreshing the page
+  event.preventDefault();
+
+  // Get form fields
+  const fname = document.querySelector('input[name="fname"]').value.trim();
+  const lname = document.querySelector('input[name="lname"]').value.trim();
+
+  // Combine the values
+  const fullName = `${fname} ${lname}`.trim();
+
+  // Handle empty input
+  if (!fname && !lname) {
+    alert("Please enter your first and last name.");
+    return;
+  } else if (!fname) {
+    alert("Please enter your first name.");
+    return;
+  } else if (!lname) {
+    alert("Please enter your last name.");
+    return;
+  }
+
+  // Display full name
+  alert(fullName);
+}
+
+
+}
+
+</script>
+
+</body>
+
+</html>
