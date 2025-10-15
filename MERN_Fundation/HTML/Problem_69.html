@@ -1,0 +1,78 @@
+<!-- Bold Highlighter
+Objective:
+Create a JavaScript program that highlights bold (<strong>) words inside a paragraph when a user hovers over a specific link. When the user moves the mouse away, the highlighted words should revert to their original color.
+
+Requirements:
+The webpage contains a paragraph with some words wrapped in <strong> tags.
+There is a link that, when hovered over, triggers the highlight effect on the bold words.
+When the mouse moves over the link, all <strong> elements should turn green (rgb(0, 128, 0)).
+When the mouse moves out of the link, the <strong> elements should return to black (rgb(0, 0, 0)).
+Implementation Details:
+You will write the code only inside script.js.
+You need to implement two functions:
+highlight(): Changes the color of all <strong> elements to green.
+return_normal(): Reverts the color of <strong> elements to black.
+These functions should be triggered on mouseover and mouseout events of the link.
+Use document.querySelectorAll() to select all <strong> elements.
+Loop through the selected elements and modify their style.color property.
+Behavior Expectations:
+Mouse Over the Link:
+All words inside <strong> tags change to green (rgb(0, 128, 0)).
+Mouse Out of the Link:
+The highlighted words return to black (rgb(0, 0, 0)).
+Example HTML Structure:
+<p>
+  This is an <strong>example</strong> paragraph with some <strong>important</strong> words.
+</p>
+<a href="#" onmouseover="highlight()" onmouseout="return_normal()">Hover over me!</a>
+Reference Image (Example Output):
+Bold Highlighter
+
+Test Cases:
+Check Highlight on Hover:
+
+Move the mouse over the link, and verify that all bold words (<strong>) turn green.
+The CSS color property should be rgb(0, 128, 0).
+Check Revert on Mouse Out:
+
+Move the mouse away from the link, and ensure the bold words revert to black.
+The CSS color property should be rgb(0, 0, 0).
+Hints:
+Use document.querySelectorAll('strong') to get all <strong> elements.
+Loop through the elements using forEach and change their style.color property accordingly.
+Ensure the functions are called correctly in the onmouseover and onmouseout attributes of the <a> tag. -->
+
+    <!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Get And Style All Tags</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  	<p>[<a href="#" onMouseOver="highlight()" onMouseOut="return_normal()">On mouse over here bold words of the following paragraph will be highlighted</a>]</p> 
+	<p><strong>AccioJob</strong> is an <strong>ed-tech startup</strong> run by IIT Delhi Alumni that provides a comprehensive state-of-the-art learning platform for <strong>Full Stack Web Development</strong>. Our industry-relevant curriculum is taught by top tech instructors and mentors, and our students have gone on to work at leading tech companies like <strong>Amazon</strong>, <strong>Salesforce</strong>, and <strong>Walmart</strong>, among others. With job placement opportunities at <strong>300+</strong> top tech partner companies, we have placed <strong>1000+</strong> students in 2022 itself at an average salary of <strong>8.3 LPA</strong></p>
+
+    <script>
+        function highlight() {
+  const boldWords = document.querySelectorAll('strong');
+  boldWords.forEach(word => {
+    word.style.color = 'rgb(0, 128, 0)'; // green
+  });
+}
+
+function return_normal() {
+  const boldWords = document.querySelectorAll('strong');
+  boldWords.forEach(word => {
+    word.style.color = 'rgb(0, 0, 0)'; // black
+  });
+}
+
+</script>
+
+</body>
+
+</html>
