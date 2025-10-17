@@ -1,0 +1,207 @@
+<!-- Remember Me: Login Form
+Objective
+Create a Login Form that allows users to log in, remember their credentials, and log in as an existing user if credentials are saved.
+
+Requirements
+1️⃣ HTML Structure
+The login form should contain the following elements:
+
+🔹 Heading:
+The page should have an h1 element with the text "Login Form".
+🔹 Form Fields:
+A username input field:
+Type: text
+Placeholder: "Username"
+ID: username
+A password input field:
+Type: password
+Placeholder: "Password"
+ID: password
+A "Remember Me" checkbox:
+Type: checkbox
+ID: checkbox
+Label: "Remember me."
+A submit button:
+Type: submit
+ID: submit
+Value: "Submit"
+🔹 Existing User Login Button:
+This button should be hidden initially and only appear if credentials are saved in localStorage.
+ID: existing
+Text: "Login as existing user"
+2️⃣ Functionality
+✅ Form Submission Behavior
+When the submit button (#submit) is clicked:
+
+Display an alert:
+alert("Logged in as <username>");
+If the "Remember Me" checkbox (#checkbox) is checked:
+Store the username and password in localStorage.
+If the checkbox is unchecked:
+Remove any previously stored credentials from localStorage.
+✅ Persisting Login Data
+If credentials are saved in localStorage, display the "Login as existing user" (#existing) button.
+When this button is clicked, display:
+alert("Logged in as <saved username>");
+🔍 Edge Cases to Consider
+The "Remember Me" functionality should persist across page reloads.
+If a user logs in without checking "Remember Me," the credentials should not be saved.
+If a user unchecks "Remember Me" and submits, previously saved credentials should be removed.
+🧪 Test Cases (Mapped to Cypress)
+🔹 1. Checking Initial Form Display
+Ensure the form is present on the page (<form>).
+Ensure input fields (#username, #password) are empty on page load.
+The checkbox (#checkbox) should be unchecked by default.
+The submit button (#submit) should exist.
+The "Login as existing user" button (#existing) should not be visible initially.
+🔹 2. Submitting Without "Remember Me"
+Enter a username & password and submit without checking the checkbox.
+Alert should display "Logged in as <username>".
+localStorage should not store the credentials.
+🔹 3. Submitting With "Remember Me" Checked
+Enter a username & password, check the "Remember Me" box, and submit.
+Credentials should be stored in localStorage.
+Reload the page and ensure the "Login as existing user" (#existing) button is visible.
+🔹 4. Logging in as Existing User
+If credentials are stored, clicking "Login as existing user" should show an alert:
+alert("Logged in as <saved username>");
+🎯 Expected Behavior Summary
+Action	Expected Outcome
+Page loads initially	Form is displayed, fields are empty, "Login as existing user" is hidden
+Enter username & password, submit without "Remember Me"	Alert appears, credentials are not stored
+Enter username & password, submit with "Remember Me"	Alert appears, credentials are stored in localStorage
+Reload page after storing credentials	"Login as existing user" button appears
+Click "Login as existing user"	Alert appears with saved username -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remember Me: Login Form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /*  your css code here. If applicable */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#existing {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#existing:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Login Form</h1>
+
+  <form id="loginForm">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" placeholder="Username" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+
+    <label for="checkbox">Remember me:</label>
+    <input type="checkbox" id="checkbox"><br><br>
+
+    <input type="submit" id="submit" value="Submit">
+  </form>
+
+  <button id="existing" style="display: none;">Login as existing user</button>
+
+  <script src="script.js">const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const checkbox = document.getElementById('checkbox');
+const submitBtn = document.getElementById('submit');
+const existingBtn = document.getElementById('existing');
+
+// Check localStorage on load
+window.onload = function () {
+  const savedUser = localStorage.getItem('username');
+  const savedPass = localStorage.getItem('password');
+
+  if (savedUser && savedPass) {
+    existingBtn.style.display = 'inline-block';
+  } else {
+    existingBtn.style.display = 'none';
+  }
+};
+
+// Form submission
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const username = usernameInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  if (!username || !password) return;
+
+  alert(`Logged in as ${username}`);
+
+  if (checkbox.checked) {
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
+  } else {
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+  }
+
+  existingBtn.style.display = localStorage.getItem('username') ? 'inline-block' : 'none';
+});
+
+// Existing user login
+existingBtn.addEventListener('click', function () {
+  const savedUser = localStorage.getItem('username');
+  if (savedUser) {
+    alert(`Logged in as ${savedUser}`);
+  }
+});
+</script>
+</body>
+</html>
