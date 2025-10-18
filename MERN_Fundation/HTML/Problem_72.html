@@ -1,0 +1,182 @@
+<!-- OTP Entry Frontend
+Objective:
+Create a frontend application for OTP (One Time Password) verification. The design should match the provided reference image and contain specific elements and behavior that ensure an efficient and user-friendly OTP input system.
+
+Requirements:
+Heading and Subheading:
+
+The page should have a heading with the text "Verify Your Account". The id of this heading should be verification_heading.
+Below the heading, there should be a subheading that provides some additional information. The id of this subheading should be verification_subtext.
+OTP Input Fields:
+
+The OTP input section should consist of 6 input fields where each field allows the user to enter a digit.
+Each input field should:
+Have the class code.
+Be contained within a parent container that has the class code-container.
+Be focused automatically when the user types a number into the previous field.
+When the user presses the backspace key, the content should be deleted from the last filled input field, and the previous field should automatically gain focus.
+Behavior of Input Fields:
+
+Typing Forward:
+When the user types a number into an input field, the focus should automatically move to the next input field.
+Backspace Behavior:
+When the backspace key is pressed, the focus should move to the previous input field, and the digit should be deleted from that field.
+Example of Structure:
+The heading with id="verification_heading" should have the text: Verify Your Account.
+The subheading with id="verification_subtext" should provide some additional text explaining the OTP process.
+Each of the 6 input fields should have the class code and be arranged inside a container with the class code-container.
+As the user types in one input field, the next field should automatically be focused.
+Behavior Expectations:
+Typing Forward:
+
+When the user types in the first input field (code-1), the focus should automatically move to the next field (code-2), and so on until all 6 fields are filled.
+Backspace:
+
+If the user presses the backspace key in the last field, the focus should move back to the previous field. This behavior should continue until the first field is reached.
+The focus should always be on the correct input field that requires user interaction (either typing or backspacing).
+Reference Image:
+Here is a reference image that shows how the OTP input fields and page layout should look:
+
+OTP
+
+Test Cases:
+The following test cases will check if your implementation works as expected:
+
+Checking Rendering:
+
+The page should render with the correct heading (#verification_heading) and subheading (#verification_subtext).
+Ensure that the input fields (6 in total) are rendered and exist in the DOM with the correct class="code".
+Checking Forward Typing:
+
+Verify that when a user types a digit into the first input field, the focus moves to the next field, and this continues until all 6 fields are filled.
+Checking Deletion (Backspace):
+
+Verify that when the user presses the backspace key, the content is removed from the last filled input field, and the focus moves to the previous field. This should work for all input fields.
+Additional Instructions:
+Ensure that each input field is properly connected to its predecessor and successor.
+Focus handling should work seamlessly, meaning that as soon as a user types a number or presses backspace, the appropriate input field should be focused next.
+Pay attention to edge cases where backspace should focus on the previous field when there are no digits in the current field. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTP Verification</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+  background-color: #f7f8fa;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 2px solid black;
+}
+
+#verification_heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#verification_subtext {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.code-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.code {
+  width: 60px;
+  height: 80px;
+  font-size: 48px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.code:focus {
+  border-color: #555;
+}
+
+.note {
+  background-color: #eee;
+  color: #555;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 id="verification_heading">Verify Your Account</h2>
+    <p id="verification_subtext">
+      We emailed you the six digit code to acciojob@email.com. Enter the code below to confirm your email address.
+    </p>
+
+    <div class="code-container">
+      <input type="text" id="code-1" class="code" maxlength="1" />
+      <input type="text" id="code-2" class="code" maxlength="1" />
+      <input type="text" id="code-3" class="code" maxlength="1" />
+      <input type="text" id="code-4" class="code" maxlength="1" />
+      <input type="text" id="code-5" class="code" maxlength="1" />
+      <input type="text" id="code-6" class="code" maxlength="1" />
+    </div>
+
+    <p class="note">
+      This is design only. We didn't actually send you an email as we don't have your email, right?
+    </p>
+  </div>
+
+  <script src="script.js">
+    const inputs = document.querySelectorAll(".code");
+
+// Focus first input when page loads
+window.addEventListener("load", () => inputs[0].focus());
+
+inputs.forEach((input, index) => {
+  input.addEventListener("keydown", (e) => {
+    // If number typed
+    if (e.key >= 0 && e.key <= 9) {
+      input.value = "";
+      setTimeout(() => {
+        if (index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        }
+      }, 10);
+    }
+    // If backspace pressed
+    else if (e.key === "Backspace") {
+      input.value = "";
+      setTimeout(() => {
+        if (index > 0) {
+          inputs[index - 1].focus();
+        }
+      }, 10);
+    }
+  });
+});
+
+  </script>
+</body>
+</html>
