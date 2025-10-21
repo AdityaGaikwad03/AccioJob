@@ -1,54 +1,68 @@
-<!-- Substrings
-Implement the function doesItContain, which takes 2 strings as argument, return true or false whether the first string contains second string or not(Use JS In built functions).
+<!-- Infinite Scrolling
+Instructions
+You are already given the HTML and CSS of the project, fill in the JavaScript code in script.js to make it work.
 
-Input Format
-Function will take 2 args, 1) string in which to check 2) the string which is to be checked is it in 1st string
+Add about 10 list items to the list by default.
 
-Output Format
-Function will return boolean whether it contains given substring or not
+When the user reaches the end of list, 2 more list items must be added automatically using JavaScript.
 
-Example 1
-Input
+Infinite Scroll -->
 
-Hi World world,world
-Output
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <style>
+      #infi-list {
+        width: 200px;
+        height: 300px;
+        overflow: auto;
 
-true
-Explanation
+        margin: 30px;
+        padding: 20px;
+        border: 10px solid black;
+      }
+      li {
+        padding: 10px;
+        list-style-type: none;
+      }
+      li:hover {
+        background: #ccc;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Infinite Scroll</h2>
+    <main>
+      <ol id="infi-list"></ol>
+    </main>
+    <script src="./script.js">
+            //your code here!
+      const infiList = document.getElementById("infi-list");
 
-Here 'world' is present in the first string
+      // Function to add new list items
+      function addItems(count) {
+        for (let i = 0; i < count; i++) {
+          const li = document.createElement("li");
+          li.textContent = `Item ${infiList.children.length + 1}`;
+          infiList.appendChild(li);
+        }
+      }
 
-Example 2
-Input
+      // Add initial 10 items
+      addItems(10);
 
-hi hi hi,hello
-Output
-
-false
-Explanation
-
-'hello' is not present in the first string.
-
-Constraints
-1 <= |length of strings| <= 10^5 -->
-
-
-function doesItContain(line1, ch) {
-  // write code here
-  // return the output , do not use console.log here
-    return line1.toLowerCase().includes(ch.toLowerCase());
-}
-
-const rl = require("readline");
-
-const reader = rl.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-reader.on("line", (line) => {
-  const [line1, ch, hc] = line.split(",");
-
-  console.log(doesItContain(line1, ch));
-});
-
+      // Detect scroll event
+      infiList.addEventListener("scroll", () => {
+        // Check if user reached (or nearly reached) the bottom
+        if (infiList.scrollTop + infiList.clientHeight >= infiList.scrollHeight - 10) {
+          addItems(2); // Add 2 new items when bottom is reached
+        }
+      });
+    </script>
+  </body>
+</html>
