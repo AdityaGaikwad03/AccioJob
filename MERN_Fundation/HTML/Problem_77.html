@@ -1,0 +1,152 @@
+<!-- Book List
+Create a webpage that allows users to input the name, author, and ISBN number of a book and dynamically adds this data to a table upon submission of a form. The webpage should include the following elements:
+A heading (h1) with the content "MyBookList".
+A div with class=form-group for the form.
+Three input tags with id=title, id=author and id=isbn.
+A submit button with id=submit.
+A table with class=table table-striped to show the content of addeed books.
+Table head has three columns : Title, Author, ISBN# and table body with id=book-list
+When the user enters the data and click on submit button a new row with all the data is entered in the data.
+A clear button with class=delete is present in each row of the data entered. If the user clicks on the clear button the whole row gets deleted.
+The page should look like this:
+
+image
+
+image
+
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyBookList</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /*  your css code here. If applicable */
+/* layout */
+body { margin: 0; font-family: Arial, sans-serif; }
+.wrap { max-width: 900px; margin: 24px auto; padding: 0 12px; }
+
+h1 { text-align: center; margin: 8px 0 18px; }
+.blue { color: #2f6df6; }
+
+/* form */
+.form-group { margin-bottom: 16px; }
+label { display: block; margin: 10px 0 6px; }
+input { width: 100%; padding: 8px; border: 1px solid #ccc; }
+
+#submit {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: 0;
+  background: #2f6df6;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* table */
+.table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+.table th, .table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+.table-striped tbody tr:nth-child(odd) { background: #f7f7f7; }
+
+/* delete button */
+.delete {
+  border: 0;
+  padding: 6px 10px;
+  background: #e53935;
+  color: #fff;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1><span class="blue">My</span>BookList</h1>
+
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input id="title" type="text">
+
+      <label for="author">Author</label>
+      <input id="author" type="text">
+
+      <label for="isbn">ISBN#</label>
+      <input id="isbn" type="text">
+
+      <button id="submit" type="button">Add Book</button>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>ISBN#</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="book-list"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js">//your JS code here. If required.
+// elements
+var titleInput  = document.getElementById('title');
+var authorInput = document.getElementById('author');
+var isbnInput   = document.getElementById('isbn');
+var submitBtn   = document.getElementById('submit');
+var listBody    = document.getElementById('book-list');
+
+// add book
+submitBtn.addEventListener('click', function () {
+  var title  = titleInput.value.trim();
+  var author = authorInput.value.trim();
+  var isbn   = isbnInput.value.trim();
+
+  if (!title || !author || !isbn) {
+    alert('Please fill Title, Author, and ISBN#');
+    return;
+  }
+
+  var tr = document.createElement('tr');
+
+  var tdTitle  = document.createElement('td');
+  var tdAuthor = document.createElement('td');
+  var tdIsbn   = document.createElement('td');
+  var tdDel    = document.createElement('td');
+
+  tdTitle.textContent  = title;
+  tdAuthor.textContent = author;
+  tdIsbn.textContent   = isbn;
+
+  var delBtn = document.createElement('button');
+  delBtn.className = 'delete';
+  delBtn.textContent = 'X';
+  tdDel.appendChild(delBtn);
+
+  tr.appendChild(tdTitle);
+  tr.appendChild(tdAuthor);
+  tr.appendChild(tdIsbn);
+  tr.appendChild(tdDel);
+
+  listBody.appendChild(tr);
+
+  // reset
+  titleInput.value = '';
+  authorInput.value = '';
+  isbnInput.value = '';
+  titleInput.focus();
+});
+
+// delete row
+listBody.addEventListener('click', function (e) {
+  if (e.target && e.target.classList.contains('delete')) {
+    var row = e.target.closest('tr');
+    if (row) listBody.removeChild(row);
+  }
+});</script>
+</body>
+</html>

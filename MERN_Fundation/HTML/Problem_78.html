@@ -1,0 +1,214 @@
+<!-- Tic Tac Toe
+Create a webpage that allows user to play the multiplayer tic tac toe game. The webpage should include the following elements:
+An outer div with class container that contains all the content of the page.
+First user is provided by two input boxes for names of both the users with id player-1 and player-2 and a submit button with id submit.
+After user entered name for the players and click on the submit button then a tic tac toe board appears on the screen.
+On the board page there is a h1 tag with content Tic Tac Toe. There should be a div with class="message" to show whose turn is. For example : harsh, you're up if harsh is user1.
+The board should consist of 9 cells in a grid each with id 1, 2, 3, 4.... and so on.
+When user 1 clicks on any cell of the board it shows x and for user 2 it shows o.
+If a user wins a game, then a message is the div with class="message" is shown {username} congratulations you won!.
+The initial view of the page should look like this: -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /*  your css code here. If applicable */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#player-input input {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+#submit {
+  margin-top: 15px;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 0;
+  margin: 20px auto;
+}
+
+.cell {
+  border: 1px solid black;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #f8a8a8;
+}
+
+.message {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cell {
+  border: 1px solid black;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Initial Player Input Section -->
+      <div id="player-input">
+        <h1>Tic Tac Toe</h1>
+        <label>Player 1</label>
+        <input id="player-1" type="text" placeholder="enter name" />
+        <br />
+        <label>Player 2</label>
+        <input id="player-2" type="text" placeholder="enter name" />
+        <br />
+        <button id="submit">Start Game</button>
+      </div>
+
+      <!-- Game Board Section -->
+      <div id="game-board" style="display: none;">
+        <h1>Tic Tac Toe</h1>
+        <div class="message"></div>
+        <div class="board">
+          <!-- 9 cells -->
+          <div class="cell" id="1"></div>
+          <div class="cell" id="2"></div>
+          <div class="cell" id="3"></div>
+          <div class="cell" id="4"></div>
+          <div class="cell" id="5"></div>
+          <div class="cell" id="6"></div>
+          <div class="cell" id="7"></div>
+          <div class="cell" id="8"></div>
+          <div class="cell" id="9"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js">const player1Input = document.getElementById("player-1");
+const player2Input = document.getElementById("player-2");
+const submitBtn = document.getElementById("submit");
+
+const playerInputSection = document.getElementById("player-input");
+const gameBoardSection = document.getElementById("game-board");
+const messageDiv = document.querySelector(".message");
+const cells = document.querySelectorAll(".cell");
+
+let player1, player2;
+let currentPlayer;
+let currentSymbol = "X";
+let board = Array(9).fill("");
+let gameOver = false;
+
+// Start game when players enter names
+submitBtn.addEventListener("click", () => {
+  player1 = player1Input.value.trim() || "Player 1";
+  player2 = player2Input.value.trim() || "Player 2";
+  currentPlayer = player1;
+
+  playerInputSection.style.display = "none";
+  gameBoardSection.style.display = "block";
+  messageDiv.textContent = `${currentPlayer}, you're up`;
+});
+
+// Handle cell clicks
+cells.forEach((cell) => {
+  cell.addEventListener("click", () => {
+    if (gameOver) return;
+
+    const index = parseInt(cell.id) - 1;
+    if (board[index] !== "") return;
+
+    board[index] = currentSymbol;
+    cell.textContent = currentSymbol;
+
+    const winningCombo = checkWinner();
+    if (winningCombo) {
+      highlightWinner(winningCombo);
+      messageDiv.textContent = `${currentPlayer}, congratulations you won!`;
+      gameOver = true;
+      return;
+    }
+
+    // Check for draw
+    if (board.every((x) => x !== "")) {
+      messageDiv.textContent = "It's a draw!";
+      gameOver = true;
+      return;
+    }
+
+    // Switch turns
+    currentPlayer = currentPlayer === player1 ? player2 : player1;
+    currentSymbol = currentSymbol === "X" ? "O" : "X";
+    messageDiv.textContent = `${currentPlayer}, you're up`;
+  });
+});
+
+// Function to check for winner
+function checkWinner() {
+  const wins = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
+  for (const [a, b, c] of wins) {
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      return [a, b, c]; // return the winning cells
+    }
+  }
+  return null;
+}
+
+// Function to highlight winning cells
+function highlightWinner(combo) {
+  combo.forEach((index) => {
+    const cell = document.getElementById((index + 1).toString());
+    cell.style.backgroundColor = "#90EE90"; // light green highlight
+    cell.style.transition = "background-color 0.3s ease";
+  });
+}
+</script>
+  </body>
+</html>
