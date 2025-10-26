@@ -1,4 +1,81 @@
-<!--  -->
+<!-- Progress Bar Component
+Objective
+Your task is to create an interactive progress bar using HTML, CSS, and JavaScript. The progress bar should consist of five circles, each representing a step in the progress, and two buttons: Next (id: next) and Previous (id: prev).
+
+When a user clicks Next, the progress should move forward by activating the next circle. When a user clicks Previous, the progress should move backward by deactivating the current circle. The Previous button should be disabled initially, and the Next button should become disabled once all circles are active.
+
+🎯 Acceptance Criteria
+✅ HTML Structure
+The progress bar must contain 5 circles with unique IDs:
+circle-1
+circle-2
+circle-3
+circle-4
+circle-5
+Each circle must have the class .circle.
+The Next button must have an id of next.
+The Previous button must have an id of prev.
+A progress line should visually connect the circles.
+✅ CSS Styling
+Only the active circles should be highlighted.
+The inactive circles should have a different appearance.
+The progress line should fill as the user moves forward.
+Buttons should be styled properly and disabled when necessary.
+✅ JavaScript Functionality
+Clicking the Next button:
+Adds the active class to the next circle.
+Moves the progress line forward.
+Enables the Previous button if it was disabled.
+Disables the Next button when reaching the last circle.
+Clicking the Previous button:
+Removes the active class from the current circle.
+Moves the progress line backward.
+Enables the Next button if it was disabled.
+Disables the Previous button when reaching the first circle.
+🖥 Example Walkthrough
+Initial State:
+The first circle (circle-1) has the class active.
+The Previous button (prev) is disabled.
+The Next button (next) is enabled.
+User Actions:
+Step 1: Clicking Next
+circle-2 gets the active class.
+prev button becomes enabled.
+Progress line moves forward.
+Step 2: Clicking Next again
+circle-3 gets the active class.
+Progress continues.
+Step 3: Clicking Next until circle-5
+circle-5 is active.
+The Next button (next) is disabled.
+The Previous button (prev) is still enabled.
+Step 4: Clicking Previous
+Moves back to circle-4.
+next button is re-enabled.
+Step 5: Clicking Previous until circle-1
+circle-1 remains active.
+The Previous button (prev) is disabled again.
+🔥 Edge Cases
+Clicking Next at the last step: The next button should be disabled.
+Clicking Previous at the first step: The prev button should be disabled.
+Rapid clicking: The buttons should work properly without skipping or errors.
+Ensure all circles are activated in order: No skipping.
+📌 Expected Test Cases
+✅ Test 1: Checking Circle Presence
+All circles (circle-1 to circle-5) should be present.
+✅ Test 2: Initial State
+circle-1 has the active class.
+prev is disabled.
+next is enabled.
+✅ Test 3: Clicking Next Once
+circle-2 becomes active.
+prev becomes enabled.
+✅ Test 4: Clicking Previous Once
+Moves back to circle-1.
+prev becomes disabled again.
+✅ Test 5: Clicking Next to Last Step
+circle-5 is active.
+next becomes disabled. -->
   <!DOCTYPE html>
 <html lang="en">
 <head>
