@@ -1,0 +1,18 @@
+<!-- Q1. Create an HTML page with a button labeled 'Show Greeting'. When clicked, it should display "Hello, JavaScript Learner!" inside a tag using addEventListener().  -->
+
+<!DOCTYPE html>
+<html>
+<body>
+  <button id="showBtn">Show Greeting</button>
+  <p id="msg"></p>
+
+  <script>
+    const btn = document.getElementById("showBtn");
+    const msg = document.getElementById("msg");
+
+    btn.addEventListener("click", () => {
+      msg.innerText = "Hello, JavaScript Learner!";
+    });
+  </script>
+</body>
+</html>

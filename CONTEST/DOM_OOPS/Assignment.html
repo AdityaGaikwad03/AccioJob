@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM & OOP in JavaScript Assessment</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f5f7fa;
+        color: #222;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: linear-gradient(to right, #182848, #4b6cb7);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      section {
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 900px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #2b3a67;
+        border-bottom: 2px solid #4b6cb7;
+        padding-bottom: 5px;
+      }
+
+      .question {
+        background: #f9fafc;
+        padding: 12px 16px;
+        border-left: 4px solid #4b6cb7;
+        margin: 10px 0;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .question:hover {
+        background: #eef3ff;
+      }
+
+      .answer {
+        display: none;
+        padding: 10px;
+        margin-top: 5px;
+        background: #eef3ff;
+        border-radius: 6px;
+      }
+
+      .show-code-btn,
+      #showBtn {
+        background: #4b6cb7;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.2s;
+        margin: 10px;
+      }
+
+      .show-code-btn:hover {
+        background: #182848;
+      }
+
+      #showBtn:hover {
+        background: #182848;
+      }
+
+      pre {
+        background: #1e1e1e;
+        color: #dcdcdc;
+        padding: 12px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Consolas", monospace;
+        line-height: 1.5;
+      }
+
+      .keyword {
+        color: #569cd6;
+      }
+      .string {
+        color: #ce9178;
+      }
+      .function {
+        color: #dcdcaa;
+      }
+      .variable {
+        color: #9cdcfe;
+      }
+
+      .output {
+        margin-top: 10px;
+        padding: 8px;
+        background: #eef3ff;
+        border-left: 3px solid #4b6cb7;
+        border-radius: 6px;
+        color: #222;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+
+      th {
+        background: #4b6cb7;
+        color: white;
+      }
+
+      .submit {
+        background: #4b6cb7;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 10px 0;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      ul#techList {
+        list-style: none;
+      }
+
+      #name,
+      #email,
+      #studentName,
+      #studentCourse,
+      #studentMarks {
+        width: 30%;
+        padding: 8px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Assessment: DOM & OOP in JavaScript</h1>
+      <p>Duration: 2 Hours | Total Marks: 100</p>
+    </header>
+
+    <!-- Section A -->
+    <section>
+      <h2>Section A — Conceptual (20 Marks)</h2>
+
+      <div class="question">1. What is the DOM?</div>
+      <div class="answer">
+        The DOM is a tree structure representing an HTML document; it differs
+        from static HTML as it’s live and interactive via JS.
+      </div>
+
+      <div class="question">2. Difference between innerText and innerHTML?</div>
+      <div class="answer">
+        <code>innerText</code> shows visible text only, while
+        <code>innerHTML</code> returns HTML including tags.
+      </div>
+
+      <div class="question">3. What does addEventListener() do?</div>
+      <div class="answer">
+        <code>addEventListener()</code> attaches an event to an element.<br />
+        <pre><code>btn.addEventListener("click",()=>alert("Clicked!"));</code></pre>
+      </div>
+
+      <div class="question">4. What is parentElement?</div>
+      <div class="answer">
+        <code>parentElement</code> returns the immediate parent node of an
+        element.
+      </div>
+
+      <div class="question">
+        5. Difference between localStorage and sessionStorage?
+      </div>
+      <div class="answer">
+        <code>localStorage</code> persists data until manually cleared;
+        <code>sessionStorage</code> clears automatically when the tab closes.
+      </div>
+
+      <div class="question">
+        6. How does "this" behave in class methods vs arrow functions?
+      </div>
+      <div class="answer">
+        In class methods, <code>this</code> refers to the instance; in arrow
+        functions, it’s lexically bound to the surrounding scope.
+      </div>
+
+      <div class="question">7. What are the four pillars of OOP?</div>
+      <div class="answer">
+        Encapsulation, Inheritance, Polymorphism, and Abstraction.
+      </div>
+
+      <div class="question">8. What is DocumentFragment?</div>
+      <div class="answer">
+        <code>DocumentFragment</code> lets you build DOM elements off-screen for
+        better performance.
+      </div>
+    </section>
+
+    <!-- Section B -->
+    <section>
+      <h2>Section B — Practical Coding (50 Marks)</h2>
+
+      <!-- Q1 -->
+      <h3>Q1. Show Greeting</h3>
+      <button id="showBtn">Show Greeting</button>
+      <p id="msg" class="output"></p>
+      <button class="show-code-btn" onclick="toggleCode('code1')">
+        Show Code
+      </button>
+      <pre id="code1" style="display: none"><code>
+<span class="variable">document</span>.<span class="function">getElementById</span>(<span class="string">"showBtn"</span>)
+  .<span class="function">addEventListener</span>(<span class="string">"click"</span>, () => {
+    <span class="variable">document</span>.<span class="function">getElementById</span>(<span class="string">"msg"</span>)
+      .innerText = <span class="string">"Hello, JavaScript Learner!"</span>;
+  });
+    </code></pre>
+
+      <!-- Q2 -->
+      <h3>Q2. Dynamic List using DocumentFragment</h3>
+      <ul id="techList" class="output"></ul>
+      <button class="show-code-btn" onclick="toggleCode('code2')">
+        Show Code
+      </button>
+      <pre id="code2" style="display: none"><code>
+<span class="keyword">const</span> arr = [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"JavaScript"</span>, <span class="string">"React"</span>];
+<span class="keyword">const</span> fragment = <span class="variable">document</span>.<span class="function">createDocumentFragment</span>();
+arr.<span class="function">forEach</span>(item => {
+  <span class="keyword">const</span> li = <span class="variable">document</span>.<span class="function">createElement</span>(<span class="string">"li"</span>);
+  li.textContent = item;
+  fragment.appendChild(li);
+});
+<span class="variable">document</span>.<span class="function">getElementById</span>(<span class="string">"techList"</span>).appendChild(fragment);
+    </code></pre>
+
+      <!-- Q3 -->
+      <h3>Q3. Form with localStorage</h3>
+      <form id="userForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <button class="submit" type="submit">Save User</button>
+      </form>
+      <div id="display" class="output"></div>
+      <button class="show-code-btn" onclick="toggleCode('code3')">
+        Show Code
+      </button>
+      <pre id="code3" style="display: none"><code>
+<span class="keyword">const</span> form = <span class="variable">document</span>.<span class="function">getElementById</span>(<span class="string">"userForm"</span>);
+form.<span class="function">addEventListener</span>(<span class="string">"submit"</span>, (e) => {
+  e.preventDefault();
+  <span class="keyword">const</span> user = { name: form.name.value, email: form.email.value };
+  <span class="variable">localStorage</span>.<span class="function">setItem</span>(<span class="string">"user"</span>, JSON.stringify(user));
+  <span class="variable">document</span>.<span class="function">getElementById</span>(<span class="string">"display"</span>)
+    .innerHTML = <span class="string">`&lt;b&gt;Name:&lt;/b&gt; ${user.name} &lt;br&gt;&lt;b&gt;Email:&lt;/b&gt; ${user.email}`</span>;
+  form.reset();
+});
+    </code></pre>
+
+      <!-- Q4 -->
+      <h3>Q4. DOM Traversal Example</h3>
+      <div id="outer" style="background: #e3f2fd; padding: 10px">
+        Outer Div
+        <div id="middle" style="background: #bbdefb; padding: 10px">
+          Middle Div
+          <div id="inner" style="background: #90caf9; padding: 10px">
+            Inner Div
+          </div>
+        </div>
+        <div id="sibling" style="background: #c8e6c9; padding: 10px">
+          Sibling Div
+        </div>
+      </div>
+      <button class="show-code-btn" onclick="toggleCode('code4')">
+        Show Code
+      </button>
+      <pre id="code4" style="display: none"><code>
+<span class="keyword">const</span> inner = <span class="variable">document</span>.<span class="function">getElementById</span>(<span class="string">"inner"</span>);
+inner.parentElement.nextElementSibling.style.background = <span class="string">"#a5d6a7"</span>;
+    </code></pre>
+
+      <!-- Q5 -->
+      <h3>Q5. Product Class Example</h3>
+      <pre id="productOutput" class="output"></pre>
+      <button class="show-code-btn" onclick="toggleCode('code5')">
+        Show Code
+      </button>
+      <pre id="code5" style="display: none"><code>
+<span class="keyword">class</span> Product {
+  <span class="function">constructor</span>(name, price, discount) {
+    <span class="keyword">this</span>.name = name;
+    <span class="keyword">this</span>.price = price;
+    <span class="keyword">this</span>.discount = discount;
+  }
+  <span class="function">getPriceAfterDiscount</span>() {
+    <span class="keyword">return</span> <span class="keyword">this</span>.price - (<span class="keyword">this</span>.price * <span class="keyword">this</span>.discount) / 100;
+  }
+  <span class="function">displayInfo</span>() {
+    <span class="keyword">return</span> `${<span class="keyword">this</span>.name}: ₹${<span class="keyword">this</span>.<span class="function">getPriceAfterDiscount</span>()}`;
+  }
+}
+
+<span class="keyword">const</span> p1 = <span class="keyword">new</span> Product(<span class="string">"Laptop"</span>, 50000, 10);
+<span class="keyword">const</span> p2 = <span class="keyword">new</span> Product(<span class="string">"Phone"</span>, 20000, 5);
+<span class="variable">document</span>.<span class="function">getElementById</span>(<span class="string">"productOutput"</span>).textContent = `${p1.<span class="function">displayInfo</span>()}\n${p2.<span class="function">displayInfo</span>()}`;
+    </code></pre>
+    </section>
+
+   <!-- Section C -->
+  <section>
+    <h2>Section C — Mini Project: Student Manager (30 marks)</h2>
+
+    <form id="studentForm">
+      <input type="text" id="studentName" placeholder="Name" required>
+      <input type="text" id="studentCourse" placeholder="Course" required>
+      <input type="number" id="studentMarks" placeholder="Marks" required>
+      <button type="submit" class="submit">Add Student</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Course</th><th>Marks</th><th>Grade</th></tr>
+      </thead>
+      <tbody id="studentTable"></tbody>
+    </table>
+
+    <button class="show-code-btn" onclick="toggleCode('code6')">
+  Show Code
+</button>
+<pre id="code6" style="display:none"><code>
+<span class="keyword">class</span> Student {
+  <span class="function">constructor</span>(name, course, marks) {
+    <span class="keyword">this</span>.name = name;
+    <span class="keyword">this</span>.course = course;
+    <span class="keyword">this</span>.marks = marks;
+  }
+  <span class="function">getGrade</span>() {
+    <span class="keyword">return</span> <span class="keyword">this</span>.marks >= 40 ? <span class="string">"Pass"</span> : <span class="string">"Fail"</span>;
+  }
+}
+</code></pre>
+
+    </code></pre>
+  </section>
+    <script>
+      // Section A: toggle answers
+      document.querySelectorAll(".question").forEach((q) => {
+        q.addEventListener("click", () => {
+          const next = q.nextElementSibling;
+          next.style.display =
+            next.style.display === "block" ? "none" : "block";
+        });
+      });
+
+      // Section B Q1
+      document.getElementById("showBtn").addEventListener("click", () => {
+        document.getElementById("msg").innerText = "Hello, JavaScript Learner!";
+      });
+
+      // Section B Q2
+      const arr = ["HTML", "CSS", "JavaScript", "React"];
+      const fragment = document.createDocumentFragment();
+      arr.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        fragment.appendChild(li);
+      });
+      document.getElementById("techList").appendChild(fragment);
+
+      // Section B Q3
+      const form = document.getElementById("userForm");
+      const display = document.getElementById("display");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const user = { name: form.name.value, email: form.email.value };
+        localStorage.setItem("user", JSON.stringify(user));
+        display.innerHTML = `<b>Name:</b> ${user.name}<br><b>Email:</b> ${user.email}`;
+        form.reset();
+      });
+
+      // Section B Q4
+      const inner = document.getElementById("inner");
+      inner.parentElement.nextElementSibling.style.background = "#a5d6a7";
+
+      // Section B Q5
+      class Product {
+        constructor(name, price, discount) {
+          this.name = name;
+          this.price = price;
+          this.discount = discount;
+        }
+        getPriceAfterDiscount() {
+          return this.price - (this.price * this.discount) / 100;
+        }
+        displayInfo() {
+          return `${this.name}: ₹${this.getPriceAfterDiscount()}`;
+        }
+      }
+      const p1 = new Product("Laptop", 50000, 10);
+      const p2 = new Product("Phone", 20000, 5);
+      document.getElementById(
+        "productOutput"
+      ).textContent = `${p1.displayInfo()}\n${p2.displayInfo()}`;
+
+      // SECTION C
+    class Student {
+      constructor(name, course, marks) {
+        this.name = name;
+        this.course = course;
+        this.marks = marks;
+      }
+      getGrade() {
+        return this.marks >= 40 ? "Pass" : "Fail";
+      }
+    }
+
+    const studentForm = document.getElementById("studentForm");
+    const studentTable = document.getElementById("studentTable");
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    function renderTable() {
+      studentTable.innerHTML = "";
+      students.forEach(s => {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${s.name}</td><td>${s.course}</td><td>${s.marks}</td><td>${s.marks >= 40 ? "Pass" : "Fail"}</td>`;
+        studentTable.appendChild(row);
+      });
+    }
+
+    studentForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const s = new Student(
+        studentForm.studentName.value,
+        studentForm.studentCourse.value,
+        Number(studentForm.studentMarks.value)
+      );
+      students.push(s);
+      localStorage.setItem("students", JSON.stringify(students));
+      renderTable();
+      studentForm.reset();
+    });
+
+    renderTable();
+
+      // Toggle code
+      function toggleCode(id) {
+        const code = document.getElementById(id);
+        code.style.display = code.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!-- Q4. Create 3 nested divs and use DOM traversal to log firstElementChild, parentElement, and change the background color of nextElementSibling. 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        #outer, #middle, #inner, #sibling {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        #sibling {
+            width: 100px;
+            height: 50px;
+        }
+        #outer{
+            background-color: lightgray;
+        }
+        #middle{
+            background-color: lightblue;
+        }
+        #inner{
+            background-color: lightcoral;
+        }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="outer">Outer Div
+      <div id="middle">Middle Div
+        <div id="inner">Inner Div</div>
+      </div>
+      <div id="sibling">Sibling Div</div>
+    </div>
+
+    <script>
+      const inner = document.getElementById("inner");
+      console.log(inner.firstElementChild); 
+      console.log(inner.parentElement); 
+      inner.parentElement.nextElementSibling.style.background = "lightgreen";
+    </script>
+  </body>
+</html>

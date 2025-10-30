@@ -1,0 +1,32 @@
+<!-- Q2. Create a list dynamically from an array ["HTML", "CSS", "JavaScript", "React"] using DocumentFragment. Add "Node.js" at the end using appendChild(). 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="techList"></ul>
+
+<script>
+  const arr = ["HTML", "CSS", "JavaScript", "React"];
+  const fragment = document.createDocumentFragment();
+
+  arr.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    fragment.appendChild(li);
+  });
+
+  const newLi = document.createElement("li");
+  newLi.textContent = "Node.js";
+  fragment.appendChild(newLi);
+
+  document.getElementById("techList").appendChild(fragment);
+</script>
+
+</body>
+</html>

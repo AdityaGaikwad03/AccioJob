@@ -1,0 +1,41 @@
+<!-- Q3. Create a form (Name, Email) that saves data to localStorage on submit and displays it dynamically. Use submit and input events.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="userForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <button type="submit">Save</button>
+    </form>
+    <div id="display"></div>
+
+    <script>
+      const form = document.getElementById("userForm");
+      const display = document.getElementById("display");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const user = {
+          name: form.name.value,
+          email: form.email.value,
+        };
+        localStorage.setItem("user", JSON.stringify(user));
+        showUser();
+      });
+
+      function showUser() {
+        const data = JSON.parse(localStorage.getItem("user"));
+        if (data)
+          display.innerHTML = `Name: ${data.name}<br>Email: ${data.email}`;
+      }
+
+      showUser(); // restore on load
+    </script>
+  </body>
+</html>
