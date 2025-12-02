@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Final Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<!-- TODO: Set a light gray background and dark text for the whole site -->
+
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- NAVBAR -->
+    <nav class="flex justify-between items-center p-4 bg-white shadow-sm">
+        <!-- TODO: Make navbar flex, spaced apart, centered vertically -->
+        <!-- TODO: Add padding, white background, and small shadow -->
+
+        <h1 class="text-2xl font-bold">
+            <!-- TODO: Make logo large and bold -->
+            BrandName
+        </h1>
+
+        <ul class="hidden md:flex space-x-4">
+            <!-- TODO: Hide menu on small screens, show on medium screens -->
+            <!-- TODO: Add horizontal gap -->
+            <!-- TODO: Add hover color change -->
+            <li class="hover:text-blue-600">Home</li>
+            <li class="hover:text-blue-600">Services</li>
+            <li class="hover:text-blue-600">Pricing</li>
+            <li class="hover:text-blue-600">Contact</li>
+        </ul>
+
+        <button class="md:hidden">
+            <!-- TODO: Show this only on mobile screens -->
+            ☰
+        </button>
+    </nav>
+
+
+
+    <!-- HERO SECTION -->
+    <section class="flex flex-col md:flex-row items-center p-8 bg-white">
+        <!-- TODO: On mobile → vertical; on desktop → horizontal -->
+        <!-- TODO: Add horizontal padding and vertical spacing -->
+
+        <div class="flex-1 space-y-4">
+            <!-- TODO: Make left side flexible, add vertical spacing -->
+            <h1 class="text-4xl font-extrabold leading-tight">
+                <!-- TODO: Make heading very large, bold, tight line height -->
+                Build Modern UIs with
+                <span class="text-blue-600">Tailwind CSS</span>
+                <!-- TODO: Make this span blue -->
+            </h1>
+
+            <p class="text-md text-gray-600">
+                <!-- TODO: Medium text + gray color -->
+                Tailwind gives you the power to design beautiful, responsive UIs faster than ever.
+            </p>
+
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                <!-- TODO: Blue background, white text, padding, rounded, hover color change -->
+                Get Started
+            </button>
+        </div>
+
+        <div class="mt-6 md:mt-0 flex justify-center md:justify-end flex-1">
+            <!-- TODO: Add margin on mobile only -->
+            <!-- TODO: Center the image -->
+            <!-- TODO: Add shadow + rounded corners -->
+            <img src="https://cdn.dribbble.com/userupload/33009550/file/original-e6e4aee4318b0b2edeaf4fe37003901f.jpg?resize=400x0"
+                class="rounded-md shadow-2xl" />
+        </div>
+    </section>
+
+
+
+    <!-- SERVICES SECTION -->
+    <section class="p-8">
+        <!-- TODO: Add padding -->
+        <!-- TODO: Section heading center + bold + big -->
+        <h2 class="text-center font-bold text-3xl">Our Services</h2>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- TODO: Create responsive grid (1 → 3 columns) -->
+            <!-- TODO: Add gap between cards -->
+
+            <!-- CARD 1 -->
+            <div class="bg-white p-6 rounded-lg shadow text-center space-y-4">
+                <!-- TODO: White background + padding + rounded + shadow + center text + vertical gap -->
+                <div class="text-4xl">⚡</div>
+                <!-- TODO: Large bold title -->
+                <h3 class="font-bold text-lg">Fast Development</h3>
+                <!-- TODO: Gray description -->
+                <p class="text-gray-600">Build interfaces at lightning speed with utility-first classes.</p>
+            </div>
+
+            <!-- CARD 2 SAME -->
+            <div class="bg-white p-6 rounded-lg shadow text-center space-y-4">
+                <div class="text-4xl">🎨</div>
+                <h3 class="font-bold text-lg">Beautiful Design</h3>
+                <p class="text-gray-600">Consistent design system and modern UI building blocks.</p>
+            </div>
+
+            <!-- CARD 3 SAME -->
+            <div class="bg-white p-6 rounded-lg shadow text-center space-y-4">
+                <div class="text-4xl">📱</div>
+                <h3 class="font-bold text-lg">Fully Responsive</h3>
+                <p class="text-gray-600">Responsive by default. Perfect on all screen sizes.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- FEATURES SECTION -->
+    <section class="p-8 bg-white">
+        <!-- TODO: Add padding + white background -->
+        <h2 class="text-center font-bold text-3xl">
+            <!-- TODO: Center + bold + large -->
+            Features
+        </h2>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- TODO: 3-column responsive grid + large gap -->
+
+            <div class="bg-gray-100 p-6 rounded-lg shadow space-y-4">
+                <!-- TODO: Light background, padding, rounded, shadow, vertical gap -->
+                <h3 class="font-bold text-lg">Customizable</h3>
+                <p class="text-gray-600">Modify colors, spacing, and shadows easily via config file.</p>
+            </div>
+
+            <div class="bg-gray-100 p-6 rounded-lg shadow space-y-4">
+                <h3 class="font-bold text-lg">Utility-First</h3>
+                <p class="text-gray-600">Compose UIs with predefined classes instead of writing CSS.</p>
+            </div>
+
+            <div class="bg-gray-100 p-6 rounded-lg shadow space-y-4">
+                <h3 class="font-bold text-lg">Developer Friendly</h3>
+                <p class="text-gray-600">Write less CSS and ship projects faster with clean workflows.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- PRICING SECTION -->
+    <section class="p-8 bg-gray-100">
+        <!-- TODO: Add padding -->
+        <h2 class="text-center font-bold text-3xl">
+            <!-- TODO: Center + bold + large -->
+            Pricing
+        </h2>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- TODO: Grid with 3 cards + gap -->
+
+            <!-- CARD 1 -->
+            <div class="bg-white p-6 rounded-lg shadow text-center space-y-4">
+                <!-- TODO: White background + padding + rounded + shadow + center text -->
+                <h3 class="font-bold text-lg">Basic</h3>
+                <p class=" font-bold text-lg">$9</p>
+                <ul class="space-y-4 text-gray-600">
+                    <!-- TODO: Vertical spacing + gray text -->
+                    <li>✔ Starter Features</li>
+                    <li>✔ Email Support</li>
+                    <li>✔ Basic Insights</li>
+                </ul>
+                <button class="bg-blue-500 text-white w-full py-2 rounded hover:bg-blue-600">
+                    <!-- TODO: Blue button full width -->
+                    Choose Plan
+                </button>
+            </div>
+
+            <!-- CARD 2 (Highlighted) -->
+            <div class="bg-blue-500 text-white p-6 rounded-lg shadow-lg transform scale-105 text-center space-y-4">
+                <!-- TODO: Blue background + white text + bigger shadow + scale effect -->
+                <h3 class="font-bold text-lg">Popular</h3>
+                <p class="font-bold text-lg">$19</p>
+                <ul class="space-y-4 text-white">
+                    <li>✔ Unlimited Access</li>
+                    <li>✔ Priority Support</li>
+                    <li>✔ Advanced Insights</li>
+                </ul>
+                <button class="bg-white text-blue-500 w-full py-2 rounded">
+                    <!-- TODO: White background button with blue text -->
+                    Choose Plan
+                </button>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="bg-white p-6 rounded-lg shadow text-center space-y-4">
+                <h3 class="font-bold text-lg">Premium</h3>
+                <p class="font-bold text-lg">$49</p>
+                <ul class="space-y-4 text-gray-600">
+                    <li>✔ All Features</li>
+                    <li>✔ 24/7 Support</li>
+                    <li>✔ Pro Insights</li>
+                </ul>
+                <button class="bg-blue-500 text-white w-full py-2 rounded hover:bg-blue-600">
+                    Choose Plan
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- CONTACT SECTION -->
+    <section class="text-center p-8 bg-white">
+        <h2 class="font-bold text-3xl">
+            <!-- TODO: Center + bold + large -->
+            Contact Us
+        </h2>
+
+        <div class="mt-8 max-w-md mx-auto space-y-4 bg-gray-100 p-6 rounded-lg shadow">
+            <!-- TODO: Make a centered card with padding + gray background + rounded + shadow -->
+
+            <!-- TODO: Apply input field pattern -->
+            <input type="text" placeholder="Your Name" class="w-full p-2 rounded border border-gray-300" />
+
+            <input type="email" placeholder="Email Address" class="w-full p-2 rounded border border-gray-300" />
+
+            <textarea placeholder="Message" class="w-full p-2 rounded border border-gray-300"></textarea>
+            <!-- TODO: Full width blue button with hover + active animations -->
+            <button class="bg-blue-500 text-white w-full py-2 rounded hover:bg-blue-600 active:bg-blue-700">Send Message</button>
+
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="text-center p-4 bg-gray-200 text-gray-600">
+        <!-- TODO: Center text + padding + gray background + gray text -->
+        © 2025 BrandName — All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
