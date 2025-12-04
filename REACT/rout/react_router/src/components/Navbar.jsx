@@ -10,6 +10,8 @@ export default function Navbar(){
             <NavLink to = "/users" style = {({ isActive }) => ({ color: isActive ? 'red' : 'blue' })}>Users</NavLink>
             <NavLink to = "/products" style = {({ isActive }) => ({ color: isActive ? 'red' : 'blue' })}>Products</NavLink>
             <NavLink to = "/postDetails" style ={({isActive}) => ({ color: isActive ? 'red' : 'blue'})}>PostDetails</NavLink>
+            <NavLink to = "/movies" style ={({isActive}) => ({ color: isActive ? 'red' : 'blue'})}>Movies</NavLink>
+            <NavLink to = "/dashboard" style={({isActive}) => ({color: isActive ? 'red' : 'blue'})}>Dashboard</NavLink>
         </nav>
     )
 }
