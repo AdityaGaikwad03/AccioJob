@@ -6,22 +6,32 @@ import { javascript } from "@codemirror/lang-javascript";
 
 export default function Editor({ language, value, onChange }) {
 
-  // MUST match exactly the language prop you pass
+  // Match language to CodeMirror extension
   const mode = {
     html: html(),
     css: css(),
-    js: javascript(),
-    javascript: javascript()
-  }[language]; // <- this prevents undefined
+    js: javascript()
+  }[language];
 
   return (
     <div className="editor-container">
       <CodeMirror
         value={value}
-        height="100%"
         theme="dark"
-        extensions={mode ? [mode] : []}  // <- protects from undefined
+        extensions={mode ? [mode] : []}
         onChange={(val) => onChange(val)}
+        style={{
+          height: "100%",
+          width: "100%",
+          maxWidth: "100%",
+          maxHeight: "100%",
+          overflow: "hidden",
+        }}
+        basicSetup={{
+          lineNumbers: true,
+          // foldGutter: true,
+          highlightActiveLine: true,
+        }}
       />
     </div>
   );
