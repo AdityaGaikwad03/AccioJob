@@ -1,144 +1,166 @@
-🌐 Online Code Editor
+🌐 CodeCraft — Online HTML/CSS/JS Editor
 
-A modern CodePen-style HTML, CSS & JavaScript editor built using React + Vite + CodeMirror 6.
+A sleek, fast, and modern CodePen-style online code editor built with React, Vite, and CodeMirror 6.
+Designed for developers who want instant output, clean UI, and powerful features like autosave, collapsible panels, and mobile-friendly editing.
 
 <p align="center"> <img src="public/logo.svg" width="140" /> </p> <p align="center"> <img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" /> <img src="https://img.shields.io/badge/Vite-5-purple?style=for-the-badge&logo=vite" /> <img src="https://img.shields.io/badge/CodeMirror-6-darkgreen?style=for-the-badge" /> <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" /> </p>
 🚀 Live Demo
 
-👉 Add your deployed link here (Netlify / Vercel)
-
-https://your-code-editor-demo.netlify.app
-
-🎬 Animated Demo (GIFs)
-
-Place your GIFs inside /gifs/ folder and replace paths below.
-
-📝 Typing in the Editor
-
-⚡ Live Rendering
-
-🎛 Collapse / Expand Panels
-
-💾 Auto Save to LocalStorage
-
-📸 Screenshots
-
-Add .png images inside /screenshots/.
-
-✨ Full Editor UI
-
-✨ Preview Panel
+👉 https://codecraft-app.vercel.app/
 
 ✨ Features
-Feature	Description
-📝 HTML/CSS/JS Editor	Powered by CodeMirror 6
-⚡ Live Preview	Updates in real time
-💾 Auto Save	Stored in LocalStorage
-🎛 Expand / Collapse	Individual editor sections
-🎨 Icons	React Icons / FontAwesome
-🌓 Dark UI	Beautiful modern theme
-🔐 Sandbox Mode	Safe JS execution inside iframe
-🎯 Lightweight	Built with Vite for max performance
-🧩 Tech Stack
-<p align="left"> <img src="https://img.shields.io/badge/React-19-blue?logo=react" /> <img src="https://img.shields.io/badge/Vite-5-purple?logo=vite" /> <img src="https://img.shields.io/badge/CodeMirror-6-success" /> <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript" /> <img src="https://img.shields.io/badge/CSS-3-blue?logo=css3" /> </p>
-📂 Folder Structure
-src/
-│── Components/
-│   └── Editor.jsx            # CodeMirror wrapper
-│
-│── hooks/
-│   └── useLocalStorage.js    # Auto-save hook
-│
-│── App.jsx                   # Main editor layout
-│── App.css                   # Styling (dark mode UI)
-│── main.jsx                  # App entry point
-│
-└── public/logo.svg           # Project logo
+🧑‍💻 Editor Functionality
 
-⚙️ Installation
-1️⃣ Clone repository
-git clone https://github.com/AdityaGaikwad03/AccioJob/edit/main/PROJECT/codeeditor
-cd code-editor
+Separate HTML, CSS, and JavaScript editors
+
+Built using CodeMirror 6 for a smooth coding experience
+
+Auto-run preview updates output in real time
+
+Collapsible editor panels
+
+Mobile-friendly tab switching (HTML / CSS / JS)
+
+💾 Storage & Code Management
+
+Auto-save via LocalStorage
+
+Manual Save button with success popup
+
+Load Previous Code anytime
+
+Reset All Editors with one click
+
+📱 UI & Responsiveness
+
+Fully responsive layout
+
+Mobile-first panel switching
+
+Clean dark-themed interface
+
+FontAwesome icons for HTML, CSS, JS, and controls
+
+🔐 Output Preview
+
+Real-time iframe preview
+
+Safe execution using:
+
+sandbox="allow-scripts"
+
+🧠 How It Works
+🔄 Live Auto Preview
+
+A 300ms debounce prevents excessive renders:
+
+useEffect(() => {
+  const timeout = setTimeout(() => {
+    setSrcDoc(`
+      <html>
+        <style>${css}</style>
+        <body>${html}</body>
+        <script>${js}<\/script>
+      </html>
+    `);
+  }, 300);
+
+  return () => clearTimeout(timeout);
+}, [html, css, js]);
+
+💾 Save Code
+const handleSave = () => {
+  localStorage.setItem("html", html);
+  localStorage.setItem("css", css);
+  localStorage.setItem("js", js);
+
+  setShowPopup(true);
+  setTimeout(() => setShowPopup(false), 2000);
+};
+
+📂 Load Saved Code
+const handleLoad = () => {
+  setHtml(localStorage.getItem("html") || "");
+  setCss(localStorage.getItem("css") || "");
+  setJs(localStorage.getItem("js") || "");
+};
+
+🗑️ Reset Everything
+const handleReset = () => {
+  setHtml("");
+  setCss("");
+  setJs("");
+};
+
+📱 Mobile Editing (Tabs)
+
+Switch between HTML, CSS, and JS:
+
+<div className="mobile-tabs">
+  <button onClick={() => setActivePanel("html")}>HTML</button>
+  <button onClick={() => setActivePanel("css")}>CSS</button>
+  <button onClick={() => setActivePanel("js")}>JS</button>
+</div>
+
+🔧 Installation & Setup
+1️⃣ Clone the repo
+git clone https://github.com/AdityaGaikwad03/AccioJob
+cd PROJECT/codeeditor
 
 2️⃣ Install dependencies
 npm install
 
-3️⃣ Run development server
+3️⃣ Run dev server
 npm run dev
 
-Access the project:
-http://localhost:5173
 
-🛠 Build
-npm run build
+Visit:
+👉 http://localhost:5173
 
-
-Output will be in the /dist folder.
+📂 Folder Structure
+src/
+│── Components/
+│   ├── Editor.jsx
+│   ├── NavBar.jsx
+│   └── (new components can be added)
+│
+│── hooks/
+│   └── useLocalStorage.js
+│
+│── App.jsx          # Main application logic
+│── App.css          # Styling & layout
+│── main.jsx         # Entry point
+│
+└── public/logo.svg
 
 ☁️ Deployment
 🚀 Deploy to Netlify
 npm run build
-
-
-Then drag the /dist folder into Netlify.
-
-OR:
-
 netlify deploy
 
 🚀 Deploy to Vercel
-npm install -g vercel
+npm i -g vercel
 vercel
 
-🔐 Security Notes
+📌 Changelog
+v1.2.0
 
-The preview is rendered using:
+Added mobile tabs
 
-sandbox="allow-scripts allow-same-origin"
+Added save/load/reset functionality
 
+Added save success popup
 
-✔ Required for live preview
-✔ Safe for self-written code
-❌ Do NOT load third-party external URLs
+Improved live preview debounce
 
-🧠 How It Works (Core Logic)
-Live Preview Engine
-setSrcDoc(`
-  <html>
-    <style>${css}</style>
-    <body>${html}</body>
-    <script>${js}<\/script>
-  </html>
-`);
-
-Persistent Data
-const [html, setHtml] = useLocalStorage("html", "");
-
-CodeMirror Setup
-<CodeMirror
-  value={value}
-  extensions={[html(), css(), javascript()]}
-  theme="dark"
-  onChange={onChange}
-/>
+Enhanced UI design & responsiveness
 
 🤝 Contributing
 
-Fork this repo
+Fork the repo
 
-Create a new branch
+Create a feature branch
 
-Commit your changes
+Commit changes
 
 Open a Pull Request
-
-🧹 Changelog
-v1.0.0
-
-✔ CodeMirror 6
-✔ HTML/CSS/JS live preview
-✔ LocalStorage auto save
-✔ Collapsible panels
-✔ Icon UI
-✔ GIF demo included
-✔ Project logo added
