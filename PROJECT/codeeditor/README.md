@@ -57,7 +57,7 @@ src/
 
 ⚙️ Installation
 1️⃣ Clone repository
-git clone https://github.com/your-username/code-editor.git
+git clone https://github.com/AdityaGaikwad03/AccioJob/edit/main/PROJECT/codeeditor
 cd code-editor
 
 2️⃣ Install dependencies
