@@ -102,6 +102,21 @@ html, body, #root {
   overflow: hidden;
 }
 
+.panel.collapsed {
+  height: 40px !important;
+  overflow: hidden;
+  flex: 0 0 100% !important;   /* 👈 takes full row */
+  width: 100% !important;      /* 👈 forces new line */
+}
+.top-pane {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px;
+  padding: 10px;
+  height: 50vh;
+  min-height: 0;
+}
+
 .panel.collapsed .cm-editor {
   display: none !important;
 }
