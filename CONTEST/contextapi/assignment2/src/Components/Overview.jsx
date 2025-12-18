@@ -7,24 +7,44 @@ export default function Overview() {
   const [notifications, setNotifications] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setNotifications(["Welcome!", "New update available"]);
       setLoading(false);
     }, 1500);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div>
+    <div
+      style={{
+        background: theme === "light" ? "#fff" : "#222",
+        color: theme === "light" ? "#222" : "#fff",
+        minHeight: "100vh",
+        padding: "10px",
+      }}
+    >
       <h2>Hello {username}</h2>
       <p>Theme: {theme}</p>
-      <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+
+      <button
+        onClick={() =>
+          setTheme(theme === "light" ? "dark" : "light")
+        }
+      >
         Toggle Theme
       </button>
+
+      <hr />
 
       {loading ? (
         <p>Loading...</p>
       ) : notifications.length ? (
-        <ul>{notifications.map((n, i) => <li key={i}>{n}</li>)}</ul>
+        <ul>
+          {notifications.map((n, i) => (
+            <li key={i}>{n}</li>
+          ))}
+        </ul>
       ) : (
         <p>No notifications.</p>
       )}
