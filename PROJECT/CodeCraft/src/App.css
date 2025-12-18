@@ -342,3 +342,16 @@ html, body, #root {
     min-width: 80px;
   }
 }
+
+.icon-html {
+  color: #e34c26; /* HTML orange */
+}
+
+.icon-css {
+  color: #264de4; /* CSS blue */
+}
+
+.icon-js {
+  color: #f7df1e; /* JS yellow */
+}
+
