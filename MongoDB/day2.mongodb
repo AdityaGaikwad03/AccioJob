@@ -1,0 +1,3785 @@
+use trainingDB
+// switched to db trainingDB
+db.employees.insertMany([
+  { empId: "E001", name: "Amit Sharma", department: "Engineering", age: 25, salary: 45000, isActive: true, location: "Ahmedabad", joiningDate: new Date("2023-01-10") },
+  { empId: "E002", name: "Neha Verma", department: "HR", age: 29, salary: 40000, isActive: true, location: "Delhi", joiningDate: new Date("2023-01-15") },
+  { empId: "E003", name: "Rahul Mehta", department: "Management", age: 35, salary: 80000, isActive: true, location: "Mumbai", joiningDate: new Date("2022-12-01") },
+  { empId: "E004", name: "Pooja Singh", department: "QA", age: 26, salary: 38000, isActive: false, location: "Jaipur", joiningDate: new Date("2023-02-01") },
+  { empId: "E005", name: "Karan Patel", department: "Design", age: 27, salary: 42000, isActive: true, location: "Ahmedabad", joiningDate: new Date("2023-03-05") },
+
+  { empId: "E006", name: "User6", department: "Engineering", age: 24, salary: 46000, isActive: true, location: "Pune", joiningDate: new Date("2023-03-10") },
+  { empId: "E007", name: "User7", department: "Engineering", age: 31, salary: 52000, isActive: false, location: "Surat", joiningDate: new Date("2022-11-20") },
+  { empId: "E008", name: "User8", department: "HR", age: 28, salary: 41000, isActive: true, location: "Delhi", joiningDate: new Date("2023-04-01") },
+  { empId: "E009", name: "User9", department: "QA", age: 25, salary: 39000, isActive: true, location: "Indore", joiningDate: new Date("2023-04-15") },
+  { empId: "E010", name: "User10", department: "Management", age: 38, salary: 90000, isActive: true, location: "Chandigarh", joiningDate: new Date("2022-10-10") },
+
+  { empId: "E011", name: "User11", department: "Engineering", age: 22, salary: 35000, isActive: true, location: "Bhopal", joiningDate: new Date("2023-05-01") },
+  { empId: "E012", name: "User12", department: "QA", age: 24, salary: 36000, isActive: false, location: "Lucknow", joiningDate: new Date("2023-05-10") },
+  { empId: "E013", name: "User13", department: "HR", age: 30, salary: 43000, isActive: true, location: "Delhi", joiningDate: new Date("2023-05-15") },
+  { empId: "E014", name: "User14", department: "Engineering", age: 27, salary: 48000, isActive: true, location: "Ahmedabad", joiningDate: new Date("2023-06-01") },
+  { empId: "E015", name: "User15", department: "Management", age: 41, salary: 95000, isActive: false, location: "Mumbai", joiningDate: new Date("2022-09-20") },
+
+  { empId: "E016", name: "User16", department: "Design", age: 26, salary: 44000, isActive: true, location: "Pune", joiningDate: new Date("2023-06-15") },
+  { empId: "E017", name: "User17", department: "QA", age: 23, salary: 34000, isActive: true, location: "Indore", joiningDate: new Date("2023-07-01") },
+  { empId: "E018", name: "User18", department: "Engineering", age: 32, salary: 60000, isActive: true, location: "Surat", joiningDate: new Date("2022-08-01") },
+  { empId: "E019", name: "User19", department: "HR", age: 34, salary: 46000, isActive: false, location: "Delhi", joiningDate: new Date("2023-07-15") },
+  { empId: "E020", name: "User20", department: "Management", age: 39, salary: 88000, isActive: true, location: "Jaipur", joiningDate: new Date("2022-07-10") },
+
+  { empId: "E021", name: "User21", department: "Engineering", age: 28, salary: 52000, isActive: true, location: "Ahmedabad", joiningDate: new Date("2023-08-01") },
+  { empId: "E022", name: "User22", department: "QA", age: 26, salary: 37000, isActive: true, location: "Bhopal", joiningDate: new Date("2023-08-10") },
+  { empId: "E023", name: "User23", department: "Design", age: 29, salary: 47000, isActive: true, location: "Pune", joiningDate: new Date("2023-08-20") },
+  { empId: "E024", name: "User24", department: "HR", age: 31, salary: 45000, isActive: true, location: "Delhi", joiningDate: new Date("2023-09-01") },
+  { empId: "E025", name: "User25", department: "Engineering", age: 34, salary: 65000, isActive: false, location: "Surat", joiningDate: new Date("2022-06-01") },
+
+  { empId: "E026", name: "User26", department: "Management", age: 42, salary: 99000, isActive: true, location: "Mumbai", joiningDate: new Date("2022-05-01") },
+  { empId: "E027", name: "User27", department: "QA", age: 24, salary: 36000, isActive: true, location: "Indore", joiningDate: new Date("2023-09-15") },
+  { empId: "E028", name: "User28", department: "Engineering", age: 26, salary: 50000, isActive: true, location: "Ahmedabad", joiningDate: new Date("2023-10-01") },
+  { empId: "E029", name: "User29", department: "Design", age: 28, salary: 48000, isActive: false, location: "Jaipur", joiningDate: new Date("2023-10-10") },
+  { empId: "E030", name: "User30", department: "HR", age: 33, salary: 47000, isActive: true, location: "Delhi", joiningDate: new Date("2023-10-20") },
+
+  { empId: "E031", name: "User31", department: "Engineering", age: 23, salary: 36000, isActive: true, location: "Pune", joiningDate: new Date("2023-11-01") },
+  { empId: "E032", name: "User32", department: "QA", age: 27, salary: 38000, isActive: true, location: "Lucknow", joiningDate: new Date("2023-11-05") },
+  { empId: "E033", name: "User33", department: "Management", age: 37, salary: 82000, isActive: false, location: "Chandigarh", joiningDate: new Date("2022-04-01") },
+  { empId: "E034", name: "User34", department: "Engineering", age: 29, salary: 56000, isActive: true, location: "Ahmedabad", joiningDate: new Date("2023-11-15") },
+  { empId: "E035", name: "User35", department: "Design", age: 31, salary: 50000, isActive: true, location: "Pune", joiningDate: new Date("2023-11-20") },
+
+  { empId: "E036", name: "User36", department: "HR", age: 35, salary: 52000, isActive: true, location: "Delhi", joiningDate: new Date("2023-12-01") },
+  { empId: "E037", name: "User37", department: "Engineering", age: 33, salary: 70000, isActive: false, location: "Surat", joiningDate: new Date("2022-03-01") },
+  { empId: "E038", name: "User38", department: "QA", age: 25, salary: 37000, isActive: true, location: "Indore", joiningDate: new Date("2023-12-10") },
+  { empId: "E039", name: "User39", department: "Management", age: 40, salary: 91000, isActive: true, location: "Mumbai", joiningDate: new Date("2022-02-01") },
+  { empId: "E040", name: "User40", department: "Engineering", age: 28, salary: 54000, isActive: true, location: "Ahmedabad", joiningDate: new Date("2023-12-15") },
+
+  { empId: "E041", name: "User41", department: "Design", age: 27, salary: 46000, isActive: true, location: "Pune", joiningDate: new Date("2024-01-01") },
+  { empId: "E042", name: "User42", department: "QA", age: 24, salary: 35000, isActive: false, location: "Bhopal", joiningDate: new Date("2024-01-05") },
+  { empId: "E043", name: "User43", department: "HR", age: 32, salary: 48000, isActive: true, location: "Delhi", joiningDate: new Date("2024-01-10") },
+  { empId: "E044", name: "User44", department: "Engineering", age: 30, salary: 62000, isActive: true, location: "Surat", joiningDate: new Date("2024-01-15") },
+  { empId: "E045", name: "User45", department: "Management", age: 43, salary: 97000, isActive: false, location: "Mumbai", joiningDate: new Date("2022-01-01") },
+
+  { empId: "E046", name: "User46", department: "Design", age: 28, salary: 49000, isActive: true, location: "Pune", joiningDate: new Date("2024-01-20") },
+  { empId: "E047", name: "User47", department: "Engineering", age: 26, salary: 51000, isActive: true, location: "Ahmedabad", joiningDate: new Date("2024-01-25") },
+  { empId: "E048", name: "User48", department: "QA", age: 29, salary: 40000, isActive: true, location: "Indore", joiningDate: new Date("2024-01-28") },
+  { empId: "E049", name: "User49", department: "HR", age: 36, salary: 55000, isActive: false, location: "Delhi", joiningDate: new Date("2024-02-01") },
+  { empId: "E050", name: "User50", department: "Engineering", age: 34, salary: 72000, isActive: true, location: "Mumbai", joiningDate: new Date("2024-02-05") }
+])
+// {
+//     '3': ObjectId('6963d1fe08e3e5a5a32d5028'),
+//     '4': ObjectId('6963d1fe08e3e5a5a32d5029'),
+//     '5': ObjectId('6963d1fe08e3e5a5a32d502a'),
+//     '6': ObjectId('6963d1fe08e3e5a5a32d502b'),
+//     '7': ObjectId('6963d1fe08e3e5a5a32d502c'),
+//     '8': ObjectId('6963d1fe08e3e5a5a32d502d'),
+//     '9': ObjectId('6963d1fe08e3e5a5a32d502e'),
+//     '10': ObjectId('6963d1fe08e3e5a5a32d502f'),
+//     '11': ObjectId('6963d1fe08e3e5a5a32d5030'),
+//     '12': ObjectId('6963d1fe08e3e5a5a32d5031'),
+//     '13': ObjectId('6963d1fe08e3e5a5a32d5032'),
+//     '14': ObjectId('6963d1fe08e3e5a5a32d5033'),
+//     '15': ObjectId('6963d1fe08e3e5a5a32d5034'),
+//     '16': ObjectId('6963d1fe08e3e5a5a32d5035'),
+//     '17': ObjectId('6963d1fe08e3e5a5a32d5036'),
+//     '18': ObjectId('6963d1fe08e3e5a5a32d5037'),
+//     '19': ObjectId('6963d1fe08e3e5a5a32d5038'),
+//     '20': ObjectId('6963d1fe08e3e5a5a32d5039'),
+//     '21': ObjectId('6963d1fe08e3e5a5a32d503a'),
+//     '22': ObjectId('6963d1fe08e3e5a5a32d503b'),
+//     '23': ObjectId('6963d1fe08e3e5a5a32d503c'),
+//     '24': ObjectId('6963d1fe08e3e5a5a32d503d'),
+//     '25': ObjectId('6963d1fe08e3e5a5a32d503e'),
+//     '26': ObjectId('6963d1fe08e3e5a5a32d503f'),
+//     '27': ObjectId('6963d1fe08e3e5a5a32d5040'),
+//     '28': ObjectId('6963d1fe08e3e5a5a32d5041'),
+//     '29': ObjectId('6963d1fe08e3e5a5a32d5042'),
+//     '30': ObjectId('6963d1fe08e3e5a5a32d5043'),
+//     '31': ObjectId('6963d1fe08e3e5a5a32d5044'),
+//     '32': ObjectId('6963d1fe08e3e5a5a32d5045'),
+//     '33': ObjectId('6963d1fe08e3e5a5a32d5046'),
+//     '34': ObjectId('6963d1fe08e3e5a5a32d5047'),
+//     '35': ObjectId('6963d1fe08e3e5a5a32d5048'),
+//     '36': ObjectId('6963d1fe08e3e5a5a32d5049'),
+//     '37': ObjectId('6963d1fe08e3e5a5a32d504a'),
+//     '38': ObjectId('6963d1fe08e3e5a5a32d504b'),
+//     '39': ObjectId('6963d1fe08e3e5a5a32d504c'),
+//     '40': ObjectId('6963d1fe08e3e5a5a32d504d'),
+//     '41': ObjectId('6963d1fe08e3e5a5a32d504e'),
+//     '42': ObjectId('6963d1fe08e3e5a5a32d504f'),
+//     '43': ObjectId('6963d1fe08e3e5a5a32d5050'),
+//     '44': ObjectId('6963d1fe08e3e5a5a32d5051'),
+//     '45': ObjectId('6963d1fe08e3e5a5a32d5052'),
+//     '46': ObjectId('6963d1fe08e3e5a5a32d5053'),
+//     '47': ObjectId('6963d1fe08e3e5a5a32d5054'),
+//     '48': ObjectId('6963d1fe08e3e5a5a32d5055'),
+//     '49': ObjectId('6963d1fe08e3e5a5a32d5056')
+//   }
+
+db.inventory.insertMany([
+  { itemCode: "I001", itemName: "Office Chair", category: "Furniture", price: 4500, quantity: 20, supplier: "UrbanFurn", isAvailable: true, addedOn: new Date("2024-01-01") },
+  { itemCode: "I002", itemName: "Desk Table", category: "Furniture", price: 8500, quantity: 10, supplier: "WoodWorks", isAvailable: true, addedOn: new Date("2024-01-02") },
+  { itemCode: "I003", itemName: "Laptop Stand", category: "Accessories", price: 1200, quantity: 0, supplier: "TechGear", isAvailable: false, addedOn: new Date("2024-01-03") },
+  { itemCode: "I004", itemName: "Wireless Mouse", category: "Electronics", price: 900, quantity: 50, supplier: "LogiTech", isAvailable: true, addedOn: new Date("2024-01-04") },
+  { itemCode: "I005", itemName: "Keyboard", category: "Electronics", price: 1500, quantity: 40, supplier: "KeyMaster", isAvailable: true, addedOn: new Date("2024-01-05") },
+
+  { itemCode: "I006", itemName: "Monitor 24inch", category: "Electronics", price: 12000, quantity: 15, supplier: "ViewMax", isAvailable: true, addedOn: new Date("2024-01-06") },
+  { itemCode: "I007", itemName: "Printer", category: "Electronics", price: 9500, quantity: 5, supplier: "PrintTech", isAvailable: true, addedOn: new Date("2024-01-07") },
+  { itemCode: "I008", itemName: "Whiteboard", category: "Furniture", price: 3200, quantity: 12, supplier: "OfficePro", isAvailable: true, addedOn: new Date("2024-01-08") },
+  { itemCode: "I009", itemName: "Marker Set", category: "Accessories", price: 300, quantity: 100, supplier: "WriteWell", isAvailable: true, addedOn: new Date("2024-01-09") },
+  { itemCode: "I010", itemName: "Projector", category: "Electronics", price: 28000, quantity: 3, supplier: "BeamPro", isAvailable: true, addedOn: new Date("2024-01-10") },
+
+  { itemCode: "I011", itemName: "CPU Cabinet", category: "Electronics", price: 35000, quantity: 7, supplier: "BuildPC", isAvailable: true, addedOn: new Date("2024-01-11") },
+  { itemCode: "I012", itemName: "UPS", category: "Electronics", price: 6000, quantity: 9, supplier: "PowerSafe", isAvailable: true, addedOn: new Date("2024-01-12") },
+  { itemCode: "I013", itemName: "Router", category: "Electronics", price: 2500, quantity: 18, supplier: "NetLink", isAvailable: true, addedOn: new Date("2024-01-13") },
+  { itemCode: "I014", itemName: "LAN Cable", category: "Accessories", price: 400, quantity: 0, supplier: "CablePro", isAvailable: false, addedOn: new Date("2024-01-14") },
+  { itemCode: "I015", itemName: "Extension Board", category: "Accessories", price: 700, quantity: 35, supplier: "PowerLine", isAvailable: true, addedOn: new Date("2024-01-15") },
+
+  { itemCode: "I016", itemName: "Webcam", category: "Electronics", price: 3200, quantity: 14, supplier: "CamTech", isAvailable: true, addedOn: new Date("2024-01-16") },
+  { itemCode: "I017", itemName: "Headphones", category: "Electronics", price: 2800, quantity: 22, supplier: "SoundMax", isAvailable: true, addedOn: new Date("2024-01-17") },
+  { itemCode: "I018", itemName: "Conference Speaker", category: "Electronics", price: 15000, quantity: 4, supplier: "AudioHub", isAvailable: true, addedOn: new Date("2024-01-18") },
+  { itemCode: "I019", itemName: "Coffee Machine", category: "Electronics", price: 18000, quantity: 2, supplier: "CafePro", isAvailable: true, addedOn: new Date("2024-01-19") },
+  { itemCode: "I020", itemName: "Water Dispenser", category: "Electronics", price: 9000, quantity: 6, supplier: "AquaPure", isAvailable: true, addedOn: new Date("2024-01-20") },
+
+  { itemCode: "I021", itemName: "Filing Cabinet", category: "Furniture", price: 11000, quantity: 8, supplier: "SteelWorks", isAvailable: true, addedOn: new Date("2024-01-21") },
+  { itemCode: "I022", itemName: "Office Sofa", category: "Furniture", price: 42000, quantity: 1, supplier: "ComfortZone", isAvailable: true, addedOn: new Date("2024-01-22") },
+  { itemCode: "I023", itemName: "Reception Desk", category: "Furniture", price: 25000, quantity: 2, supplier: "FrontDesk", isAvailable: true, addedOn: new Date("2024-01-23") },
+  { itemCode: "I024", itemName: "Paper Shredder", category: "Electronics", price: 5200, quantity: 5, supplier: "SecureDoc", isAvailable: true, addedOn: new Date("2024-01-24") },
+  { itemCode: "I025", itemName: "Scanner", category: "Electronics", price: 8200, quantity: 6, supplier: "ScanTech", isAvailable: true, addedOn: new Date("2024-01-25") },
+
+  { itemCode: "I026", itemName: "Desk Lamp", category: "Accessories", price: 1100, quantity: 30, supplier: "BrightLite", isAvailable: true, addedOn: new Date("2024-01-26") },
+  { itemCode: "I027", itemName: "Mouse Pad", category: "Accessories", price: 250, quantity: 150, supplier: "SoftMat", isAvailable: true, addedOn: new Date("2024-01-27") },
+  { itemCode: "I028", itemName: "Stationery Kit", category: "Accessories", price: 900, quantity: 60, supplier: "OfficeBasics", isAvailable: true, addedOn: new Date("2024-01-28") },
+  { itemCode: "I029", itemName: "External Hard Drive", category: "Electronics", price: 6500, quantity: 12, supplier: "DataStore", isAvailable: true, addedOn: new Date("2024-01-29") },
+  { itemCode: "I030", itemName: "Pen Drive 64GB", category: "Electronics", price: 800, quantity: 80, supplier: "FlashX", isAvailable: true, addedOn: new Date("2024-01-30") },
+
+  { itemCode: "I031", itemName: "Power Bank", category: "Electronics", price: 2200, quantity: 18, supplier: "ChargePro", isAvailable: true, addedOn: new Date("2024-01-31") },
+  { itemCode: "I032", itemName: "Smart TV", category: "Electronics", price: 55000, quantity: 2, supplier: "VisionPlus", isAvailable: true, addedOn: new Date("2024-02-01") },
+  { itemCode: "I033", itemName: "AC Unit", category: "Electronics", price: 38000, quantity: 1, supplier: "CoolAir", isAvailable: true, addedOn: new Date("2024-02-02") },
+  { itemCode: "I034", itemName: "Heater", category: "Electronics", price: 3200, quantity: 0, supplier: "HeatMax", isAvailable: false, addedOn: new Date("2024-02-03") },
+  { itemCode: "I035", itemName: "Vacuum Cleaner", category: "Electronics", price: 7200, quantity: 4, supplier: "CleanTech", isAvailable: true, addedOn: new Date("2024-02-04") },
+
+  { itemCode: "I036", itemName: "Footrest", category: "Furniture", price: 1800, quantity: 10, supplier: "ComfortZone", isAvailable: true, addedOn: new Date("2024-02-05") },
+  { itemCode: "I037", itemName: "Cable Organizer", category: "Accessories", price: 600, quantity: 40, supplier: "CablePro", isAvailable: true, addedOn: new Date("2024-02-06") },
+  { itemCode: "I038", itemName: "Laptop Bag", category: "Accessories", price: 2400, quantity: 18, supplier: "CarryAll", isAvailable: true, addedOn: new Date("2024-02-07") },
+  { itemCode: "I039", itemName: "Surge Protector", category: "Accessories", price: 1300, quantity: 25, supplier: "PowerLine", isAvailable: true, addedOn: new Date("2024-02-08") },
+  { itemCode: "I040", itemName: "Standing Desk", category: "Furniture", price: 48000, quantity: 1, supplier: "FlexiDesk", isAvailable: true, addedOn: new Date("2024-02-09") },
+
+  { itemCode: "I041", itemName: "Tablet", category: "Electronics", price: 26000, quantity: 6, supplier: "TabWorld", isAvailable: true, addedOn: new Date("2024-02-10") },
+  { itemCode: "I042", itemName: "Smart Watch", category: "Electronics", price: 15000, quantity: 9, supplier: "TimeTech", isAvailable: true, addedOn: new Date("2024-02-11") },
+  { itemCode: "I043", itemName: "Mobile Stand", category: "Accessories", price: 500, quantity: 55, supplier: "GripGo", isAvailable: true, addedOn: new Date("2024-02-12") },
+  { itemCode: "I044", itemName: "Desk Drawer", category: "Furniture", price: 3500, quantity: 7, supplier: "WoodWorks", isAvailable: true, addedOn: new Date("2024-02-13") },
+  { itemCode: "I045", itemName: "Paper Tray", category: "Accessories", price: 700, quantity: 20, supplier: "OfficePro", isAvailable: true, addedOn: new Date("2024-02-14") },
+
+  { itemCode: "I046", itemName: "Barcode Scanner", category: "Electronics", price: 9800, quantity: 3, supplier: "ScanTech", isAvailable: true, addedOn: new Date("2024-02-15") },
+  { itemCode: "I047", itemName: "Cash Drawer", category: "Electronics", price: 5200, quantity: 2, supplier: "RetailGear", isAvailable: true, addedOn: new Date("2024-02-16") },
+  { itemCode: "I048", itemName: "Label Printer", category: "Electronics", price: 14500, quantity: 1, supplier: "PrintTech", isAvailable: true, addedOn: new Date("2024-02-17") },
+  { itemCode: "I049", itemName: "Noise Cancelling Headset", category: "Electronics", price: 22000, quantity: 2, supplier: "SoundMax", isAvailable: true, addedOn: new Date("2024-02-18") },
+  { itemCode: "I050", itemName: "Server Rack", category: "Furniture", price: 65000, quantity: 1, supplier: "RackPro", isAvailable: true, addedOn: new Date("2024-02-19") }
+])
+// {
+//   acknowledged: true,
+//   insertedIds: {
+//     '0': ObjectId('6963d21208e3e5a5a32d5057'),
+//     '1': ObjectId('6963d21208e3e5a5a32d5058'),
+//     '2': ObjectId('6963d21208e3e5a5a32d5059'),
+//     '3': ObjectId('6963d21208e3e5a5a32d505a'),
+//     '4': ObjectId('6963d21208e3e5a5a32d505b'),
+//     '5': ObjectId('6963d21208e3e5a5a32d505c'),
+//     '6': ObjectId('6963d21208e3e5a5a32d505d'),
+//     '7': ObjectId('6963d21208e3e5a5a32d505e'),
+//     '8': ObjectId('6963d21208e3e5a5a32d505f'),
+//     '9': ObjectId('6963d21208e3e5a5a32d5060'),
+//     '10': ObjectId('6963d21208e3e5a5a32d5061'),
+//     '11': ObjectId('6963d21208e3e5a5a32d5062'),
+//     '12': ObjectId('6963d21208e3e5a5a32d5063'),
+//     '13': ObjectId('6963d21208e3e5a5a32d5064'),
+//     '14': ObjectId('6963d21208e3e5a5a32d5065'),
+//     '15': ObjectId('6963d21208e3e5a5a32d5066'),
+//     '16': ObjectId('6963d21208e3e5a5a32d5067'),
+//     '17': ObjectId('6963d21208e3e5a5a32d5068'),
+//     '18': ObjectId('6963d21208e3e5a5a32d5069'),
+//     '19': ObjectId('6963d21208e3e5a5a32d506a'),
+//     '20': ObjectId('6963d21208e3e5a5a32d506b'),
+//     '21': ObjectId('6963d21208e3e5a5a32d506c'),
+//     '22': ObjectId('6963d21208e3e5a5a32d506d'),
+//     '23': ObjectId('6963d21208e3e5a5a32d506e'),
+//     '24': ObjectId('6963d21208e3e5a5a32d506f'),
+//     '25': ObjectId('6963d21208e3e5a5a32d5070'),
+//     '26': ObjectId('6963d21208e3e5a5a32d5071'),
+//     '27': ObjectId('6963d21208e3e5a5a32d5072'),
+//     '28': ObjectId('6963d21208e3e5a5a32d5073'),
+//     '29': ObjectId('6963d21208e3e5a5a32d5074'),
+//     '30': ObjectId('6963d21208e3e5a5a32d5075'),
+//     '31': ObjectId('6963d21208e3e5a5a32d5076'),
+//     '32': ObjectId('6963d21208e3e5a5a32d5077'),
+//     '33': ObjectId('6963d21208e3e5a5a32d5078'),
+//     '34': ObjectId('6963d21208e3e5a5a32d5079'),
+//     '35': ObjectId('6963d21208e3e5a5a32d507a'),
+//     '36': ObjectId('6963d21208e3e5a5a32d507b'),
+//     '37': ObjectId('6963d21208e3e5a5a32d507c'),
+//     '38': ObjectId('6963d21208e3e5a5a32d507d'),
+//     '39': ObjectId('6963d21208e3e5a5a32d507e'),
+//     '40': ObjectId('6963d21208e3e5a5a32d507f'),
+//     '41': ObjectId('6963d21208e3e5a5a32d5080'),
+//     '42': ObjectId('6963d21208e3e5a5a32d5081'),
+//     '43': ObjectId('6963d21208e3e5a5a32d5082'),
+//     '44': ObjectId('6963d21208e3e5a5a32d5083'),
+//     '45': ObjectId('6963d21208e3e5a5a32d5084'),
+//     '46': ObjectId('6963d21208e3e5a5a32d5085'),
+//     '47': ObjectId('6963d21208e3e5a5a32d5086'),
+//     '48': ObjectId('6963d21208e3e5a5a32d5087'),
+//     '49': ObjectId('6963d21208e3e5a5a32d5088')
+//   }
+// }
+db.sales.insertMany([
+  { saleId: "S001", itemCode: "I001", region: "North", unitsSold: 2, totalAmount: 9000, status: "COMPLETED", saleDate: new Date("2024-02-01") },
+  { saleId: "S002", itemCode: "I002", region: "South", unitsSold: 1, totalAmount: 8500, status: "COMPLETED", saleDate: new Date("2024-02-02") },
+  { saleId: "S003", itemCode: "I003", region: "East", unitsSold: 3, totalAmount: 3600, status: "CANCELLED", saleDate: new Date("2024-02-03") },
+  { saleId: "S004", itemCode: "I004", region: "West", unitsSold: 5, totalAmount: 4500, status: "COMPLETED", saleDate: new Date("2024-02-04") },
+  { saleId: "S005", itemCode: "I005", region: "North", unitsSold: 4, totalAmount: 6000, status: "PENDING", saleDate: new Date("2024-02-05") },
+
+  { saleId: "S006", itemCode: "I006", region: "South", unitsSold: 2, totalAmount: 24000, status: "COMPLETED", saleDate: new Date("2024-02-06") },
+  { saleId: "S007", itemCode: "I007", region: "East", unitsSold: 1, totalAmount: 9500, status: "COMPLETED", saleDate: new Date("2024-02-07") },
+  { saleId: "S008", itemCode: "I008", region: "West", unitsSold: 2, totalAmount: 6400, status: "COMPLETED", saleDate: new Date("2024-02-08") },
+  { saleId: "S009", itemCode: "I009", region: "North", unitsSold: 10, totalAmount: 3000, status: "COMPLETED", saleDate: new Date("2024-02-09") },
+  { saleId: "S010", itemCode: "I010", region: "South", unitsSold: 1, totalAmount: 28000, status: "CANCELLED", saleDate: new Date("2024-02-10") },
+
+  { saleId: "S011", itemCode: "I011", region: "East", unitsSold: 1, totalAmount: 35000, status: "COMPLETED", saleDate: new Date("2024-02-11") },
+  { saleId: "S012", itemCode: "I012", region: "West", unitsSold: 2, totalAmount: 12000, status: "COMPLETED", saleDate: new Date("2024-02-12") },
+  { saleId: "S013", itemCode: "I013", region: "North", unitsSold: 3, totalAmount: 7500, status: "COMPLETED", saleDate: new Date("2024-02-13") },
+  { saleId: "S014", itemCode: "I014", region: "South", unitsSold: 5, totalAmount: 2000, status: "PENDING", saleDate: new Date("2024-02-14") },
+  { saleId: "S015", itemCode: "I015", region: "East", unitsSold: 4, totalAmount: 2800, status: "COMPLETED", saleDate: new Date("2024-02-15") },
+
+  { saleId: "S016", itemCode: "I016", region: "West", unitsSold: 2, totalAmount: 6400, status: "COMPLETED", saleDate: new Date("2024-02-16") },
+  { saleId: "S017", itemCode: "I017", region: "North", unitsSold: 3, totalAmount: 8400, status: "COMPLETED", saleDate: new Date("2024-02-17") },
+  { saleId: "S018", itemCode: "I018", region: "South", unitsSold: 1, totalAmount: 15000, status: "PENDING", saleDate: new Date("2024-02-18") },
+  { saleId: "S019", itemCode: "I019", region: "East", unitsSold: 1, totalAmount: 18000, status: "COMPLETED", saleDate: new Date("2024-02-19") },
+  { saleId: "S020", itemCode: "I020", region: "West", unitsSold: 2, totalAmount: 18000, status: "COMPLETED", saleDate: new Date("2024-02-20") },
+
+  { saleId: "S021", itemCode: "I021", region: "North", unitsSold: 1, totalAmount: 11000, status: "COMPLETED", saleDate: new Date("2024-02-21") },
+  { saleId: "S022", itemCode: "I022", region: "South", unitsSold: 1, totalAmount: 42000, status: "COMPLETED", saleDate: new Date("2024-02-22") },
+  { saleId: "S023", itemCode: "I023", region: "East", unitsSold: 1, totalAmount: 25000, status: "PENDING", saleDate: new Date("2024-02-23") },
+  { saleId: "S024", itemCode: "I024", region: "West", unitsSold: 2, totalAmount: 10400, status: "COMPLETED", saleDate: new Date("2024-02-24") },
+  { saleId: "S025", itemCode: "I025", region: "North", unitsSold: 1, totalAmount: 8200, status: "COMPLETED", saleDate: new Date("2024-02-25") },
+
+  { saleId: "S026", itemCode: "I026", region: "South", unitsSold: 3, totalAmount: 3300, status: "COMPLETED", saleDate: new Date("2024-02-26") },
+  { saleId: "S027", itemCode: "I027", region: "East", unitsSold: 8, totalAmount: 2000, status: "COMPLETED", saleDate: new Date("2024-02-27") },
+  { saleId: "S028", itemCode: "I028", region: "West", unitsSold: 5, totalAmount: 4500, status: "PENDING", saleDate: new Date("2024-02-28") },
+  { saleId: "S029", itemCode: "I029", region: "North", unitsSold: 2, totalAmount: 13000, status: "COMPLETED", saleDate: new Date("2024-02-29") },
+  { saleId: "S030", itemCode: "I030", region: "South", unitsSold: 6, totalAmount: 4800, status: "COMPLETED", saleDate: new Date("2024-03-01") },
+
+  { saleId: "S031", itemCode: "I031", region: "East", unitsSold: 2, totalAmount: 4400, status: "COMPLETED", saleDate: new Date("2024-03-02") },
+  { saleId: "S032", itemCode: "I032", region: "West", unitsSold: 1, totalAmount: 55000, status: "COMPLETED", saleDate: new Date("2024-03-03") },
+  { saleId: "S033", itemCode: "I033", region: "North", unitsSold: 1, totalAmount: 38000, status: "COMPLETED", saleDate: new Date("2024-03-04") },
+  { saleId: "S034", itemCode: "I034", region: "South", unitsSold: 2, totalAmount: 6400, status: "CANCELLED", saleDate: new Date("2024-03-05") },
+  { saleId: "S035", itemCode: "I035", region: "East", unitsSold: 1, totalAmount: 7200, status: "COMPLETED", saleDate: new Date("2024-03-06") },
+
+  { saleId: "S036", itemCode: "I036", region: "West", unitsSold: 3, totalAmount: 5400, status: "COMPLETED", saleDate: new Date("2024-03-07") },
+  { saleId: "S037", itemCode: "I037", region: "North", unitsSold: 4, totalAmount: 2400, status: "COMPLETED", saleDate: new Date("2024-03-08") },
+  { saleId: "S038", itemCode: "I038", region: "South", unitsSold: 2, totalAmount: 4800, status: "PENDING", saleDate: new Date("2024-03-09") },
+  { saleId: "S039", itemCode: "I039", region: "East", unitsSold: 3, totalAmount: 3900, status: "COMPLETED", saleDate: new Date("2024-03-10") },
+  { saleId: "S040", itemCode: "I040", region: "West", unitsSold: 1, totalAmount: 48000, status: "COMPLETED", saleDate: new Date("2024-03-11") },
+
+  { saleId: "S041", itemCode: "I041", region: "North", unitsSold: 2, totalAmount: 52000, status: "COMPLETED", saleDate: new Date("2024-03-12") },
+  { saleId: "S042", itemCode: "I042", region: "South", unitsSold: 1, totalAmount: 15000, status: "COMPLETED", saleDate: new Date("2024-03-13") },
+  { saleId: "S043", itemCode: "I043", region: "East", unitsSold: 6, totalAmount: 3000, status: "COMPLETED", saleDate: new Date("2024-03-14") },
+  { saleId: "S044", itemCode: "I044", region: "West", unitsSold: 2, totalAmount: 7000, status: "PENDING", saleDate: new Date("2024-03-15") },
+  { saleId: "S045", itemCode: "I045", region: "North", unitsSold: 3, totalAmount: 2100, status: "COMPLETED", saleDate: new Date("2024-03-16") },
+
+  { saleId: "S046", itemCode: "I046", region: "South", unitsSold: 1, totalAmount: 9800, status: "COMPLETED", saleDate: new Date("2024-03-17") },
+  { saleId: "S047", itemCode: "I047", region: "East", unitsSold: 1, totalAmount: 5200, status: "COMPLETED", saleDate: new Date("2024-03-18") },
+  { saleId: "S048", itemCode: "I048", region: "West", unitsSold: 1, totalAmount: 14500, status: "COMPLETED", saleDate: new Date("2024-03-19") },
+  { saleId: "S049", itemCode: "I049", region: "North", unitsSold: 1, totalAmount: 22000, status: "PENDING", saleDate: new Date("2024-03-20") },
+  { saleId: "S050", itemCode: "I050", region: "South", unitsSold: 1, totalAmount: 65000, status: "COMPLETED", saleDate: new Date("2024-03-21") }
+])
+// {
+//   acknowledged: true,
+//   insertedIds: {
+//     '0': ObjectId('6963d21a08e3e5a5a32d5089'),
+//     '1': ObjectId('6963d21a08e3e5a5a32d508a'),
+//     '2': ObjectId('6963d21a08e3e5a5a32d508b'),
+//     '3': ObjectId('6963d21a08e3e5a5a32d508c'),
+//     '4': ObjectId('6963d21a08e3e5a5a32d508d'),
+//     '5': ObjectId('6963d21a08e3e5a5a32d508e'),
+//     '6': ObjectId('6963d21a08e3e5a5a32d508f'),
+//     '7': ObjectId('6963d21a08e3e5a5a32d5090'),
+//     '8': ObjectId('6963d21a08e3e5a5a32d5091'),
+//     '9': ObjectId('6963d21a08e3e5a5a32d5092'),
+//     '10': ObjectId('6963d21a08e3e5a5a32d5093'),
+//     '11': ObjectId('6963d21a08e3e5a5a32d5094'),
+//     '12': ObjectId('6963d21a08e3e5a5a32d5095'),
+//     '13': ObjectId('6963d21a08e3e5a5a32d5096'),
+//     '14': ObjectId('6963d21a08e3e5a5a32d5097'),
+//     '15': ObjectId('6963d21a08e3e5a5a32d5098'),
+//     '16': ObjectId('6963d21a08e3e5a5a32d5099'),
+//     '17': ObjectId('6963d21a08e3e5a5a32d509a'),
+//     '18': ObjectId('6963d21a08e3e5a5a32d509b'),
+//     '19': ObjectId('6963d21a08e3e5a5a32d509c'),
+//     '20': ObjectId('6963d21a08e3e5a5a32d509d'),
+//     '21': ObjectId('6963d21a08e3e5a5a32d509e'),
+//     '22': ObjectId('6963d21a08e3e5a5a32d509f'),
+//     '23': ObjectId('6963d21a08e3e5a5a32d50a0'),
+//     '24': ObjectId('6963d21a08e3e5a5a32d50a1'),
+//     '25': ObjectId('6963d21a08e3e5a5a32d50a2'),
+//     '26': ObjectId('6963d21a08e3e5a5a32d50a3'),
+//     '27': ObjectId('6963d21a08e3e5a5a32d50a4'),
+//     '28': ObjectId('6963d21a08e3e5a5a32d50a5'),
+//     '29': ObjectId('6963d21a08e3e5a5a32d50a6'),
+//     '30': ObjectId('6963d21a08e3e5a5a32d50a7'),
+//     '31': ObjectId('6963d21a08e3e5a5a32d50a8'),
+//     '32': ObjectId('6963d21a08e3e5a5a32d50a9'),
+//     '33': ObjectId('6963d21a08e3e5a5a32d50aa'),
+//     '34': ObjectId('6963d21a08e3e5a5a32d50ab'),
+//     '35': ObjectId('6963d21a08e3e5a5a32d50ac'),
+//     '36': ObjectId('6963d21a08e3e5a5a32d50ad'),
+//     '37': ObjectId('6963d21a08e3e5a5a32d50ae'),
+//     '38': ObjectId('6963d21a08e3e5a5a32d50af'),
+//     '39': ObjectId('6963d21a08e3e5a5a32d50b0'),
+//     '40': ObjectId('6963d21a08e3e5a5a32d50b1'),
+//     '41': ObjectId('6963d21a08e3e5a5a32d50b2'),
+//     '42': ObjectId('6963d21a08e3e5a5a32d50b3'),
+//     '43': ObjectId('6963d21a08e3e5a5a32d50b4'),
+//     '44': ObjectId('6963d21a08e3e5a5a32d50b5'),
+//     '45': ObjectId('6963d21a08e3e5a5a32d50b6'),
+//     '46': ObjectId('6963d21a08e3e5a5a32d50b7'),
+//     '47': ObjectId('6963d21a08e3e5a5a32d50b8'),
+//     '48': ObjectId('6963d21a08e3e5a5a32d50b9'),
+//     '49': ObjectId('6963d21a08e3e5a5a32d50ba')
+//   }
+// }
+
+db.employees.find({department: "Engineering"})
+db.employees.find({age: {$gt: 30}})
+db.employees.find({ department: "Engineering" })
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5025'),
+//   empId: 'E001',
+//   name: 'Amit Sharma',
+//   department: 'Engineering',
+//   age: 25,
+//   salary: 45000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-01-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502a'),
+//   empId: 'E006',
+//   name: 'User6',
+//   department: 'Engineering',
+//   age: 24,
+//   salary: 46000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-03-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502b'),
+//   empId: 'E007',
+//   name: 'User7',
+//   department: 'Engineering',
+//   age: 31,
+//   salary: 52000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-11-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502f'),
+//   empId: 'E011',
+//   name: 'User11',
+//   department: 'Engineering',
+//   age: 22,
+//   salary: 35000,
+//   isActive: true,
+//   location: 'Bhopal',
+//   joiningDate: 2023-05-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5032'),
+//   empId: 'E014',
+//   name: 'User14',
+//   department: 'Engineering',
+//   age: 27,
+//   salary: 48000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-06-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5036'),
+//   empId: 'E018',
+//   name: 'User18',
+//   department: 'Engineering',
+//   age: 32,
+//   salary: 60000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2022-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5039'),
+//   empId: 'E021',
+//   name: 'User21',
+//   department: 'Engineering',
+//   age: 28,
+//   salary: 52000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503d'),
+//   empId: 'E025',
+//   name: 'User25',
+//   department: 'Engineering',
+//   age: 34,
+//   salary: 65000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-06-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5040'),
+//   empId: 'E028',
+//   name: 'User28',
+//   department: 'Engineering',
+//   age: 26,
+//   salary: 50000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-10-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5043'),
+//   empId: 'E031',
+//   name: 'User31',
+//   department: 'Engineering',
+//   age: 23,
+//   salary: 36000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-11-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5046'),
+//   empId: 'E034',
+//   name: 'User34',
+//   department: 'Engineering',
+//   age: 29,
+//   salary: 56000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-11-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5049'),
+//   empId: 'E037',
+//   name: 'User37',
+//   department: 'Engineering',
+//   age: 33,
+//   salary: 70000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-03-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504c'),
+//   empId: 'E040',
+//   name: 'User40',
+//   department: 'Engineering',
+//   age: 28,
+//   salary: 54000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-12-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5050'),
+//   empId: 'E044',
+//   name: 'User44',
+//   department: 'Engineering',
+//   age: 30,
+//   salary: 62000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2024-01-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5053'),
+//   empId: 'E047',
+//   name: 'User47',
+//   department: 'Engineering',
+//   age: 26,
+//   salary: 51000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2024-01-25T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5056'),
+//   empId: 'E050',
+//   name: 'User50',
+//   department: 'Engineering',
+//   age: 34,
+//   salary: 72000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2024-02-05T00:00:00.000Z
+// }
+db.employees.find({ isActive: true })
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5025'),
+//   empId: 'E001',
+//   name: 'Amit Sharma',
+//   department: 'Engineering',
+//   age: 25,
+//   salary: 45000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-01-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5026'),
+//   empId: 'E002',
+//   name: 'Neha Verma',
+//   department: 'HR',
+//   age: 29,
+//   salary: 40000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-01-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5027'),
+//   empId: 'E003',
+//   name: 'Rahul Mehta',
+//   department: 'Management',
+//   age: 35,
+//   salary: 80000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-12-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5029'),
+//   empId: 'E005',
+//   name: 'Karan Patel',
+//   department: 'Design',
+//   age: 27,
+//   salary: 42000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-03-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502a'),
+//   empId: 'E006',
+//   name: 'User6',
+//   department: 'Engineering',
+//   age: 24,
+//   salary: 46000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-03-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502c'),
+//   empId: 'E008',
+//   name: 'User8',
+//   department: 'HR',
+//   age: 28,
+//   salary: 41000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-04-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502d'),
+//   empId: 'E009',
+//   name: 'User9',
+//   department: 'QA',
+//   age: 25,
+//   salary: 39000,
+//   isActive: true,
+//   location: 'Indore',
+//   joiningDate: 2023-04-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502e'),
+//   empId: 'E010',
+//   name: 'User10',
+//   department: 'Management',
+//   age: 38,
+//   salary: 90000,
+//   isActive: true,
+//   location: 'Chandigarh',
+//   joiningDate: 2022-10-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502f'),
+//   empId: 'E011',
+//   name: 'User11',
+//   department: 'Engineering',
+//   age: 22,
+//   salary: 35000,
+//   isActive: true,
+//   location: 'Bhopal',
+//   joiningDate: 2023-05-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5031'),
+//   empId: 'E013',
+//   name: 'User13',
+//   department: 'HR',
+//   age: 30,
+//   salary: 43000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-05-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5032'),
+//   empId: 'E014',
+//   name: 'User14',
+//   department: 'Engineering',
+//   age: 27,
+//   salary: 48000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-06-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5034'),
+//   empId: 'E016',
+//   name: 'User16',
+//   department: 'Design',
+//   age: 26,
+//   salary: 44000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-06-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5035'),
+//   empId: 'E017',
+//   name: 'User17',
+//   department: 'QA',
+//   age: 23,
+//   salary: 34000,
+//   isActive: true,
+//   location: 'Indore',
+//   joiningDate: 2023-07-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5036'),
+//   empId: 'E018',
+//   name: 'User18',
+//   department: 'Engineering',
+//   age: 32,
+//   salary: 60000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2022-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5038'),
+//   empId: 'E020',
+//   name: 'User20',
+//   department: 'Management',
+//   age: 39,
+//   salary: 88000,
+//   isActive: true,
+//   location: 'Jaipur',
+//   joiningDate: 2022-07-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5039'),
+//   empId: 'E021',
+//   name: 'User21',
+//   department: 'Engineering',
+//   age: 28,
+//   salary: 52000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503a'),
+//   empId: 'E022',
+//   name: 'User22',
+//   department: 'QA',
+//   age: 26,
+//   salary: 37000,
+//   isActive: true,
+//   location: 'Bhopal',
+//   joiningDate: 2023-08-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503b'),
+//   empId: 'E023',
+//   name: 'User23',
+//   department: 'Design',
+//   age: 29,
+//   salary: 47000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-08-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503c'),
+//   empId: 'E024',
+//   name: 'User24',
+//   department: 'HR',
+//   age: 31,
+//   salary: 45000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-09-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503e'),
+//   empId: 'E026',
+//   name: 'User26',
+//   department: 'Management',
+//   age: 42,
+//   salary: 99000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-05-01T00:00:00.000Z
+// }
+// Type "it" for more
+db.employees.find({ age: { $gt: 30 } })
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5027'),
+//   empId: 'E003',
+//   name: 'Rahul Mehta',
+//   department: 'Management',
+//   age: 35,
+//   salary: 80000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-12-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502b'),
+//   empId: 'E007',
+//   name: 'User7',
+//   department: 'Engineering',
+//   age: 31,
+//   salary: 52000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-11-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502e'),
+//   empId: 'E010',
+//   name: 'User10',
+//   department: 'Management',
+//   age: 38,
+//   salary: 90000,
+//   isActive: true,
+//   location: 'Chandigarh',
+//   joiningDate: 2022-10-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5033'),
+//   empId: 'E015',
+//   name: 'User15',
+//   department: 'Management',
+//   age: 41,
+//   salary: 95000,
+//   isActive: false,
+//   location: 'Mumbai',
+//   joiningDate: 2022-09-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5036'),
+//   empId: 'E018',
+//   name: 'User18',
+//   department: 'Engineering',
+//   age: 32,
+//   salary: 60000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2022-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5037'),
+//   empId: 'E019',
+//   name: 'User19',
+//   department: 'HR',
+//   age: 34,
+//   salary: 46000,
+//   isActive: false,
+//   location: 'Delhi',
+//   joiningDate: 2023-07-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5038'),
+//   empId: 'E020',
+//   name: 'User20',
+//   department: 'Management',
+//   age: 39,
+//   salary: 88000,
+//   isActive: true,
+//   location: 'Jaipur',
+//   joiningDate: 2022-07-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503c'),
+//   empId: 'E024',
+//   name: 'User24',
+//   department: 'HR',
+//   age: 31,
+//   salary: 45000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-09-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503d'),
+//   empId: 'E025',
+//   name: 'User25',
+//   department: 'Engineering',
+//   age: 34,
+//   salary: 65000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-06-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503e'),
+//   empId: 'E026',
+//   name: 'User26',
+//   department: 'Management',
+//   age: 42,
+//   salary: 99000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-05-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5042'),
+//   empId: 'E030',
+//   name: 'User30',
+//   department: 'HR',
+//   age: 33,
+//   salary: 47000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-10-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5045'),
+//   empId: 'E033',
+//   name: 'User33',
+//   department: 'Management',
+//   age: 37,
+//   salary: 82000,
+//   isActive: false,
+//   location: 'Chandigarh',
+//   joiningDate: 2022-04-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5047'),
+//   empId: 'E035',
+//   name: 'User35',
+//   department: 'Design',
+//   age: 31,
+//   salary: 50000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-11-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5048'),
+//   empId: 'E036',
+//   name: 'User36',
+//   department: 'HR',
+//   age: 35,
+//   salary: 52000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-12-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5049'),
+//   empId: 'E037',
+//   name: 'User37',
+//   department: 'Engineering',
+//   age: 33,
+//   salary: 70000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-03-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504b'),
+//   empId: 'E039',
+//   name: 'User39',
+//   department: 'Management',
+//   age: 40,
+//   salary: 91000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-02-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504f'),
+//   empId: 'E043',
+//   name: 'User43',
+//   department: 'HR',
+//   age: 32,
+//   salary: 48000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2024-01-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5051'),
+//   empId: 'E045',
+//   name: 'User45',
+//   department: 'Management',
+//   age: 43,
+//   salary: 97000,
+//   isActive: false,
+//   location: 'Mumbai',
+//   joiningDate: 2022-01-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5055'),
+//   empId: 'E049',
+//   name: 'User49',
+//   department: 'HR',
+//   age: 36,
+//   salary: 55000,
+//   isActive: false,
+//   location: 'Delhi',
+//   joiningDate: 2024-02-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5056'),
+//   empId: 'E050',
+//   name: 'User50',
+//   department: 'Engineering',
+//   age: 34,
+//   salary: 72000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2024-02-05T00:00:00.000Z
+// }
+
+db.employees.find({ city: "Delhi", isActive: true })
+db.inventory.find({ price: { $lt: 5000 } })
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5057'),
+//   itemCode: 'I001',
+//   itemName: 'Office Chair',
+//   category: 'Furniture',
+//   price: 4500,
+//   quantity: 20,
+//   supplier: 'UrbanFurn',
+//   isAvailable: true,
+//   addedOn: 2024-01-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5059'),
+//   itemCode: 'I003',
+//   itemName: 'Laptop Stand',
+//   category: 'Accessories',
+//   price: 1200,
+//   quantity: 0,
+//   supplier: 'TechGear',
+//   isAvailable: false,
+//   addedOn: 2024-01-03T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505a'),
+//   itemCode: 'I004',
+//   itemName: 'Wireless Mouse',
+//   category: 'Electronics',
+//   price: 900,
+//   quantity: 50,
+//   supplier: 'LogiTech',
+//   isAvailable: true,
+//   addedOn: 2024-01-04T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505b'),
+//   itemCode: 'I005',
+//   itemName: 'Keyboard',
+//   category: 'Electronics',
+//   price: 1500,
+//   quantity: 40,
+//   supplier: 'KeyMaster',
+//   isAvailable: true,
+//   addedOn: 2024-01-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505e'),
+//   itemCode: 'I008',
+//   itemName: 'Whiteboard',
+//   category: 'Furniture',
+//   price: 3200,
+//   quantity: 12,
+//   supplier: 'OfficePro',
+//   isAvailable: true,
+//   addedOn: 2024-01-08T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505f'),
+//   itemCode: 'I009',
+//   itemName: 'Marker Set',
+//   category: 'Accessories',
+//   price: 300,
+//   quantity: 100,
+//   supplier: 'WriteWell',
+//   isAvailable: true,
+//   addedOn: 2024-01-09T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5063'),
+//   itemCode: 'I013',
+//   itemName: 'Router',
+//   category: 'Electronics',
+//   price: 2500,
+//   quantity: 18,
+//   supplier: 'NetLink',
+//   isAvailable: true,
+//   addedOn: 2024-01-13T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5064'),
+//   itemCode: 'I014',
+//   itemName: 'LAN Cable',
+//   category: 'Accessories',
+//   price: 400,
+//   quantity: 0,
+//   supplier: 'CablePro',
+//   isAvailable: false,
+//   addedOn: 2024-01-14T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5065'),
+//   itemCode: 'I015',
+//   itemName: 'Extension Board',
+//   category: 'Accessories',
+//   price: 700,
+//   quantity: 35,
+//   supplier: 'PowerLine',
+//   isAvailable: true,
+//   addedOn: 2024-01-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5066'),
+//   itemCode: 'I016',
+//   itemName: 'Webcam',
+//   category: 'Electronics',
+//   price: 3200,
+//   quantity: 14,
+//   supplier: 'CamTech',
+//   isAvailable: true,
+//   addedOn: 2024-01-16T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5067'),
+//   itemCode: 'I017',
+//   itemName: 'Headphones',
+//   category: 'Electronics',
+//   price: 2800,
+//   quantity: 22,
+//   supplier: 'SoundMax',
+//   isAvailable: true,
+//   addedOn: 2024-01-17T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5070'),
+//   itemCode: 'I026',
+//   itemName: 'Desk Lamp',
+//   category: 'Accessories',
+//   price: 1100,
+//   quantity: 30,
+//   supplier: 'BrightLite',
+//   isAvailable: true,
+//   addedOn: 2024-01-26T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5071'),
+//   itemCode: 'I027',
+//   itemName: 'Mouse Pad',
+//   category: 'Accessories',
+//   price: 250,
+//   quantity: 150,
+//   supplier: 'SoftMat',
+//   isAvailable: true,
+//   addedOn: 2024-01-27T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5072'),
+//   itemCode: 'I028',
+//   itemName: 'Stationery Kit',
+//   category: 'Accessories',
+//   price: 900,
+//   quantity: 60,
+//   supplier: 'OfficeBasics',
+//   isAvailable: true,
+//   addedOn: 2024-01-28T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5074'),
+//   itemCode: 'I030',
+//   itemName: 'Pen Drive 64GB',
+//   category: 'Electronics',
+//   price: 800,
+//   quantity: 80,
+//   supplier: 'FlashX',
+//   isAvailable: true,
+//   addedOn: 2024-01-30T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5075'),
+//   itemCode: 'I031',
+//   itemName: 'Power Bank',
+//   category: 'Electronics',
+//   price: 2200,
+//   quantity: 18,
+//   supplier: 'ChargePro',
+//   isAvailable: true,
+//   addedOn: 2024-01-31T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5078'),
+//   itemCode: 'I034',
+//   itemName: 'Heater',
+//   category: 'Electronics',
+//   price: 3200,
+//   quantity: 0,
+//   supplier: 'HeatMax',
+//   isAvailable: false,
+//   addedOn: 2024-02-03T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507a'),
+//   itemCode: 'I036',
+//   itemName: 'Footrest',
+//   category: 'Furniture',
+//   price: 1800,
+//   quantity: 10,
+//   supplier: 'ComfortZone',
+//   isAvailable: true,
+//   addedOn: 2024-02-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507b'),
+//   itemCode: 'I037',
+//   itemName: 'Cable Organizer',
+//   category: 'Accessories',
+//   price: 600,
+//   quantity: 40,
+//   supplier: 'CablePro',
+//   isAvailable: true,
+//   addedOn: 2024-02-06T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507c'),
+//   itemCode: 'I038',
+//   itemName: 'Laptop Bag',
+//   category: 'Accessories',
+//   price: 2400,
+//   quantity: 18,
+//   supplier: 'CarryAll',
+//   isAvailable: true,
+//   addedOn: 2024-02-07T00:00:00.000Z
+// }
+// Type "it" for more
+// db.employees.find({ city: "Delhi", isActive: true })
+// db.inventory.find({ isAvailable: false })
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5059'),
+//   itemCode: 'I003',
+//   itemName: 'Laptop Stand',
+//   category: 'Accessories',
+//   price: 1200,
+//   quantity: 0,
+//   supplier: 'TechGear',
+//   isAvailable: false,
+//   addedOn: 2024-01-03T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5064'),
+//   itemCode: 'I014',
+//   itemName: 'LAN Cable',
+//   category: 'Accessories',
+//   price: 400,
+//   quantity: 0,
+//   supplier: 'CablePro',
+//   isAvailable: false,
+//   addedOn: 2024-01-14T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5078'),
+//   itemCode: 'I034',
+//   itemName: 'Heater',
+//   category: 'Electronics',
+//   price: 3200,
+//   quantity: 0,
+//   supplier: 'HeatMax',
+//   isAvailable: false,
+//   addedOn: 2024-02-03T00:00:00.000Z
+// }
+db.inventory.find(
+  { category: "Electronics" },
+  { itemName: 1, price: 1, _id: 0 }
+)
+// {
+//   itemName: 'Wireless Mouse',
+//   price: 900
+// }
+// {
+//   itemName: 'Keyboard',
+//   price: 1500
+// }
+// {
+//   itemName: 'Monitor 24inch',
+//   price: 12000
+// }
+// {
+//   itemName: 'Printer',
+//   price: 9500
+// }
+// {
+//   itemName: 'Projector',
+//   price: 28000
+// }
+// {
+//   itemName: 'CPU Cabinet',
+//   price: 35000
+// }
+// {
+//   itemName: 'UPS',
+//   price: 6000
+// }
+// {
+//   itemName: 'Router',
+//   price: 2500
+// }
+// {
+//   itemName: 'Webcam',
+//   price: 3200
+// }
+// {
+//   itemName: 'Headphones',
+//   price: 2800
+// }
+// {
+//   itemName: 'Conference Speaker',
+//   price: 15000
+// }
+// {
+//   itemName: 'Coffee Machine',
+//   price: 18000
+// }
+// {
+//   itemName: 'Water Dispenser',
+//   price: 9000
+// }
+// {
+//   itemName: 'Paper Shredder',
+//   price: 5200
+// }
+// {
+//   itemName: 'Scanner',
+//   price: 8200
+// }
+// {
+//   itemName: 'External Hard Drive',
+//   price: 6500
+// }
+// {
+//   itemName: 'Pen Drive 64GB',
+//   price: 800
+// }
+// {
+//   itemName: 'Power Bank',
+//   price: 2200
+// }
+// {
+//   itemName: 'Smart TV',
+//   price: 55000
+// }
+// {
+//   itemName: 'AC Unit',
+//   price: 38000
+// }
+// Type "it" for more
+db.sales.find({ status: "COMPLETED" })
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5089'),
+//   saleId: 'S001',
+//   itemCode: 'I001',
+//   region: 'North',
+//   unitsSold: 2,
+//   totalAmount: 9000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d508a'),
+//   saleId: 'S002',
+//   itemCode: 'I002',
+//   region: 'South',
+//   unitsSold: 1,
+//   totalAmount: 8500,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-02T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d508c'),
+//   saleId: 'S004',
+//   itemCode: 'I004',
+//   region: 'West',
+//   unitsSold: 5,
+//   totalAmount: 4500,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-04T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d508e'),
+//   saleId: 'S006',
+//   itemCode: 'I006',
+//   region: 'South',
+//   unitsSold: 2,
+//   totalAmount: 24000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-06T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d508f'),
+//   saleId: 'S007',
+//   itemCode: 'I007',
+//   region: 'East',
+//   unitsSold: 1,
+//   totalAmount: 9500,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-07T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5090'),
+//   saleId: 'S008',
+//   itemCode: 'I008',
+//   region: 'West',
+//   unitsSold: 2,
+//   totalAmount: 6400,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-08T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5091'),
+//   saleId: 'S009',
+//   itemCode: 'I009',
+//   region: 'North',
+//   unitsSold: 10,
+//   totalAmount: 3000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-09T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5093'),
+//   saleId: 'S011',
+//   itemCode: 'I011',
+//   region: 'East',
+//   unitsSold: 1,
+//   totalAmount: 35000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-11T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5094'),
+//   saleId: 'S012',
+//   itemCode: 'I012',
+//   region: 'West',
+//   unitsSold: 2,
+//   totalAmount: 12000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-12T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5095'),
+//   saleId: 'S013',
+//   itemCode: 'I013',
+//   region: 'North',
+//   unitsSold: 3,
+//   totalAmount: 7500,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-13T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5097'),
+//   saleId: 'S015',
+//   itemCode: 'I015',
+//   region: 'East',
+//   unitsSold: 4,
+//   totalAmount: 2800,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5098'),
+//   saleId: 'S016',
+//   itemCode: 'I016',
+//   region: 'West',
+//   unitsSold: 2,
+//   totalAmount: 6400,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-16T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5099'),
+//   saleId: 'S017',
+//   itemCode: 'I017',
+//   region: 'North',
+//   unitsSold: 3,
+//   totalAmount: 8400,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-17T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d509b'),
+//   saleId: 'S019',
+//   itemCode: 'I019',
+//   region: 'East',
+//   unitsSold: 1,
+//   totalAmount: 18000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-19T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d509c'),
+//   saleId: 'S020',
+//   itemCode: 'I020',
+//   region: 'West',
+//   unitsSold: 2,
+//   totalAmount: 18000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d509d'),
+//   saleId: 'S021',
+//   itemCode: 'I021',
+//   region: 'North',
+//   unitsSold: 1,
+//   totalAmount: 11000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-21T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d509e'),
+//   saleId: 'S022',
+//   itemCode: 'I022',
+//   region: 'South',
+//   unitsSold: 1,
+//   totalAmount: 42000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-22T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50a0'),
+//   saleId: 'S024',
+//   itemCode: 'I024',
+//   region: 'West',
+//   unitsSold: 2,
+//   totalAmount: 10400,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-24T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50a1'),
+//   saleId: 'S025',
+//   itemCode: 'I025',
+//   region: 'North',
+//   unitsSold: 1,
+//   totalAmount: 8200,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-25T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50a2'),
+//   saleId: 'S026',
+//   itemCode: 'I026',
+//   region: 'South',
+//   unitsSold: 3,
+//   totalAmount: 3300,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-26T00:00:00.000Z
+// }
+// Type "it" for more
+db.sales.find({ region: "North" })
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5089'),
+//   saleId: 'S001',
+//   itemCode: 'I001',
+//   region: 'North',
+//   unitsSold: 2,
+//   totalAmount: 9000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d508d'),
+//   saleId: 'S005',
+//   itemCode: 'I005',
+//   region: 'North',
+//   unitsSold: 4,
+//   totalAmount: 6000,
+//   status: 'PENDING',
+//   saleDate: 2024-02-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5091'),
+//   saleId: 'S009',
+//   itemCode: 'I009',
+//   region: 'North',
+//   unitsSold: 10,
+//   totalAmount: 3000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-09T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5095'),
+//   saleId: 'S013',
+//   itemCode: 'I013',
+//   region: 'North',
+//   unitsSold: 3,
+//   totalAmount: 7500,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-13T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5099'),
+//   saleId: 'S017',
+//   itemCode: 'I017',
+//   region: 'North',
+//   unitsSold: 3,
+//   totalAmount: 8400,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-17T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d509d'),
+//   saleId: 'S021',
+//   itemCode: 'I021',
+//   region: 'North',
+//   unitsSold: 1,
+//   totalAmount: 11000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-21T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50a1'),
+//   saleId: 'S025',
+//   itemCode: 'I025',
+//   region: 'North',
+//   unitsSold: 1,
+//   totalAmount: 8200,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-25T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50a5'),
+//   saleId: 'S029',
+//   itemCode: 'I029',
+//   region: 'North',
+//   unitsSold: 2,
+//   totalAmount: 13000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-29T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50a9'),
+//   saleId: 'S033',
+//   itemCode: 'I033',
+//   region: 'North',
+//   unitsSold: 1,
+//   totalAmount: 38000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-03-04T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50ad'),
+//   saleId: 'S037',
+//   itemCode: 'I037',
+//   region: 'North',
+//   unitsSold: 4,
+//   totalAmount: 2400,
+//   status: 'COMPLETED',
+//   saleDate: 2024-03-08T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50b1'),
+//   saleId: 'S041',
+//   itemCode: 'I041',
+//   region: 'North',
+//   unitsSold: 2,
+//   totalAmount: 52000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-03-12T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50b5'),
+//   saleId: 'S045',
+//   itemCode: 'I045',
+//   region: 'North',
+//   unitsSold: 3,
+//   totalAmount: 2100,
+//   status: 'COMPLETED',
+//   saleDate: 2024-03-16T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50b9'),
+//   saleId: 'S049',
+//   itemCode: 'I049',
+//   region: 'North',
+//   unitsSold: 1,
+//   totalAmount: 22000,
+//   status: 'PENDING',
+//   saleDate: 2024-03-20T00:00:00.000Z
+// }
+// db.sales.findOne({ unitsSold: { $gt: 3 } })
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d508c'),
+//   saleId: 'S004',
+//   itemCode: 'I004',
+//   region: 'West',
+//   unitsSold: 5,
+//   totalAmount: 4500,
+//   status: 'COMPLETED',
+//   saleDate: 2024-02-04T00:00:00.000Z
+// }
+// db.employees.find({ salary: { $gt: 60000 } })
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5027'),
+//   empId: 'E003',
+//   name: 'Rahul Mehta',
+//   department: 'Management',
+//   age: 35,
+//   salary: 80000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-12-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502e'),
+//   empId: 'E010',
+//   name: 'User10',
+//   department: 'Management',
+//   age: 38,
+//   salary: 90000,
+//   isActive: true,
+//   location: 'Chandigarh',
+//   joiningDate: 2022-10-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5033'),
+//   empId: 'E015',
+//   name: 'User15',
+//   department: 'Management',
+//   age: 41,
+//   salary: 95000,
+//   isActive: false,
+//   location: 'Mumbai',
+//   joiningDate: 2022-09-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5038'),
+//   empId: 'E020',
+//   name: 'User20',
+//   department: 'Management',
+//   age: 39,
+//   salary: 88000,
+//   isActive: true,
+//   location: 'Jaipur',
+//   joiningDate: 2022-07-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503d'),
+//   empId: 'E025',
+//   name: 'User25',
+//   department: 'Engineering',
+//   age: 34,
+//   salary: 65000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-06-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503e'),
+//   empId: 'E026',
+//   name: 'User26',
+//   department: 'Management',
+//   age: 42,
+//   salary: 99000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-05-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5045'),
+//   empId: 'E033',
+//   name: 'User33',
+//   department: 'Management',
+//   age: 37,
+//   salary: 82000,
+//   isActive: false,
+//   location: 'Chandigarh',
+//   joiningDate: 2022-04-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5049'),
+//   empId: 'E037',
+//   name: 'User37',
+//   department: 'Engineering',
+//   age: 33,
+//   salary: 70000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-03-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504b'),
+//   empId: 'E039',
+//   name: 'User39',
+//   department: 'Management',
+//   age: 40,
+//   salary: 91000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-02-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5050'),
+//   empId: 'E044',
+//   name: 'User44',
+//   department: 'Engineering',
+//   age: 30,
+//   salary: 62000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2024-01-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5051'),
+//   empId: 'E045',
+//   name: 'User45',
+//   department: 'Management',
+//   age: 43,
+//   salary: 97000,
+//   isActive: false,
+//   location: 'Mumbai',
+//   joiningDate: 2022-01-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5056'),
+//   empId: 'E050',
+//   name: 'User50',
+//   department: 'Engineering',
+//   age: 34,
+//   salary: 72000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2024-02-05T00:00:00.000Z
+// }
+db.employees.find({ age: { $gte: 25, $lte: 35 } })
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5025'),
+//   empId: 'E001',
+//   name: 'Amit Sharma',
+//   department: 'Engineering',
+//   age: 25,
+//   salary: 45000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-01-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5026'),
+//   empId: 'E002',
+//   name: 'Neha Verma',
+//   department: 'HR',
+//   age: 29,
+//   salary: 40000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-01-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5027'),
+//   empId: 'E003',
+//   name: 'Rahul Mehta',
+//   department: 'Management',
+//   age: 35,
+//   salary: 80000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-12-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5028'),
+//   empId: 'E004',
+//   name: 'Pooja Singh',
+//   department: 'QA',
+//   age: 26,
+//   salary: 38000,
+//   isActive: false,
+//   location: 'Jaipur',
+//   joiningDate: 2023-02-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5029'),
+//   empId: 'E005',
+//   name: 'Karan Patel',
+//   department: 'Design',
+//   age: 27,
+//   salary: 42000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-03-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502b'),
+//   empId: 'E007',
+//   name: 'User7',
+//   department: 'Engineering',
+//   age: 31,
+//   salary: 52000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-11-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502c'),
+//   empId: 'E008',
+//   name: 'User8',
+//   department: 'HR',
+//   age: 28,
+//   salary: 41000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-04-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502d'),
+//   empId: 'E009',
+//   name: 'User9',
+//   department: 'QA',
+//   age: 25,
+//   salary: 39000,
+//   isActive: true,
+//   location: 'Indore',
+//   joiningDate: 2023-04-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5031'),
+//   empId: 'E013',
+//   name: 'User13',
+//   department: 'HR',
+//   age: 30,
+//   salary: 43000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-05-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5032'),
+//   empId: 'E014',
+//   name: 'User14',
+//   department: 'Engineering',
+//   age: 27,
+//   salary: 48000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-06-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5034'),
+//   empId: 'E016',
+//   name: 'User16',
+//   department: 'Design',
+//   age: 26,
+//   salary: 44000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-06-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5036'),
+//   empId: 'E018',
+//   name: 'User18',
+//   department: 'Engineering',
+//   age: 32,
+//   salary: 60000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2022-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5037'),
+//   empId: 'E019',
+//   name: 'User19',
+//   department: 'HR',
+//   age: 34,
+//   salary: 46000,
+//   isActive: false,
+//   location: 'Delhi',
+//   joiningDate: 2023-07-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5039'),
+//   empId: 'E021',
+//   name: 'User21',
+//   department: 'Engineering',
+//   age: 28,
+//   salary: 52000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503a'),
+//   empId: 'E022',
+//   name: 'User22',
+//   department: 'QA',
+//   age: 26,
+//   salary: 37000,
+//   isActive: true,
+//   location: 'Bhopal',
+//   joiningDate: 2023-08-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503b'),
+//   empId: 'E023',
+//   name: 'User23',
+//   department: 'Design',
+//   age: 29,
+//   salary: 47000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-08-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503c'),
+//   empId: 'E024',
+//   name: 'User24',
+//   department: 'HR',
+//   age: 31,
+//   salary: 45000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-09-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503d'),
+//   empId: 'E025',
+//   name: 'User25',
+//   department: 'Engineering',
+//   age: 34,
+//   salary: 65000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-06-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5040'),
+//   empId: 'E028',
+//   name: 'User28',
+//   department: 'Engineering',
+//   age: 26,
+//   salary: 50000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-10-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5041'),
+//   empId: 'E029',
+//   name: 'User29',
+//   department: 'Design',
+//   age: 28,
+//   salary: 48000,
+//   isActive: false,
+//   location: 'Jaipur',
+//   joiningDate: 2023-10-10T00:00:00.000Z
+// }
+// Type "it" for more
+// it
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5042'),
+//   empId: 'E030',
+//   name: 'User30',
+//   department: 'HR',
+//   age: 33,
+//   salary: 47000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-10-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5044'),
+//   empId: 'E032',
+//   name: 'User32',
+//   department: 'QA',
+//   age: 27,
+//   salary: 38000,
+//   isActive: true,
+//   location: 'Lucknow',
+//   joiningDate: 2023-11-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5046'),
+//   empId: 'E034',
+//   name: 'User34',
+//   department: 'Engineering',
+//   age: 29,
+//   salary: 56000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-11-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5047'),
+//   empId: 'E035',
+//   name: 'User35',
+//   department: 'Design',
+//   age: 31,
+//   salary: 50000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-11-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5048'),
+//   empId: 'E036',
+//   name: 'User36',
+//   department: 'HR',
+//   age: 35,
+//   salary: 52000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-12-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5049'),
+//   empId: 'E037',
+//   name: 'User37',
+//   department: 'Engineering',
+//   age: 33,
+//   salary: 70000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-03-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504a'),
+//   empId: 'E038',
+//   name: 'User38',
+//   department: 'QA',
+//   age: 25,
+//   salary: 37000,
+//   isActive: true,
+//   location: 'Indore',
+//   joiningDate: 2023-12-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504c'),
+//   empId: 'E040',
+//   name: 'User40',
+//   department: 'Engineering',
+//   age: 28,
+//   salary: 54000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-12-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504d'),
+//   empId: 'E041',
+//   name: 'User41',
+//   department: 'Design',
+//   age: 27,
+//   salary: 46000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2024-01-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504f'),
+//   empId: 'E043',
+//   name: 'User43',
+//   department: 'HR',
+//   age: 32,
+//   salary: 48000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2024-01-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5050'),
+//   empId: 'E044',
+//   name: 'User44',
+//   department: 'Engineering',
+//   age: 30,
+//   salary: 62000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2024-01-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5052'),
+//   empId: 'E046',
+//   name: 'User46',
+//   department: 'Design',
+//   age: 28,
+//   salary: 49000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2024-01-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5053'),
+//   empId: 'E047',
+//   name: 'User47',
+//   department: 'Engineering',
+//   age: 26,
+//   salary: 51000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2024-01-25T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5054'),
+//   empId: 'E048',
+//   name: 'User48',
+//   department: 'QA',
+//   age: 29,
+//   salary: 40000,
+//   isActive: true,
+//   location: 'Indore',
+//   joiningDate: 2024-01-28T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5056'),
+//   empId: 'E050',
+//   name: 'User50',
+//   department: 'Engineering',
+//   age: 34,
+//   salary: 72000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2024-02-05T00:00:00.000Z
+// }
+db.employees.find({ department: { $in: ["HR", "QA"] } })
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5026'),
+//   empId: 'E002',
+//   name: 'Neha Verma',
+//   department: 'HR',
+//   age: 29,
+//   salary: 40000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-01-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5028'),
+//   empId: 'E004',
+//   name: 'Pooja Singh',
+//   department: 'QA',
+//   age: 26,
+//   salary: 38000,
+//   isActive: false,
+//   location: 'Jaipur',
+//   joiningDate: 2023-02-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502c'),
+//   empId: 'E008',
+//   name: 'User8',
+//   department: 'HR',
+//   age: 28,
+//   salary: 41000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-04-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502d'),
+//   empId: 'E009',
+//   name: 'User9',
+//   department: 'QA',
+//   age: 25,
+//   salary: 39000,
+//   isActive: true,
+//   location: 'Indore',
+//   joiningDate: 2023-04-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5030'),
+//   empId: 'E012',
+//   name: 'User12',
+//   department: 'QA',
+//   age: 24,
+//   salary: 36000,
+//   isActive: false,
+//   location: 'Lucknow',
+//   joiningDate: 2023-05-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5031'),
+//   empId: 'E013',
+//   name: 'User13',
+//   department: 'HR',
+//   age: 30,
+//   salary: 43000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-05-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5035'),
+//   empId: 'E017',
+//   name: 'User17',
+//   department: 'QA',
+//   age: 23,
+//   salary: 34000,
+//   isActive: true,
+//   location: 'Indore',
+//   joiningDate: 2023-07-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5037'),
+//   empId: 'E019',
+//   name: 'User19',
+//   department: 'HR',
+//   age: 34,
+//   salary: 46000,
+//   isActive: false,
+//   location: 'Delhi',
+//   joiningDate: 2023-07-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503a'),
+//   empId: 'E022',
+//   name: 'User22',
+//   department: 'QA',
+//   age: 26,
+//   salary: 37000,
+//   isActive: true,
+//   location: 'Bhopal',
+//   joiningDate: 2023-08-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503c'),
+//   empId: 'E024',
+//   name: 'User24',
+//   department: 'HR',
+//   age: 31,
+//   salary: 45000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-09-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503f'),
+//   empId: 'E027',
+//   name: 'User27',
+//   department: 'QA',
+//   age: 24,
+//   salary: 36000,
+//   isActive: true,
+//   location: 'Indore',
+//   joiningDate: 2023-09-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5042'),
+//   empId: 'E030',
+//   name: 'User30',
+//   department: 'HR',
+//   age: 33,
+//   salary: 47000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-10-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5044'),
+//   empId: 'E032',
+//   name: 'User32',
+//   department: 'QA',
+//   age: 27,
+//   salary: 38000,
+//   isActive: true,
+//   location: 'Lucknow',
+//   joiningDate: 2023-11-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5048'),
+//   empId: 'E036',
+//   name: 'User36',
+//   department: 'HR',
+//   age: 35,
+//   salary: 52000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-12-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504a'),
+//   empId: 'E038',
+//   name: 'User38',
+//   department: 'QA',
+//   age: 25,
+//   salary: 37000,
+//   isActive: true,
+//   location: 'Indore',
+//   joiningDate: 2023-12-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504e'),
+//   empId: 'E042',
+//   name: 'User42',
+//   department: 'QA',
+//   age: 24,
+//   salary: 35000,
+//   isActive: false,
+//   location: 'Bhopal',
+//   joiningDate: 2024-01-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504f'),
+//   empId: 'E043',
+//   name: 'User43',
+//   department: 'HR',
+//   age: 32,
+//   salary: 48000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2024-01-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5054'),
+//   empId: 'E048',
+//   name: 'User48',
+//   department: 'QA',
+//   age: 29,
+//   salary: 40000,
+//   isActive: true,
+//   location: 'Indore',
+//   joiningDate: 2024-01-28T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5055'),
+//   empId: 'E049',
+//   name: 'User49',
+//   department: 'HR',
+//   age: 36,
+//   salary: 55000,
+//   isActive: false,
+//   location: 'Delhi',
+//   joiningDate: 2024-02-01T00:00:00.000Z
+// }
+db.employees.find({
+  isActive: false,
+  city: { $in: ["Mumbai", "Surat"] }
+})
+
+db.inventory.find({
+  quantity: { $gt: 20 },
+  isAvailable: true
+})
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505a'),
+//   itemCode: 'I004',
+//   itemName: 'Wireless Mouse',
+//   category: 'Electronics',
+//   price: 900,
+//   quantity: 50,
+//   supplier: 'LogiTech',
+//   isAvailable: true,
+//   addedOn: 2024-01-04T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505b'),
+//   itemCode: 'I005',
+//   itemName: 'Keyboard',
+//   category: 'Electronics',
+//   price: 1500,
+//   quantity: 40,
+//   supplier: 'KeyMaster',
+//   isAvailable: true,
+//   addedOn: 2024-01-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505f'),
+//   itemCode: 'I009',
+//   itemName: 'Marker Set',
+//   category: 'Accessories',
+//   price: 300,
+//   quantity: 100,
+//   supplier: 'WriteWell',
+//   isAvailable: true,
+//   addedOn: 2024-01-09T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5065'),
+//   itemCode: 'I015',
+//   itemName: 'Extension Board',
+//   category: 'Accessories',
+//   price: 700,
+//   quantity: 35,
+//   supplier: 'PowerLine',
+//   isAvailable: true,
+//   addedOn: 2024-01-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5067'),
+//   itemCode: 'I017',
+//   itemName: 'Headphones',
+//   category: 'Electronics',
+//   price: 2800,
+//   quantity: 22,
+//   supplier: 'SoundMax',
+//   isAvailable: true,
+//   addedOn: 2024-01-17T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5070'),
+//   itemCode: 'I026',
+//   itemName: 'Desk Lamp',
+//   category: 'Accessories',
+//   price: 1100,
+//   quantity: 30,
+//   supplier: 'BrightLite',
+//   isAvailable: true,
+//   addedOn: 2024-01-26T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5071'),
+//   itemCode: 'I027',
+//   itemName: 'Mouse Pad',
+//   category: 'Accessories',
+//   price: 250,
+//   quantity: 150,
+//   supplier: 'SoftMat',
+//   isAvailable: true,
+//   addedOn: 2024-01-27T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5072'),
+//   itemCode: 'I028',
+//   itemName: 'Stationery Kit',
+//   category: 'Accessories',
+//   price: 900,
+//   quantity: 60,
+//   supplier: 'OfficeBasics',
+//   isAvailable: true,
+//   addedOn: 2024-01-28T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5074'),
+//   itemCode: 'I030',
+//   itemName: 'Pen Drive 64GB',
+//   category: 'Electronics',
+//   price: 800,
+//   quantity: 80,
+//   supplier: 'FlashX',
+//   isAvailable: true,
+//   addedOn: 2024-01-30T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507b'),
+//   itemCode: 'I037',
+//   itemName: 'Cable Organizer',
+//   category: 'Accessories',
+//   price: 600,
+//   quantity: 40,
+//   supplier: 'CablePro',
+//   isAvailable: true,
+//   addedOn: 2024-02-06T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507d'),
+//   itemCode: 'I039',
+//   itemName: 'Surge Protector',
+//   category: 'Accessories',
+//   price: 1300,
+//   quantity: 25,
+//   supplier: 'PowerLine',
+//   isAvailable: true,
+//   addedOn: 2024-02-08T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5081'),
+//   itemCode: 'I043',
+//   itemName: 'Mobile Stand',
+//   category: 'Accessories',
+//   price: 500,
+//   quantity: 55,
+//   supplier: 'GripGo',
+//   isAvailable: true,
+//   addedOn: 2024-02-12T00:00:00.000Z
+// }
+db.inventory.find({
+  category: { $in: ["Furniture", "Accessories"] }
+})
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5057'),
+//   itemCode: 'I001',
+//   itemName: 'Office Chair',
+//   category: 'Furniture',
+//   price: 4500,
+//   quantity: 20,
+//   supplier: 'UrbanFurn',
+//   isAvailable: true,
+//   addedOn: 2024-01-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5058'),
+//   itemCode: 'I002',
+//   itemName: 'Desk Table',
+//   category: 'Furniture',
+//   price: 8500,
+//   quantity: 10,
+//   supplier: 'WoodWorks',
+//   isAvailable: true,
+//   addedOn: 2024-01-02T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5059'),
+//   itemCode: 'I003',
+//   itemName: 'Laptop Stand',
+//   category: 'Accessories',
+//   price: 1200,
+//   quantity: 0,
+//   supplier: 'TechGear',
+//   isAvailable: false,
+//   addedOn: 2024-01-03T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505e'),
+//   itemCode: 'I008',
+//   itemName: 'Whiteboard',
+//   category: 'Furniture',
+//   price: 3200,
+//   quantity: 12,
+//   supplier: 'OfficePro',
+//   isAvailable: true,
+//   addedOn: 2024-01-08T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505f'),
+//   itemCode: 'I009',
+//   itemName: 'Marker Set',
+//   category: 'Accessories',
+//   price: 300,
+//   quantity: 100,
+//   supplier: 'WriteWell',
+//   isAvailable: true,
+//   addedOn: 2024-01-09T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5064'),
+//   itemCode: 'I014',
+//   itemName: 'LAN Cable',
+//   category: 'Accessories',
+//   price: 400,
+//   quantity: 0,
+//   supplier: 'CablePro',
+//   isAvailable: false,
+//   addedOn: 2024-01-14T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5065'),
+//   itemCode: 'I015',
+//   itemName: 'Extension Board',
+//   category: 'Accessories',
+//   price: 700,
+//   quantity: 35,
+//   supplier: 'PowerLine',
+//   isAvailable: true,
+//   addedOn: 2024-01-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d506b'),
+//   itemCode: 'I021',
+//   itemName: 'Filing Cabinet',
+//   category: 'Furniture',
+//   price: 11000,
+//   quantity: 8,
+//   supplier: 'SteelWorks',
+//   isAvailable: true,
+//   addedOn: 2024-01-21T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d506c'),
+//   itemCode: 'I022',
+//   itemName: 'Office Sofa',
+//   category: 'Furniture',
+//   price: 42000,
+//   quantity: 1,
+//   supplier: 'ComfortZone',
+//   isAvailable: true,
+//   addedOn: 2024-01-22T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d506d'),
+//   itemCode: 'I023',
+//   itemName: 'Reception Desk',
+//   category: 'Furniture',
+//   price: 25000,
+//   quantity: 2,
+//   supplier: 'FrontDesk',
+//   isAvailable: true,
+//   addedOn: 2024-01-23T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5070'),
+//   itemCode: 'I026',
+//   itemName: 'Desk Lamp',
+//   category: 'Accessories',
+//   price: 1100,
+//   quantity: 30,
+//   supplier: 'BrightLite',
+//   isAvailable: true,
+//   addedOn: 2024-01-26T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5071'),
+//   itemCode: 'I027',
+//   itemName: 'Mouse Pad',
+//   category: 'Accessories',
+//   price: 250,
+//   quantity: 150,
+//   supplier: 'SoftMat',
+//   isAvailable: true,
+//   addedOn: 2024-01-27T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5072'),
+//   itemCode: 'I028',
+//   itemName: 'Stationery Kit',
+//   category: 'Accessories',
+//   price: 900,
+//   quantity: 60,
+//   supplier: 'OfficeBasics',
+//   isAvailable: true,
+//   addedOn: 2024-01-28T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507a'),
+//   itemCode: 'I036',
+//   itemName: 'Footrest',
+//   category: 'Furniture',
+//   price: 1800,
+//   quantity: 10,
+//   supplier: 'ComfortZone',
+//   isAvailable: true,
+//   addedOn: 2024-02-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507b'),
+//   itemCode: 'I037',
+//   itemName: 'Cable Organizer',
+//   category: 'Accessories',
+//   price: 600,
+//   quantity: 40,
+//   supplier: 'CablePro',
+//   isAvailable: true,
+//   addedOn: 2024-02-06T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507c'),
+//   itemCode: 'I038',
+//   itemName: 'Laptop Bag',
+//   category: 'Accessories',
+//   price: 2400,
+//   quantity: 18,
+//   supplier: 'CarryAll',
+//   isAvailable: true,
+//   addedOn: 2024-02-07T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507d'),
+//   itemCode: 'I039',
+//   itemName: 'Surge Protector',
+//   category: 'Accessories',
+//   price: 1300,
+//   quantity: 25,
+//   supplier: 'PowerLine',
+//   isAvailable: true,
+//   addedOn: 2024-02-08T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507e'),
+//   itemCode: 'I040',
+//   itemName: 'Standing Desk',
+//   category: 'Furniture',
+//   price: 48000,
+//   quantity: 1,
+//   supplier: 'FlexiDesk',
+//   isAvailable: true,
+//   addedOn: 2024-02-09T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5081'),
+//   itemCode: 'I043',
+//   itemName: 'Mobile Stand',
+//   category: 'Accessories',
+//   price: 500,
+//   quantity: 55,
+//   supplier: 'GripGo',
+//   isAvailable: true,
+//   addedOn: 2024-02-12T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5082'),
+//   itemCode: 'I044',
+//   itemName: 'Desk Drawer',
+//   category: 'Furniture',
+//   price: 3500,
+//   quantity: 7,
+//   supplier: 'WoodWorks',
+//   isAvailable: true,
+//   addedOn: 2024-02-13T00:00:00.000Z
+// }
+// Type "it" for more
+db.inventory.find({
+  price: { $gte: 1000, $lte: 10000 }
+})
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5057'),
+//   itemCode: 'I001',
+//   itemName: 'Office Chair',
+//   category: 'Furniture',
+//   price: 4500,
+//   quantity: 20,
+//   supplier: 'UrbanFurn',
+//   isAvailable: true,
+//   addedOn: 2024-01-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5058'),
+//   itemCode: 'I002',
+//   itemName: 'Desk Table',
+//   category: 'Furniture',
+//   price: 8500,
+//   quantity: 10,
+//   supplier: 'WoodWorks',
+//   isAvailable: true,
+//   addedOn: 2024-01-02T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5059'),
+//   itemCode: 'I003',
+//   itemName: 'Laptop Stand',
+//   category: 'Accessories',
+//   price: 1200,
+//   quantity: 0,
+//   supplier: 'TechGear',
+//   isAvailable: false,
+//   addedOn: 2024-01-03T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505b'),
+//   itemCode: 'I005',
+//   itemName: 'Keyboard',
+//   category: 'Electronics',
+//   price: 1500,
+//   quantity: 40,
+//   supplier: 'KeyMaster',
+//   isAvailable: true,
+//   addedOn: 2024-01-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505d'),
+//   itemCode: 'I007',
+//   itemName: 'Printer',
+//   category: 'Electronics',
+//   price: 9500,
+//   quantity: 5,
+//   supplier: 'PrintTech',
+//   isAvailable: true,
+//   addedOn: 2024-01-07T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505e'),
+//   itemCode: 'I008',
+//   itemName: 'Whiteboard',
+//   category: 'Furniture',
+//   price: 3200,
+//   quantity: 12,
+//   supplier: 'OfficePro',
+//   isAvailable: true,
+//   addedOn: 2024-01-08T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5062'),
+//   itemCode: 'I012',
+//   itemName: 'UPS',
+//   category: 'Electronics',
+//   price: 6000,
+//   quantity: 9,
+//   supplier: 'PowerSafe',
+//   isAvailable: true,
+//   addedOn: 2024-01-12T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5063'),
+//   itemCode: 'I013',
+//   itemName: 'Router',
+//   category: 'Electronics',
+//   price: 2500,
+//   quantity: 18,
+//   supplier: 'NetLink',
+//   isAvailable: true,
+//   addedOn: 2024-01-13T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5066'),
+//   itemCode: 'I016',
+//   itemName: 'Webcam',
+//   category: 'Electronics',
+//   price: 3200,
+//   quantity: 14,
+//   supplier: 'CamTech',
+//   isAvailable: true,
+//   addedOn: 2024-01-16T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5067'),
+//   itemCode: 'I017',
+//   itemName: 'Headphones',
+//   category: 'Electronics',
+//   price: 2800,
+//   quantity: 22,
+//   supplier: 'SoundMax',
+//   isAvailable: true,
+//   addedOn: 2024-01-17T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d506a'),
+//   itemCode: 'I020',
+//   itemName: 'Water Dispenser',
+//   category: 'Electronics',
+//   price: 9000,
+//   quantity: 6,
+//   supplier: 'AquaPure',
+//   isAvailable: true,
+//   addedOn: 2024-01-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d506e'),
+//   itemCode: 'I024',
+//   itemName: 'Paper Shredder',
+//   category: 'Electronics',
+//   price: 5200,
+//   quantity: 5,
+//   supplier: 'SecureDoc',
+//   isAvailable: true,
+//   addedOn: 2024-01-24T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d506f'),
+//   itemCode: 'I025',
+//   itemName: 'Scanner',
+//   category: 'Electronics',
+//   price: 8200,
+//   quantity: 6,
+//   supplier: 'ScanTech',
+//   isAvailable: true,
+//   addedOn: 2024-01-25T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5070'),
+//   itemCode: 'I026',
+//   itemName: 'Desk Lamp',
+//   category: 'Accessories',
+//   price: 1100,
+//   quantity: 30,
+//   supplier: 'BrightLite',
+//   isAvailable: true,
+//   addedOn: 2024-01-26T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5073'),
+//   itemCode: 'I029',
+//   itemName: 'External Hard Drive',
+//   category: 'Electronics',
+//   price: 6500,
+//   quantity: 12,
+//   supplier: 'DataStore',
+//   isAvailable: true,
+//   addedOn: 2024-01-29T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5075'),
+//   itemCode: 'I031',
+//   itemName: 'Power Bank',
+//   category: 'Electronics',
+//   price: 2200,
+//   quantity: 18,
+//   supplier: 'ChargePro',
+//   isAvailable: true,
+//   addedOn: 2024-01-31T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5078'),
+//   itemCode: 'I034',
+//   itemName: 'Heater',
+//   category: 'Electronics',
+//   price: 3200,
+//   quantity: 0,
+//   supplier: 'HeatMax',
+//   isAvailable: false,
+//   addedOn: 2024-02-03T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5079'),
+//   itemCode: 'I035',
+//   itemName: 'Vacuum Cleaner',
+//   category: 'Electronics',
+//   price: 7200,
+//   quantity: 4,
+//   supplier: 'CleanTech',
+//   isAvailable: true,
+//   addedOn: 2024-02-04T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507a'),
+//   itemCode: 'I036',
+//   itemName: 'Footrest',
+//   category: 'Furniture',
+//   price: 1800,
+//   quantity: 10,
+//   supplier: 'ComfortZone',
+//   isAvailable: true,
+//   addedOn: 2024-02-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507c'),
+//   itemCode: 'I038',
+//   itemName: 'Laptop Bag',
+//   category: 'Accessories',
+//   price: 2400,
+//   quantity: 18,
+//   supplier: 'CarryAll',
+//   isAvailable: true,
+//   addedOn: 2024-02-07T00:00:00.000Z
+// }
+// Type "it" for more
+db.inventory.find().sort({ price: -1 }).limit(5)
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5088'),
+//   itemCode: 'I050',
+//   itemName: 'Server Rack',
+//   category: 'Furniture',
+//   price: 65000,
+//   quantity: 1,
+//   supplier: 'RackPro',
+//   isAvailable: true,
+//   addedOn: 2024-02-19T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5076'),
+//   itemCode: 'I032',
+//   itemName: 'Smart TV',
+//   category: 'Electronics',
+//   price: 55000,
+//   quantity: 2,
+//   supplier: 'VisionPlus',
+//   isAvailable: true,
+//   addedOn: 2024-02-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507e'),
+//   itemCode: 'I040',
+//   itemName: 'Standing Desk',
+//   category: 'Furniture',
+//   price: 48000,
+//   quantity: 1,
+//   supplier: 'FlexiDesk',
+//   isAvailable: true,
+//   addedOn: 2024-02-09T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d506c'),
+//   itemCode: 'I022',
+//   itemName: 'Office Sofa',
+//   category: 'Furniture',
+//   price: 42000,
+//   quantity: 1,
+//   supplier: 'ComfortZone',
+//   isAvailable: true,
+//   addedOn: 2024-01-22T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5077'),
+//   itemCode: 'I033',
+//   itemName: 'AC Unit',
+//   category: 'Electronics',
+//   price: 38000,
+//   quantity: 1,
+//   supplier: 'CoolAir',
+//   isAvailable: true,
+//   addedOn: 2024-02-02T00:00:00.000Z
+// }
+db.sales.find({
+  status: { $in: ["PENDING", "CANCELLED"] }
+})
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d508b'),
+//   saleId: 'S003',
+//   itemCode: 'I003',
+//   region: 'East',
+//   unitsSold: 3,
+//   totalAmount: 3600,
+//   status: 'CANCELLED',
+//   saleDate: 2024-02-03T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d508d'),
+//   saleId: 'S005',
+//   itemCode: 'I005',
+//   region: 'North',
+//   unitsSold: 4,
+//   totalAmount: 6000,
+//   status: 'PENDING',
+//   saleDate: 2024-02-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5092'),
+//   saleId: 'S010',
+//   itemCode: 'I010',
+//   region: 'South',
+//   unitsSold: 1,
+//   totalAmount: 28000,
+//   status: 'CANCELLED',
+//   saleDate: 2024-02-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d5096'),
+//   saleId: 'S014',
+//   itemCode: 'I014',
+//   region: 'South',
+//   unitsSold: 5,
+//   totalAmount: 2000,
+//   status: 'PENDING',
+//   saleDate: 2024-02-14T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d509a'),
+//   saleId: 'S018',
+//   itemCode: 'I018',
+//   region: 'South',
+//   unitsSold: 1,
+//   totalAmount: 15000,
+//   status: 'PENDING',
+//   saleDate: 2024-02-18T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d509f'),
+//   saleId: 'S023',
+//   itemCode: 'I023',
+//   region: 'East',
+//   unitsSold: 1,
+//   totalAmount: 25000,
+//   status: 'PENDING',
+//   saleDate: 2024-02-23T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50a4'),
+//   saleId: 'S028',
+//   itemCode: 'I028',
+//   region: 'West',
+//   unitsSold: 5,
+//   totalAmount: 4500,
+//   status: 'PENDING',
+//   saleDate: 2024-02-28T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50aa'),
+//   saleId: 'S034',
+//   itemCode: 'I034',
+//   region: 'South',
+//   unitsSold: 2,
+//   totalAmount: 6400,
+//   status: 'CANCELLED',
+//   saleDate: 2024-03-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50ae'),
+//   saleId: 'S038',
+//   itemCode: 'I038',
+//   region: 'South',
+//   unitsSold: 2,
+//   totalAmount: 4800,
+//   status: 'PENDING',
+//   saleDate: 2024-03-09T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50b4'),
+//   saleId: 'S044',
+//   itemCode: 'I044',
+//   region: 'West',
+//   unitsSold: 2,
+//   totalAmount: 7000,
+//   status: 'PENDING',
+//   saleDate: 2024-03-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50b9'),
+//   saleId: 'S049',
+//   itemCode: 'I049',
+//   region: 'North',
+//   unitsSold: 1,
+//   totalAmount: 22000,
+//   status: 'PENDING',
+//   saleDate: 2024-03-20T00:00:00.000Z
+// }
+db.sales.find().sort({ saleDate: -1 }).limit(5)
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50ba'),
+//   saleId: 'S050',
+//   itemCode: 'I050',
+//   region: 'South',
+//   unitsSold: 1,
+//   totalAmount: 65000,
+//   status: 'COMPLETED',
+//   saleDate: 2024-03-21T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50b9'),
+//   saleId: 'S049',
+//   itemCode: 'I049',
+//   region: 'North',
+//   unitsSold: 1,
+//   totalAmount: 22000,
+//   status: 'PENDING',
+//   saleDate: 2024-03-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50b8'),
+//   saleId: 'S048',
+//   itemCode: 'I048',
+//   region: 'West',
+//   unitsSold: 1,
+//   totalAmount: 14500,
+//   status: 'COMPLETED',
+//   saleDate: 2024-03-19T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50b7'),
+//   saleId: 'S047',
+//   itemCode: 'I047',
+//   region: 'East',
+//   unitsSold: 1,
+//   totalAmount: 5200,
+//   status: 'COMPLETED',
+//   saleDate: 2024-03-18T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21a08e3e5a5a32d50b6'),
+//   saleId: 'S046',
+//   itemCode: 'I046',
+//   region: 'South',
+//   unitsSold: 1,
+//   totalAmount: 9800,
+//   status: 'COMPLETED',
+//   saleDate: 2024-03-17T00:00:00.000Z
+// }
+db.employees.find({
+  department: { $in: ["Engineering", "Design"] }
+})
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5025'),
+//   empId: 'E001',
+//   name: 'Amit Sharma',
+//   department: 'Engineering',
+//   age: 25,
+//   salary: 45000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-01-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5029'),
+//   empId: 'E005',
+//   name: 'Karan Patel',
+//   department: 'Design',
+//   age: 27,
+//   salary: 42000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-03-05T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502a'),
+//   empId: 'E006',
+//   name: 'User6',
+//   department: 'Engineering',
+//   age: 24,
+//   salary: 46000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-03-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502b'),
+//   empId: 'E007',
+//   name: 'User7',
+//   department: 'Engineering',
+//   age: 31,
+//   salary: 52000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-11-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502f'),
+//   empId: 'E011',
+//   name: 'User11',
+//   department: 'Engineering',
+//   age: 22,
+//   salary: 35000,
+//   isActive: true,
+//   location: 'Bhopal',
+//   joiningDate: 2023-05-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5032'),
+//   empId: 'E014',
+//   name: 'User14',
+//   department: 'Engineering',
+//   age: 27,
+//   salary: 48000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-06-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5034'),
+//   empId: 'E016',
+//   name: 'User16',
+//   department: 'Design',
+//   age: 26,
+//   salary: 44000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-06-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5036'),
+//   empId: 'E018',
+//   name: 'User18',
+//   department: 'Engineering',
+//   age: 32,
+//   salary: 60000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2022-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5039'),
+//   empId: 'E021',
+//   name: 'User21',
+//   department: 'Engineering',
+//   age: 28,
+//   salary: 52000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503b'),
+//   empId: 'E023',
+//   name: 'User23',
+//   department: 'Design',
+//   age: 29,
+//   salary: 47000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-08-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503d'),
+//   empId: 'E025',
+//   name: 'User25',
+//   department: 'Engineering',
+//   age: 34,
+//   salary: 65000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-06-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5040'),
+//   empId: 'E028',
+//   name: 'User28',
+//   department: 'Engineering',
+//   age: 26,
+//   salary: 50000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-10-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5041'),
+//   empId: 'E029',
+//   name: 'User29',
+//   department: 'Design',
+//   age: 28,
+//   salary: 48000,
+//   isActive: false,
+//   location: 'Jaipur',
+//   joiningDate: 2023-10-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5043'),
+//   empId: 'E031',
+//   name: 'User31',
+//   department: 'Engineering',
+//   age: 23,
+//   salary: 36000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-11-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5046'),
+//   empId: 'E034',
+//   name: 'User34',
+//   department: 'Engineering',
+//   age: 29,
+//   salary: 56000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-11-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5047'),
+//   empId: 'E035',
+//   name: 'User35',
+//   department: 'Design',
+//   age: 31,
+//   salary: 50000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2023-11-20T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5049'),
+//   empId: 'E037',
+//   name: 'User37',
+//   department: 'Engineering',
+//   age: 33,
+//   salary: 70000,
+//   isActive: false,
+//   location: 'Surat',
+//   joiningDate: 2022-03-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504c'),
+//   empId: 'E040',
+//   name: 'User40',
+//   department: 'Engineering',
+//   age: 28,
+//   salary: 54000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-12-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504d'),
+//   empId: 'E041',
+//   name: 'User41',
+//   department: 'Design',
+//   age: 27,
+//   salary: 46000,
+//   isActive: true,
+//   location: 'Pune',
+//   joiningDate: 2024-01-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5050'),
+//   empId: 'E044',
+//   name: 'User44',
+//   department: 'Engineering',
+//   age: 30,
+//   salary: 62000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2024-01-15T00:00:00.000Z
+// }
+// Type "it" for more
+db.employees.find({
+  isActive: true,
+  salary: { $gt: 50000 }
+})
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5027'),
+//   empId: 'E003',
+//   name: 'Rahul Mehta',
+//   department: 'Management',
+//   age: 35,
+//   salary: 80000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-12-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d502e'),
+//   empId: 'E010',
+//   name: 'User10',
+//   department: 'Management',
+//   age: 38,
+//   salary: 90000,
+//   isActive: true,
+//   location: 'Chandigarh',
+//   joiningDate: 2022-10-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5036'),
+//   empId: 'E018',
+//   name: 'User18',
+//   department: 'Engineering',
+//   age: 32,
+//   salary: 60000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2022-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5038'),
+//   empId: 'E020',
+//   name: 'User20',
+//   department: 'Management',
+//   age: 39,
+//   salary: 88000,
+//   isActive: true,
+//   location: 'Jaipur',
+//   joiningDate: 2022-07-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5039'),
+//   empId: 'E021',
+//   name: 'User21',
+//   department: 'Engineering',
+//   age: 28,
+//   salary: 52000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-08-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503e'),
+//   empId: 'E026',
+//   name: 'User26',
+//   department: 'Management',
+//   age: 42,
+//   salary: 99000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-05-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5046'),
+//   empId: 'E034',
+//   name: 'User34',
+//   department: 'Engineering',
+//   age: 29,
+//   salary: 56000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-11-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5048'),
+//   empId: 'E036',
+//   name: 'User36',
+//   department: 'HR',
+//   age: 35,
+//   salary: 52000,
+//   isActive: true,
+//   location: 'Delhi',
+//   joiningDate: 2023-12-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504b'),
+//   empId: 'E039',
+//   name: 'User39',
+//   department: 'Management',
+//   age: 40,
+//   salary: 91000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-02-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d504c'),
+//   empId: 'E040',
+//   name: 'User40',
+//   department: 'Engineering',
+//   age: 28,
+//   salary: 54000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2023-12-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5050'),
+//   empId: 'E044',
+//   name: 'User44',
+//   department: 'Engineering',
+//   age: 30,
+//   salary: 62000,
+//   isActive: true,
+//   location: 'Surat',
+//   joiningDate: 2024-01-15T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5053'),
+//   empId: 'E047',
+//   name: 'User47',
+//   department: 'Engineering',
+//   age: 26,
+//   salary: 51000,
+//   isActive: true,
+//   location: 'Ahmedabad',
+//   joiningDate: 2024-01-25T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5056'),
+//   empId: 'E050',
+//   name: 'User50',
+//   department: 'Engineering',
+//   age: 34,
+//   salary: 72000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2024-02-05T00:00:00.000Z
+// }
+db.employees.find(
+  { city: "Mumbai" },
+  { name: 1, salary: 1, _id: 0 }
+)
+// db.employees.find().sort({ salary: -1 }).limit(3)
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d503e'),
+//   empId: 'E026',
+//   name: 'User26',
+//   department: 'Management',
+//   age: 42,
+//   salary: 99000,
+//   isActive: true,
+//   location: 'Mumbai',
+//   joiningDate: 2022-05-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5051'),
+//   empId: 'E045',
+//   name: 'User45',
+//   department: 'Management',
+//   age: 43,
+//   salary: 97000,
+//   isActive: false,
+//   location: 'Mumbai',
+//   joiningDate: 2022-01-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d1fe08e3e5a5a32d5033'),
+//   empId: 'E015',
+//   name: 'User15',
+//   department: 'Management',
+//   age: 41,
+//   salary: 95000,
+//   isActive: false,
+//   location: 'Mumbai',
+//   joiningDate: 2022-09-20T00:00:00.000Z
+// }
+db.inventory.find({
+  isAvailable: true,
+  price: { $gt: 10000 }
+})
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d505c'),
+//   itemCode: 'I006',
+//   itemName: 'Monitor 24inch',
+//   category: 'Electronics',
+//   price: 12000,
+//   quantity: 15,
+//   supplier: 'ViewMax',
+//   isAvailable: true,
+//   addedOn: 2024-01-06T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5060'),
+//   itemCode: 'I010',
+//   itemName: 'Projector',
+//   category: 'Electronics',
+//   price: 28000,
+//   quantity: 3,
+//   supplier: 'BeamPro',
+//   isAvailable: true,
+//   addedOn: 2024-01-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5061'),
+//   itemCode: 'I011',
+//   itemName: 'CPU Cabinet',
+//   category: 'Electronics',
+//   price: 35000,
+//   quantity: 7,
+//   supplier: 'BuildPC',
+//   isAvailable: true,
+//   addedOn: 2024-01-11T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5068'),
+//   itemCode: 'I018',
+//   itemName: 'Conference Speaker',
+//   category: 'Electronics',
+//   price: 15000,
+//   quantity: 4,
+//   supplier: 'AudioHub',
+//   isAvailable: true,
+//   addedOn: 2024-01-18T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5069'),
+//   itemCode: 'I019',
+//   itemName: 'Coffee Machine',
+//   category: 'Electronics',
+//   price: 18000,
+//   quantity: 2,
+//   supplier: 'CafePro',
+//   isAvailable: true,
+//   addedOn: 2024-01-19T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d506b'),
+//   itemCode: 'I021',
+//   itemName: 'Filing Cabinet',
+//   category: 'Furniture',
+//   price: 11000,
+//   quantity: 8,
+//   supplier: 'SteelWorks',
+//   isAvailable: true,
+//   addedOn: 2024-01-21T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d506c'),
+//   itemCode: 'I022',
+//   itemName: 'Office Sofa',
+//   category: 'Furniture',
+//   price: 42000,
+//   quantity: 1,
+//   supplier: 'ComfortZone',
+//   isAvailable: true,
+//   addedOn: 2024-01-22T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d506d'),
+//   itemCode: 'I023',
+//   itemName: 'Reception Desk',
+//   category: 'Furniture',
+//   price: 25000,
+//   quantity: 2,
+//   supplier: 'FrontDesk',
+//   isAvailable: true,
+//   addedOn: 2024-01-23T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5076'),
+//   itemCode: 'I032',
+//   itemName: 'Smart TV',
+//   category: 'Electronics',
+//   price: 55000,
+//   quantity: 2,
+//   supplier: 'VisionPlus',
+//   isAvailable: true,
+//   addedOn: 2024-02-01T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5077'),
+//   itemCode: 'I033',
+//   itemName: 'AC Unit',
+//   category: 'Electronics',
+//   price: 38000,
+//   quantity: 1,
+//   supplier: 'CoolAir',
+//   isAvailable: true,
+//   addedOn: 2024-02-02T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507e'),
+//   itemCode: 'I040',
+//   itemName: 'Standing Desk',
+//   category: 'Furniture',
+//   price: 48000,
+//   quantity: 1,
+//   supplier: 'FlexiDesk',
+//   isAvailable: true,
+//   addedOn: 2024-02-09T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d507f'),
+//   itemCode: 'I041',
+//   itemName: 'Tablet',
+//   category: 'Electronics',
+//   price: 26000,
+//   quantity: 6,
+//   supplier: 'TabWorld',
+//   isAvailable: true,
+//   addedOn: 2024-02-10T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5080'),
+//   itemCode: 'I042',
+//   itemName: 'Smart Watch',
+//   category: 'Electronics',
+//   price: 15000,
+//   quantity: 9,
+//   supplier: 'TimeTech',
+//   isAvailable: true,
+//   addedOn: 2024-02-11T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5086'),
+//   itemCode: 'I048',
+//   itemName: 'Label Printer',
+//   category: 'Electronics',
+//   price: 14500,
+//   quantity: 1,
+//   supplier: 'PrintTech',
+//   isAvailable: true,
+//   addedOn: 2024-02-17T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5087'),
+//   itemCode: 'I049',
+//   itemName: 'Noise Cancelling Headset',
+//   category: 'Electronics',
+//   price: 22000,
+//   quantity: 2,
+//   supplier: 'SoundMax',
+//   isAvailable: true,
+//   addedOn: 2024-02-18T00:00:00.000Z
+// }
+// {
+//   _id: ObjectId('6963d21208e3e5a5a32d5088'),
+//   itemCode: 'I050',
+//   itemName: 'Server Rack',
+//   category: 'Furniture',
+//   price: 65000,
+//   quantity: 1,
+//   supplier: 'RackPro',
+//   isAvailable: true,
+//   addedOn: 2024-02-19T00:00:00.000Z
+// }
