@@ -1,0 +1,100 @@
+<!-- # **Design a Simple Airbnb Property Page**
+
+- Include a **title, description, image, price, and "Book Now" button** using basic HTML tags. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cozy Airbnb Property</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fffbea; /* soft cream background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 4px 6px 0px rgba(0, 0, 0, 0.8);
+      padding: 2rem;
+      max-width: 500px;
+      text-align: center;
+      border: 2px solid #000;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.01);
+    }
+
+    .card h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 1rem 0;
+    }
+
+    .card button {
+      background-color: #000;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 1rem;
+      }
+
+      .card h1 {
+        font-size: 1.5rem;
+      }
+
+      .card button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Cozy Airbnb Property</h1>
+    <p>Experience comfort and convenience in our beautifully designed property located in the heart of the city.</p>
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Cozy Airbnb Property" />
+    <p><strong>Price: $120 per night</strong></p>
+    <button type="button">Book Now</button>
+  </div>
+</body>
+</html>

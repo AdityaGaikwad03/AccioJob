@@ -1,0 +1,61 @@
+<!-- simple svg creation -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+         body { display: grid; place-items: center; min-height: 100vh; font-family: sans-serif; }
+
+    svg {
+      width: 150px;
+      height: 150px;
+    }
+    .polygon1 {
+      fill: gold;               /* star fill color */
+      stroke: black;             /* border color */
+      stroke-width: 2;            /* border thickness */
+      stroke-linejoin: round;     /* smooth corners */
+    }
+    .polygon1:hover {
+      fill: orange;               /* hover effect */
+      cursor: pointer;
+    }
+
+    </style>
+  </head>
+  <body>
+    <svg
+      width="320"
+      height="220"
+      xmlns="http://www.w3.org/2000/svg"
+      style="border: 2px solid black"
+    >
+      <!-- <polygon
+        class="polygon"
+        points="50,15 61,35 82,35 69,50 75,70 50,60 25,70 31,50 18,35 39,35"
+        fill="yellow"
+        stroke="orange"
+        stroke-width="2"
+      /> -->
+
+       <polygon class="polygon1"
+      points="
+        50,15  
+        61,35
+        82,35
+        66,50
+        72,71
+        50,60   
+        28,71
+        34,50
+        18,35
+        39,35
+      "
+    />
+
+       <text x="28" y="90" fill="black" font-size="14">Polygon</text>
+    </svg>
+  </body>
+</html>

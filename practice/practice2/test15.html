@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Smooth Button Hover Effect */
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Image Zoom on Hover */
+        .image-container {
+            width: 300px;
+            overflow: hidden;
+        }
+
+        .image {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover .image {
+            transform: scale(1.1);
+        }
+
+        /* Card Shadow Expansion */
+        .card {
+            width: 200px;
+            height: 100px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Navbar Link Underline Animation */
+        nav a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #007BFF;
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Fade In / Fade Out Effect */
+        .fade-box {
+            width: 200px;
+            height: 100px;
+            background-color: #28a745;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        .fade-box:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Smooth Button Hover Effect -->
+    <button class="btn">Hover Me</button>
+    <br><br>
+
+    <!-- Image Zoom on Hover -->
+    <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1688600793944-4d45993e6583?q=80&w=1221&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image" alt="Sample">
+    </div>
+    <br><br>
+
+
+    <!-- Card Shadow Expansion -->
+    <div class="card">Hover Card</div>
+    <br><br>
+
+
+    <!-- Navbar Link Underline Animation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <br><br>
+
+
+    <!-- Fade In / Fade Out Effect -->
+    <div class="fade-box">Hover Me</div>
+
+</body>
+</html>

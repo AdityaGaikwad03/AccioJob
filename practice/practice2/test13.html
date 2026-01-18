@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinterest Hero Clone</title>
+  <style>
+    /* Reset basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero container */
+.hero {
+  display: flex;
+  align-items: stretch;       /* Match image and text heights */
+  justify-content: flex-start;
+  height: 400px;              /* Set an explicit height */
+  background: #fff;
+  width: 100vw;
+}
+
+/* Hero Image */
+.hero-image {
+  width: 65vw;           /* Responsive width for image */
+  height: 100%;          /* Fill the .hero container */
+  object-fit: cover;     /* Crop image maintaining aspect ratio */
+}
+
+/* Hero Text */
+.hero-text {
+  flex: 1;                  /* Take up remaining space */
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 55px 40px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  color: #111;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+  color: #474747;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #e60023;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #b8001b;
+}
+
+  </style>
+</head>
+<body>
+ <div class="hero">
+  <img
+    class="hero-image"
+    src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&dpr=1"
+    alt="Pinterest Hero"
+  >
+  <div class="hero-text">
+    <h1>Welcome to my Pinterest clone</h1>
+    <p>Discover new inspiration and save your favorite ideas</p>
+    <a href="#" class="btn">Explore now</a>
+  </div>
+</div>
+
+</body>
+</html>

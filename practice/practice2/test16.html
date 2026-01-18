@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .layout {
+      display: flex;
+    }
+    .sidebar {
+      background: lightgray;
+      padding: 20px;
+      width: 200px;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+     .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #333;
+      padding: 10px;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px;
+      background: #444;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+     body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .cards {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            padding: 20px;
+            background: lightblue;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 930px) {
+            .cards {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+
+    /* Desktop: row direction (min-width: 768px)  */
+    @media (min-width: 768px) {
+      .nav {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    /* Mobile: hide sidebar */
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Main Content</div>
+  </div>
+    <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+  <h1>Responsive Cards</h1>
+    <div class="cards">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+    </div>
+</body>
+</html>

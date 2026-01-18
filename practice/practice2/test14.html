@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Footer</title>
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>/* your code here */
+/* Footer Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 40px 20px 20px;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-logo{
+   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #fffdfd;
+}
+
+.footer-col {
+  flex: 1 1 180px;
+  min-width: 180px;
+}
+
+.footer-col h2,
+.footer-col h3 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col p a{
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-col h3:hover{
+  text-decoration: underline;
+}
+
+.footer .logo {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.media-icons {
+  display: flex;
+  gap: 10px;
+}
+	
+.media-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  background: #333;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  transition: background 0.3s;
+}
+
+.media-icons a:hover {
+  background: #e60023; /* Pinterest red accent */
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  border-top: 1px solid #333;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #fffdfd;
+  background-color: gray;
+}
+
+.bottom-bar a {
+  color: #fffdfd;
+  text-decoration: none;
+}
+
+.bottom-bar a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bottom-bar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+	.link-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+</style>
+</head>
+<body>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    
+      <!-- Company Name -->
+      <div class="footer-logo">
+        <h2 class="logo">company</h2>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+    <div class="container">
+      <!-- Links -->
+		<div class = "link-boxes">
+      <div class="footer-col">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Get Started</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">App Design</a></li>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Logo Design</a></li>
+          <li><a href="#">Banner Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Other Services -->
+      <div class="footer-col">
+        <h3>Other Services</h3>
+        <ul>
+          <li><a href="#">SEO</a></li>
+          <li><a href="#">Content Marketing</a></li>
+          <li><a href="#">Prints</a></li>
+          <li><a href="#">Social Media</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>+91 8879887262</p>
+        <p>+91 8879887262</p>
+        <p><a href="mailto:contact@company.com">contact@company.com</a></p>
+      </div>
+		</div>
+    </div>
+  </footer>
+<!-- Bottom Bar -->
+    <div class="bottom-bar">
+      <p>Copyright © 2025 company.</p>
+      <p><a href="#">Privacy Policy</a></p>
+    </div>
+</body>
+</html>

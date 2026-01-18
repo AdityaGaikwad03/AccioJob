@@ -1,0 +1,106 @@
+<!-- pseudo code -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo Elements Examples</title>
+  <style>
+    /* -------------------------------
+       1. ::first-letter
+       Make first letter bigger & red
+    --------------------------------*/
+    p.example1::first-letter {
+      font-size: 32px;
+      color: orange;
+    }
+
+    /* -------------------------------
+       2. ::first-line
+       Style only the first line
+    --------------------------------*/
+    p.example2::first-line {
+      color: red;
+    }
+
+    /* -------------------------------
+       3. ::before
+       Add content before element
+    --------------------------------*/
+    h1.example1::before {
+      content: "➡️ ";
+    }
+
+    /* -------------------------------
+       4. ::after
+       Add content after element
+    --------------------------------*/
+    h1.example2::after {
+      content: " ✅";
+    }
+
+    /* -------------------------------
+       5. ::selection
+       Style selected text
+    --------------------------------*/
+    p.example3::selection {
+      background-color: yellowgreen;
+    }
+
+    /* -------------------------------
+       6. ::marker
+       Style list bullets/numbers
+    --------------------------------*/
+    ul li::marker {
+      color: red;
+    }
+
+    /* -------------------------------
+       7. ::placeholder
+       Style input placeholder
+    --------------------------------*/
+    input::placeholder {
+      font-style: italic;
+      color: goldenrod;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ::first-letter -->
+  <h2>::first-letter</h2>
+  <p class="example1">This is an example of first-letter pseudo-element.</p>
+
+  <!-- ::first-line -->
+  <h2>::first-line</h2>
+  <p class="example2">
+    This is the first line of the paragraph. <br>
+    If this text goes to the second line, it will not be styled.
+  </p>
+
+  <!-- ::before -->
+  <h2>::before</h2>
+  <h1 class="example1">Important Heading</h1>
+
+  <!-- ::after -->
+  <h2>::after</h2>
+  <h1 class="example2">Task Completed</h1>
+
+  <!-- ::selection -->
+  <h2>::selection</h2>
+  <p class="example3">Select this text and see the effect!</p>
+
+  <!-- ::marker -->
+  <h2>::marker</h2>
+  <ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+
+  <!-- ::placeholder -->
+  <h2>::placeholder</h2>
+  <input type="text" placeholder="Enter your name">
+
+</body>
+</html>
