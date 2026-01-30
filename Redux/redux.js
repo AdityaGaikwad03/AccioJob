@@ -52,6 +52,9 @@ const IcecreamReducer = (state = icecreamInitialState, action) => {
         case BUY_ICECREAM: return{
             ...state, numOfIcecream: state.numOfIcecream - 1
         }
+        case BUY_CAKE: return{
+            ...state, numOfIcecream: state.numOfIcecream - 1
+        }
         default: return state
     }
 }
@@ -79,12 +82,15 @@ console.log("initialState", store.getState());
 // let unsubscribe = store.subscribe(() => console.log(store.getState()));
 
 //dispatching action
-store.dispatch(buyCake(2));
-store.dispatch(buyCake(2));
-store.dispatch(buyCake(2));
+// store.dispatch(buyCake(2));
+// store.dispatch(buyCake(2));
+store.dispatch(buyCake(1));
 
 // store.dispatch(buyIcecream());
 // store.dispatch(buyIcecream());
 // store.dispatch(buyIcecream());
 
 // unsubscribe();
+
+//here even though we hace 2 seperate reducers, when we dispatch an action both of these reduser recieve that action
+// one 

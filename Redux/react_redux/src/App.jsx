@@ -5,6 +5,7 @@ import CakeContainer from "./components/CakeContainer";
 import IcecreamContainer from "./components/IcecreamContainer";
 import ComboContainer from "./components/ComboContainer";
 import store from "./redux/store";
+import UserComponent from "./components/User/userComponent";
 
 function App() {
  
@@ -17,9 +18,10 @@ function App() {
         step 4 store
         step 5 access value in js app */}
         <Provider store = {store}>
-          <CakeContainer />
+          {/* <CakeContainer />
           <IcecreamContainer/>
-          <ComboContainer/>
+          <ComboContainer/> */}
+          <UserComponent />
         </Provider>
       </div>
     </div>
