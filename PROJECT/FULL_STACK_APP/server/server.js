@@ -11,9 +11,15 @@ const PORT = process.env.PORT || 4000
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({credentials: true}))
+app.use(cors({origin:'http://localhost:5173', credentials: true}))
 
 connectDB();
+
+app.use((err, req, res, next) => {
+  const errorStatus = err.status || 500
+  const errorMessage = err.message || 'something went wrong'
+  return res.status(errorStatus).send(errorMessage)
+})
 
 app.listen(PORT, ()=>{
     console.log(`server is running on port: ${PORT}`)
