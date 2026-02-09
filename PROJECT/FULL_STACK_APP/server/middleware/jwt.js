@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import createError from '../utils/createError';
+import createError from '../utils/createError.js';
 
 const verifyToken = (req,res,next) =>{
     const token = req.cookies.accessToken;

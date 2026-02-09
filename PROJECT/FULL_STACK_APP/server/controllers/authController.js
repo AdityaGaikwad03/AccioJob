@@ -55,3 +55,10 @@ export const login = async(req, res, next) => {
         next(err)
     }
 }
+
+export const logout = async(req, res) => {
+    res.clearCookies("accessToken", {
+        sameSite: "none",
+        source: true
+    }).status(200).send("user has been logged out")
+}
