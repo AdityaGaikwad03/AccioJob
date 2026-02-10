@@ -1,10 +1,14 @@
-import mongoose from "mongoose";
- 
+import mongoose from 'mongoose';
+
 const connectDB = async() =>{
-    mongoose.connection.on('connected', ()=>{
-        console.log('MongoDB connected successfully');
+    
+    // the below line will be executed when db connects
+    mongoose.connection.on('connected',()=>{
+        console.log("db connected")
     })
-    await mongoose.connect(`${process.env.MONGODB_URI}/FULLSTACKAPP`)
+
+    await mongoose.connect(`${process.env.MONGODB_URI}/mern-project`)
+
 }
 
 export default connectDB;
