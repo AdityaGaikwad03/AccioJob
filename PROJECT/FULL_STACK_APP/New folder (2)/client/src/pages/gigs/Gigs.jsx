@@ -1,7 +1,10 @@
 import React, { useRef, useState } from "react";
 import "./Gigs.css";
-import { gigs } from "../../data";
+// import { gigs } from "../../data";
 import GigCard from "../../components/gigCard/GigCard";
+import { useQuery } from "@tanstack/react-query";
+import newRequest from "../../utils/newRequest";
+import { useLocation } from "react-router-dom";
 
 function Gigs() {
   
@@ -15,14 +18,25 @@ function Gigs() {
   const minRef = useRef();
   const maxRef = useRef();
 
+
+  const {search} = useLocation();
+  const {isLoading, error, data, refetch} = useQuery({
+    queryKey: ['gigs'],
+    queryFn: () => newRequest.get(`/gigs${search}&min=${minRef.current.value}&max=${maxRef.current.value}&sort=${sort}`)
+    .then((res)=>{
+      return res.data;
+    })
+  })
+
+  console.log(data)
+
   const reSort = (type) => {
     setSort(type);
     setOpen(false);
   };
 
   const apply = ()=>{
-    console.log(minRef.current.value)
-    console.log(maxRef.current.value)
+    refetch()
   }
 
   return (
@@ -59,9 +73,9 @@ function Gigs() {
           </div>
         </div>
         <div className="cards">
-          {gigs.map((gig) => (
-            <GigCard key={gig.id} item={gig} />
-          ))}
+          {isLoading ? "Loading" : error ? "somthing went wrong" :
+            (data.map((gig) => <GigCard key = {gig._id} item = {gig}/>))
+          }
         </div>
       </div>
     </div>

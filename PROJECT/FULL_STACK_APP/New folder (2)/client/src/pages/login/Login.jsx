@@ -26,8 +26,6 @@ function Login() {
 
       localStorage.setItem("currentUser", JSON.stringify(res.data));
       navigate("/")
-
-
        console.log(res)
     }catch(err){
       setError(err.response.data)

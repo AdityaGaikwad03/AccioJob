@@ -7,6 +7,8 @@ import "./Gig.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css"; // Add this CSS import
 
+
+
 function Gig() {
   const responsive = {
     desktop: {
