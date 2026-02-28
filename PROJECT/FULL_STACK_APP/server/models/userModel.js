@@ -36,7 +36,20 @@ const userSchema = new Schema({
     isSeller:{
         type: Boolean,
         default: false
+    },
+
+
+    resetPasswordToken: {
+        type: String,
+        default:undefined
+    },
+    resetPasswordExpire: {
+        type: Date,
+        default: undefined
     }
+
+    
+
 },{
     timestamps: true
 })

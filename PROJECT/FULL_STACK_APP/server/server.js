@@ -6,6 +6,9 @@ import connectDB from './config/mongoDb.js'
 
 import userRoutes from './routes/userRoutes.js'
 import authRoutes from './routes/authRoutes.js'
+import gigRoutes from './routes/gigRoutes.js'
+import reviewRoutes from './routes/reviewRoutes.js'
+
 
 const app = express();
 
@@ -32,6 +35,8 @@ app.get('/',(req,res)=>{
 
 app.use('/api/user',userRoutes);
 app.use('/api/auth',authRoutes);
+app.use('/api/gigs',gigRoutes); 
+app.use('/api/reviews',reviewRoutes); 
 
 
 app.listen(PORT, ()=>{
